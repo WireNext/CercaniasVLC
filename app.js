@@ -70,11 +70,10 @@ async function loadStaticData() {
             MapRoutes[route.route_id] = { short_name: route.route_short_name, long_name: route.route_long_name };
         });
 
-        // Usamos la limpieza de ID para el mapeo estático también
+        // Aplicamos la limpieza mínima también a los IDs estáticos
         parseCSV(tripsCSV).forEach(trip => {
             const headsign = trip.trip_headsign ? trip.trip_headsign.trim() : 'Destino Desconocido';
             if(trip.trip_id) {
-                // El ID en MapTrips debe coincidir con el ID limpiado del feed.
                 MapTrips[cleanTripId(trip.trip_id)] = { route_id: trip.route_id, headsign: headsign };
             }
         });
@@ -117,36 +116,18 @@ const trainIcon = L.icon({
 
 function isValenciaTrain(lat, lon) {
    const bbox = VALENCIA_BBOX;
-   // ✅ Filtro Geográfico REACTIVADO
+   // ✅ Filtro Geográfico ACTIVADO
    return lat >= bbox.minLat && lat <= bbox.maxLat && 
           lon >= bbox.minLon && lon <= bbox.maxLon;
 }
 
 /**
- * 🔑 FUNCIÓN CLAVE: Limpieza de ID Agresiva.
- * Intenta extraer la parte más significativa del ID numérico para coincidir con trips.txt.
- * @param {string} tripId El ID del viaje tal como viene del feed de Renfe (ej: '3071D23566C1').
- * @returns {string|null} El ID limpio.
+ * 🔑 FUNCIÓN CLAVE CORREGIDA: Limpieza Mínima.
+ * Solo elimina espacios y asegura mayúsculas para que '3071D23565C1' coincida.
  */
 function cleanTripId(tripId) {
     if (!tripId) return null;
-    
-    const cleaned = tripId.trim().toUpperCase();
-
-    // Patrón agresivo: Extraer solo los dígitos del ID.
-    const match = cleaned.match(/\d+/g);
-    
-    if (match && match.length > 0) {
-        // Concatenamos todos los dígitos encontrados.
-        const numericPart = match.join(''); 
-        
-        // Si el resultado es muy largo, nos quedamos con la parte más relevante (dependiendo del dataset GTFS).
-        // Para la mayoría de los casos de Renfe, simplemente devolver el bloque numérico completo funciona mejor.
-        return numericPart;
-    }
-    
-    // Si no hay dígitos, devolvemos el string limpio completo.
-    return cleaned; 
+    return tripId.trim().toUpperCase(); 
 }
 
 
@@ -194,7 +175,7 @@ function processVehiclePositions(entities) {
         
         const tripInfo = MapTrips[tripId];
         if (!tripInfo) {
-            // El tren existe en Valencia, pero su ID no coincide con trips.txt (se ignora).
+            // Este es el punto que estaba fallando: ¡ahora los IDs deberían coincidir!
             return; 
         }
         
