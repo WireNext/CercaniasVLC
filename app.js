@@ -36,7 +36,6 @@ function parseCSV(csvString) {
     const headers = lines[0].split(',').map(h => h.trim());
     
     return lines.slice(1).map(line => {
-        // Asumiendo CSV simple sin comas internas en strings
         const values = line.split(',').map(v => v.trim());
         let obj = {};
         headers.forEach((header, i) => {
@@ -124,7 +123,6 @@ function isValenciaTrain(lat, lon) {
 }
 
 function processTripUpdates(entities) {
-    // Si entities no es un array (por ejemplo, es undefined o null debido a un fallo en el backend), salimos.
     if (!Array.isArray(entities)) {
         console.error("El objeto de TripUpdates no contiene un array de entidades.");
         return;
@@ -134,7 +132,7 @@ function processTripUpdates(entities) {
         const tripUpdate = entity.tripUpdate;
         if (!tripUpdate) return; 
 
-        // 🛑 CORRECCIÓN CLAVE: Aseguramos que tripUpdate.trip y tripUpdate.trip.tripId existen.
+        // ✅ CORRECCIÓN DE SEGURIDAD: Previene el error 'trim'
         if (!tripUpdate.trip || !tripUpdate.trip.tripId) {
             console.warn("Entidad TripUpdate sin información de viaje completa. Ignorando.");
             return;
@@ -150,7 +148,6 @@ function processTripUpdates(entities) {
 }
 
 function processVehiclePositions(entities) {
-    // Si entities no es un array, salimos.
     if (!Array.isArray(entities)) {
         console.error("El objeto de VehiclePositions no contiene un array de entidades.");
         return;
@@ -160,7 +157,6 @@ function processVehiclePositions(entities) {
     entities.forEach(entity => {
         const vehicle = entity.vehicle;
         
-        // 🛑 Seguridad: chequea que los objetos básicos existen
         if (!vehicle || !vehicle.position || !vehicle.trip || !vehicle.trip.tripId) {
             return;
         }
