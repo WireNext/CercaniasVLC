@@ -205,6 +205,11 @@ function processVehiclePositions(entities) {
             trenesCV[tripId].lon = lon;
             trenesCV[tripId].platform = platform_code;       
             trenesCV[tripId].current_stop_id = current_stop_id; 
+            console.log(`POSICIÓN RECIBIDA: Tren ${tripId}: Lat ${lat}, Lon ${lon}`);             
+            trenesCV[tripId].lat = lat;
+            trenesCV[tripId].lon = lon;
+            trenesCV[tripId].platform = platform_code;       
+            trenesCV[tripId].current_stop_id = current_stop_id;
             updateMarker(tripId);
         }
     });
