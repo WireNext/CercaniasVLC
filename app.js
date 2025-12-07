@@ -109,9 +109,10 @@ async function loadStaticData() {
 }
 
 
-// --- 3. Inicialización del Mapa (Igual que antes) ---
+// --- 3. Inicialización del Mapa ---
 
-const map = L.map('mapid').setView([38.5, -0.7], 9); // Vista centrada entre CV y Murcia
+// Ajustado a [38.9, -0.9] (Centro de CV + Murcia) con zoom 9
+const map = L.map('mapid').setView([38.9, -0.9], 9); 
 trainMarkersGroup.addTo(map);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -168,7 +169,6 @@ function processVehiclePositions(entities) {
 
         const tripInfo = MapTrips[tripId];
         if (!tripInfo) {
-            // No hacemos nada si el viaje no está en trips.txt
             return; 
         }
         
@@ -252,9 +252,11 @@ function updateMarker(tripId) {
     `;
 
     if (data.marker) {
+        // Mover el marcador a la nueva posición
         data.marker.setLatLng([data.lat, data.lon]);
         data.marker.setPopupContent(popupContent);
     } else {
+        // Crear el marcador por primera vez
         const marker = L.marker([data.lat, data.lon], { icon: trainIcon })
             .bindPopup(popupContent, {closeButton: false, autoClose: false});
 
