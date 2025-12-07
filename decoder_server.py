@@ -1,12 +1,14 @@
 # decoder_server.py (Versión Final con Decodificación Manual Reforzada)
 
 from flask import Flask, jsonify
+from flask_cors import CORS
 from google.transit import gtfs_realtime_pb2
 import requests
 import time
 import os
 
 app = Flask(__name__)
+CORS(app)
 
 # URL de la fuente de datos (Protocol Buffer)
 RENFE_VP_URL = "https://gtfsrt.renfe.com/vehicle_positions.pb"
