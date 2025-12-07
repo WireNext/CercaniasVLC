@@ -134,6 +134,12 @@ function processTripUpdates(entities) {
         const tripUpdate = entity.tripUpdate;
         if (!tripUpdate) return; 
 
+        // 🛑 CORRECCIÓN CLAVE: Aseguramos que tripUpdate.trip y tripUpdate.trip.tripId existen.
+        if (!tripUpdate.trip || !tripUpdate.trip.tripId) {
+            console.warn("Entidad TripUpdate sin información de viaje completa. Ignorando.");
+            return;
+        }
+
         const tripId = tripUpdate.trip.tripId.trim(); 
         const delay = tripUpdate.delay || 0; 
 
@@ -154,6 +160,7 @@ function processVehiclePositions(entities) {
     entities.forEach(entity => {
         const vehicle = entity.vehicle;
         
+        // 🛑 Seguridad: chequea que los objetos básicos existen
         if (!vehicle || !vehicle.position || !vehicle.trip || !vehicle.trip.tripId) {
             return;
         }
@@ -292,14 +299,12 @@ async function fetchAndUpdateData() {
     try {
         const tu_response = await fetch(TU_URL);
         const tu_data = await tu_response.json();
-        // Agregamos un filtro de seguridad en caso de que el backend falle
         if (tu_data && tu_data.entity) {
             processTripUpdates(tu_data.entity);
         }
 
         const vp_response = await fetch(VP_URL);
         const vp_data = await vp_response.json();
-        // Agregamos un filtro de seguridad en caso de que el backend falle
         if (vp_data && vp_data.entity) {
             processVehiclePositions(vp_data.entity);
         }
