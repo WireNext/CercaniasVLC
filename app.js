@@ -1,9 +1,9 @@
 // --- 1. Definición de URLs y Áreas Geográficas ---
 
-// URLs de datos en tiempo real de Renfe (Necesita proxy CORS)
+// URLs de datos en tiempo real de Renfe (¡Cambiado a .pb!)
 const PROXY = "https://corsproxy.io/?"; 
-const RENFE_VP_URL = "https://gtfsrt.renfe.com/vehicle_positions.json";
-const RENFE_TU_URL = "https://gtfsrt.renfe.com/trip_updates.json";
+const RENFE_VP_URL = "https://gtfsrt.renfe.com/vehicle_positions.pb"; // <-- CAMBIO CLAVE
+const RENFE_TU_URL = "https://gtfsrt.renfe.com/trip_updates.pb";     // <-- CAMBIO CLAVE
 
 const VP_URL = PROXY + encodeURIComponent(RENFE_VP_URL);
 const TU_URL = PROXY + encodeURIComponent(RENFE_TU_URL);
@@ -11,7 +11,7 @@ const TU_URL = PROXY + encodeURIComponent(RENFE_TU_URL);
 // URLs de datos estáticos (APUNTANDO A LA CARPETA GTFS)
 const ROUTES_URL = 'gtfs/routes.txt';
 const TRIPS_URL = 'gtfs/trips.txt';
-const STOPS_URL = 'gtfs/stops.txt'; // <-- NECESARIO PARA NOMBRES DE PARADA
+const STOPS_URL = 'gtfs/stops.txt'; 
 
 // Coordenadas Bounding Box (Comunidad Valenciana + Región de Murcia)
 const VALENCIA_BBOX = {
@@ -36,6 +36,7 @@ function parseCSV(csvString) {
     const headers = lines[0].split(',').map(h => h.trim());
     
     return lines.slice(1).map(line => {
+        // Asumiendo CSV simple sin comas internas en strings
         const values = line.split(',').map(v => v.trim());
         let obj = {};
         headers.forEach((header, i) => {
@@ -48,12 +49,11 @@ function parseCSV(csvString) {
 }
 
 /**
- * Descarga y procesa los archivos GTFS estáticos del repositorio.
+ * Descarga y procesa los archivos GTFS estáticos.
  */
 async function loadStaticData() {
     console.log("Cargando datos estáticos del repositorio...");
     try {
-        // Aseguramos la carga de stops.txt
         const [routesResponse, tripsResponse, stopsResponse] = await Promise.all([
             fetch(ROUTES_URL),
             fetch(TRIPS_URL),
@@ -68,34 +68,22 @@ async function loadStaticData() {
         const tripsCSV = await tripsResponse.text();
         const stopsCSV = await stopsResponse.text();
 
-        // Procesar routes.txt
-        const routesData = parseCSV(routesCSV);
-        routesData.forEach(route => {
-            MapRoutes[route.route_id] = {
-                short_name: route.route_short_name,
-                long_name: route.route_long_name
-            };
+        // Procesar routes.txt y trips.txt
+        parseCSV(routesCSV).forEach(route => {
+            MapRoutes[route.route_id] = { short_name: route.route_short_name, long_name: route.route_long_name };
         });
 
-        // Procesar trips.txt
-        const tripsData = parseCSV(tripsCSV);
-        tripsData.forEach(trip => {
+        parseCSV(tripsCSV).forEach(trip => {
             const headsign = trip.trip_headsign ? trip.trip_headsign.trim() : 'Destino Desconocido';
             if(trip.trip_id) {
-                MapTrips[trip.trip_id.trim()] = { 
-                    route_id: trip.route_id,
-                    headsign: headsign
-                };
+                MapTrips[trip.trip_id.trim()] = { route_id: trip.route_id, headsign: headsign };
             }
         });
         
-        // Procesar stops.txt (para obtener nombres de parada)
-        const stopsData = parseCSV(stopsCSV);
-        stopsData.forEach(stop => {
+        // Procesar stops.txt
+        parseCSV(stopsCSV).forEach(stop => {
             if(stop.stop_id && stop.stop_name) {
-                MapStops[stop.stop_id.trim()] = {
-                    stop_name: stop.stop_name.trim()
-                };
+                MapStops[stop.stop_id.trim()] = { stop_name: stop.stop_name.trim() };
             }
         });
 
@@ -111,7 +99,7 @@ async function loadStaticData() {
 
 // --- 3. Inicialización del Mapa ---
 
-// Ajustado a [38.9, -0.9] (Centro de CV + Murcia) con zoom 9
+// Ajustado a [38.9, -0.9] (Centro de CV + Murcia) con zoom 9 para cobertura completa
 const map = L.map('mapid').setView([38.9, -0.9], 9); 
 trainMarkersGroup.addTo(map);
 
@@ -275,17 +263,19 @@ async function fetchAndUpdateData() {
     
     try {
         const tu_response = await fetch(TU_URL);
-        const tu_data = await tu_response.json();
+        // Intentamos leer el .pb como JSON
+        const tu_data = await tu_response.json(); 
         processTripUpdates(tu_data.entity);
 
         const vp_response = await fetch(VP_URL);
+        // Intentamos leer el .pb como JSON
         const vp_data = await vp_response.json();
         processVehiclePositions(vp_data.entity);
         
         console.log(`Trenes visibles: ${Object.keys(trenesCV).length}`);
 
     } catch (error) {
-        console.error("Error al obtener o procesar datos en tiempo real (CORS/Renfe):", error);
+        console.error("Error al obtener o procesar datos en tiempo real. Si el error dice 'unexpected character', la API no está sirviendo JSON y necesitas un decodificador .pb.", error);
     }
 }
 
