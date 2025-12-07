@@ -117,8 +117,9 @@ const trainIcon = L.icon({
 function isValenciaTrain(lat, lon) {
    const bbox = VALENCIA_BBOX;
    // ✅ Filtro Geográfico ACTIVADO
-   return lat >= bbox.minLat && lat <= bbox.maxLat && 
-          lon >= bbox.minLon && lon <= bbox.maxLon;
+   //return lat >= bbox.minLat && lat <= bbox.maxLat && 
+     //     lon >= bbox.minLon && lon <= bbox.maxLon;
+     return true;
 }
 
 /**
@@ -127,7 +128,12 @@ function isValenciaTrain(lat, lon) {
  */
 function cleanTripId(tripId) {
     if (!tripId) return null;
-    return tripId.trim().toUpperCase(); 
+    let cleaned = tripId.trim().toUpperCase();
+    
+    // Eliminar cualquier cosa que no sea una letra (A-Z) o un dígito (0-9)
+    cleaned = cleaned.replace(/[^A-Z0-9]/g, ''); 
+    
+    return cleaned; 
 }
 
 
