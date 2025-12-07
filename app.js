@@ -1,6 +1,6 @@
 // --- 1. Definición de URLs, Tiempos y Áreas Geográficas ---
 
-// 🎯 IMPORTANTE: Usamos la URL de tu servidor decodificador alojado en Render.
+// 🎯 CAMBIO CLAVE: Usamos la URL de tu servidor decodificador alojado en Render.
 const RENDER_BASE_URL = "https://cercaniasvlc.onrender.com"; 
 
 const VP_URL = RENDER_BASE_URL + "/api/vehicle_positions";
@@ -9,7 +9,7 @@ const TU_URL = RENDER_BASE_URL + "/api/trip_updates";
 // URLs de datos estáticos (APUNTANDO A LA CARPETA GTFS)
 const ROUTES_URL = 'gtfs/routes.txt';
 const TRIPS_URL = 'gtfs/trips.txt';
-const STOPS_URL = 'gtfs/stops.txt'; // Incluido para popups informativos
+const STOPS_URL = 'gtfs/stops.txt'; 
 
 // Coordenadas Bounding Box (Comunidad Valenciana + Murcia)
 const VALENCIA_BBOX = {
@@ -66,21 +66,18 @@ async function loadStaticData() {
         const tripsCSV = await tripsResponse.text();
         const stopsCSV = await stopsResponse.text();
 
-        // Procesar routes.txt
         parseCSV(routesCSV).forEach(route => {
             MapRoutes[route.route_id] = { short_name: route.route_short_name, long_name: route.route_long_name };
         });
 
-        // Procesar trips.txt
+        // Usamos la limpieza de ID para el mapeo estático también
         parseCSV(tripsCSV).forEach(trip => {
             const headsign = trip.trip_headsign ? trip.trip_headsign.trim() : 'Destino Desconocido';
             if(trip.trip_id) {
-                // Usamos la misma limpieza que aplicaremos a los IDs en tiempo real
                 MapTrips[cleanTripId(trip.trip_id)] = { route_id: trip.route_id, headsign: headsign };
             }
         });
         
-        // Procesar stops.txt
         parseCSV(stopsCSV).forEach(stop => {
             if(stop.stop_id && stop.stop_name) {
                 MapStops[stop.stop_id.trim()] = { stop_name: stop.stop_name.trim() };
@@ -118,27 +115,21 @@ const trainIcon = L.icon({
 
 function isValenciaTrain(lat, lon) {
    const bbox = VALENCIA_BBOX;
-   // ✅ Filtro Geográfico Reactivado
+   // ✅ Filtro Geográfico REACTIVADO
    return lat >= bbox.minLat && lat <= bbox.maxLat && 
           lon >= bbox.minLon && lon <= bbox.maxLon;
 }
 
 /**
- * Función de limpieza para asegurar la máxima coincidencia de tripId.
- * @param {string} tripId El ID del viaje tal como viene del feed de Renfe.
- * @returns {string|null} El ID limpio.
+ * Limpia el tripId.
  */
 function cleanTripId(tripId) {
     if (!tripId) return null;
-    // La limpieza básica es suficiente dado que el problema parece ser solo de trim/espacios.
     return tripId.trim(); 
 }
 
 function processTripUpdates(entities) {
-    if (!Array.isArray(entities)) {
-        console.error("El objeto de TripUpdates no contiene un array de entidades.");
-        return;
-    }
+    if (!Array.isArray(entities)) return;
     
     entities.forEach(entity => {
         const tripUpdate = entity.tripUpdate;
@@ -160,16 +151,12 @@ function processTripUpdates(entities) {
 }
 
 function processVehiclePositions(entities) {
-    if (!Array.isArray(entities)) {
-        console.error("El objeto de VehiclePositions no contiene un array de entidades.");
-        return;
-    }
+    if (!Array.isArray(entities)) return;
 
     let activeTripIds = new Set();
     entities.forEach(entity => {
         const vehicle = entity.vehicle;
         
-        // Seguridad: chequea que los objetos básicos existen
         if (!vehicle || !vehicle.position || !vehicle.trip || !vehicle.trip.tripId) {
             return;
         }
@@ -185,8 +172,6 @@ function processVehiclePositions(entities) {
         
         const tripInfo = MapTrips[tripId];
         if (!tripInfo) {
-            // El tren está en la zona, pero su tripId no coincide con trips.txt (datos estáticos).
-            // Esto es normal si Renfe usa IDs variables. Lo ignoramos.
             // console.warn(`Tren IGNORADO (tripId no encontrado en trips.txt): ${tripId}.`);
             return; 
         }
@@ -309,14 +294,12 @@ async function fetchAndUpdateData() {
     console.log("Actualizando datos en tiempo real...");
     
     try {
-        // Fetch de Trip Updates (Retrasos)
         const tu_response = await fetch(TU_URL);
         const tu_data = await tu_response.json();
         if (tu_data && tu_data.entity) {
             processTripUpdates(tu_data.entity);
         }
 
-        // Fetch de Vehicle Positions (Posición)
         const vp_response = await fetch(VP_URL);
         const vp_data = await vp_response.json();
         if (vp_data && vp_data.entity) {
