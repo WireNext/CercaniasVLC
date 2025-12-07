@@ -35,7 +35,9 @@ function parseCSV(csvString) {
     const headers = lines[0].split(',').map(h => h.trim());
     
     return lines.slice(1).map(line => {
-        const values = line.split(',').map(v => v.trim());
+        // Mejorar el split para manejar comas dentro de comillas si fuera necesario, 
+        // pero para archivos GTFS simples, split(',') suele ser suficiente.
+        const values = line.split(',').map(v => v.trim()); 
         let obj = {};
         headers.forEach((header, i) => {
             if (values[i] !== undefined) {
@@ -74,6 +76,7 @@ async function loadStaticData() {
         parseCSV(tripsCSV).forEach(trip => {
             const headsign = trip.trip_headsign ? trip.trip_headsign.trim() : 'Destino Desconocido';
             if(trip.trip_id) {
+                // Utiliza cleanTripId para asegurar que las claves GTFS estáticas coincidan con las claves de tiempo real
                 MapTrips[cleanTripId(trip.trip_id)] = { route_id: trip.route_id, headsign: headsign };
             }
         });
@@ -89,14 +92,14 @@ async function loadStaticData() {
     } catch (error) {
         console.error("Error crítico al cargar datos GTFS estáticos:", error);
         if (window.updateInterval) clearInterval(window.updateInterval);
-        document.getElementById('mapid').innerHTML = '<div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); color:red; font-size:1.2em; text-align:center; padding: 20px; background: white; border-radius: 5px;">ERROR: No se pudieron cargar los datos estáticos. Asegúrese de que los archivos TXT están en la carpeta gtfs/.</div>';
+        document.getElementById('mapid').innerHTML = '<div style="position:absolute; z-index: 1000; top:50%; left:50%; transform:translate(-50%, -50%); color:red; font-size:1.2em; text-align:center; padding: 20px; background: white; border-radius: 5px; border: 2px solid red;">ERROR: No se pudieron cargar los datos estáticos. Asegúrese de que los archivos TXT están en la carpeta gtfs/.</div>';
     }
 }
 
 
 // --- 3. Inicialización del Mapa y Icono ---
 
-const map = L.map('mapid').setView([38.9, -0.9], 9); 
+const map = L.map('mapid').setView([39.5, -0.6], 9); // Centrado ligeramente mejor en la CV
 trainMarkersGroup.addTo(map);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -115,22 +118,20 @@ const trainIcon = L.icon({
 // --- 4. Funciones de Procesamiento de Datos (Filtros y Limpieza) ---
 
 function isValenciaTrain(lat, lon) {
-   const bbox = VALENCIA_BBOX;
-   // ✅ Filtro Geográfico ACTIVADO
-   //return lat >= bbox.minLat && lat <= bbox.maxLat && 
-     //     lon >= bbox.minLon && lon <= bbox.maxLon;
-     return true;
+    const bbox = VALENCIA_BBOX;
+    // ✅ Filtro Geográfico ACTIVADO
+    return lat >= bbox.minLat && lat <= bbox.maxLat && 
+           lon >= bbox.minLon && lon <= bbox.maxLon;
 }
 
 /**
- * 🔑 FUNCIÓN CLAVE CORREGIDA: Limpieza Mínima.
- * Solo elimina espacios y asegura mayúsculas para que '3071D23565C1' coincida.
+ * 🔑 FUNCIÓN CLAVE CORREGIDA: Limpieza Mínima de tripId.
  */
 function cleanTripId(tripId) {
     if (!tripId) return null;
     let cleaned = tripId.trim().toUpperCase();
     
-    // Eliminar cualquier cosa que no sea una letra (A-Z) o un dígito (0-9)
+    // Eliminar cualquier carácter que no sea una letra (A-Z) o un dígito (0-9)
     cleaned = cleaned.replace(/[^A-Z0-9]/g, ''); 
     
     return cleaned; 
@@ -146,11 +147,12 @@ function processTripUpdates(entities) {
 
         // 🛑 CORRECCIÓN DE SEGURIDAD (Ignora mensajes incompletos de Renfe)
         if (!tripUpdate.trip || !tripUpdate.trip.tripId) {
-            console.warn("Entidad TripUpdate sin información de viaje completa. Ignorando.");
+            // console.warn("Entidad TripUpdate sin información de viaje completa. Ignorando.");
             return;
         }
 
         const tripId = cleanTripId(tripUpdate.trip.tripId); 
+        // El retraso viene en segundos. Si no está, asumimos 0.
         const delay = tripUpdate.delay || 0; 
 
         if (trenesCV[tripId]) {
@@ -181,7 +183,7 @@ function processVehiclePositions(entities) {
         
         const tripInfo = MapTrips[tripId];
         if (!tripInfo) {
-            // Este es el punto que estaba fallando: ¡ahora los IDs deberían coincidir!
+            // ¡El tripId no coincide con ningún viaje estático! (Filtrado de trenes irrelevantes)
             return; 
         }
         
@@ -190,6 +192,7 @@ function processVehiclePositions(entities) {
         let current_stop_id = vehicle.stopId ? vehicle.stopId.trim() : null; 
         
         if (vehicle.vehicle && vehicle.vehicle.label) {
+            // Extraer el código entre paréntesis, e.g., "55512 (10)" -> "10"
             const match = vehicle.vehicle.label.match(/\((\d+)\)$/); 
             if (match && match[1]) {
                 platform_code = match[1];
@@ -214,21 +217,22 @@ function processVehiclePositions(entities) {
                 platform: platform_code,      
                 current_stop_id: current_stop_id 
             };
-            updateMarker(tripId); 
+            // Crea el marcador por primera vez
+            updateMarker(tripId, null, [lat, lon]); 
 
         } else {
             // ACTUALIZACIÓN DE POSICIÓN PARA ANIMACIÓN
-            const oldLat = trenesCV[tripId].lat;
-            const oldLon = trenesCV[tripId].lon;
+            const oldPos = [trenesCV[tripId].lat, trenesCV[tripId].lon];
+            const newPos = [lat, lon];
             
             // 1. Guardar la nueva posición
             trenesCV[tripId].lat = lat;
             trenesCV[tripId].lon = lon;
-            trenesCV[tripId].platform = platform_code;       
+            trenesCV[tripId].platform = platform_code;      
             trenesCV[tripId].current_stop_id = current_stop_id; 
             
             // 2. Llamar a la función de actualización con las posiciones para la animación
-            updateMarker(tripId, [oldLat, oldLon], [lat, lon]);
+            updateMarker(tripId, oldPos, newPos);
         }
     });
 
@@ -245,9 +249,26 @@ function processVehiclePositions(entities) {
 
 function updateMarker(tripId, oldPos, newPos) {
     const data = trenesCV[tripId];
+    
+    // --- LÓGICA MEJORADA DE RETRASO ---
     const delayMinutes = Math.round(data.delay / 60);
-    const delayStyle = delayMinutes > 0 ? 'color:red;' : 'color:green;';
-    const delayText = delayMinutes > 0 ? `<span style="${delayStyle}">+${delayMinutes} min de retraso</span>` : `<span style="${delayStyle}">A tiempo</span>`;
+    let delayText;
+    let delayStyle;
+
+    if (delayMinutes >= 5) { 
+        delayStyle = 'color:#C70039; font-weight: bold;'; // Rojo intenso
+        delayText = `+${delayMinutes} min de retraso`;
+    } else if (delayMinutes > 0) { 
+        delayStyle = 'color:orange; font-weight: bold;'; // Naranja
+        delayText = `+${delayMinutes} min de retraso`;
+    } else if (delayMinutes < -1) { 
+        delayStyle = 'color:blue;'; // Azul
+        delayText = `${-delayMinutes} min (Adelantado)`;
+    } else { 
+        delayStyle = 'color:green; font-weight: bold;'; // Verde
+        delayText = 'A tiempo';
+    }
+    // ------------------------------------
 
     // 1. Obtener el nombre legible de la parada
     let stopName = 'ID no reportada / En ruta';
@@ -269,28 +290,40 @@ function updateMarker(tripId, oldPos, newPos) {
         <strong>Parada Actual/Próxima:</strong> ${stopName}<br>
         <strong>Vía de Llegada:</strong> ${platformContent}<br>
         ---<br>
-        <strong>Retraso:</strong> ${delayText}
+        <strong>Retraso:</strong> <span style="${delayStyle}">${delayText}</span>
+        <br><small style="color: #888;">Trip ID: ${tripId}</small>
     `;
 
     if (data.marker) {
-        // --- LÓGICA DE MOVIMIENTO CON ANIMACIÓN (L.movingMarker) ---
+        // --- LÓGICA DE MOVIMIENTO CON ANIMACIÓN (L.MovingMarker) ---
         if (oldPos && newPos && (oldPos[0] !== newPos[0] || oldPos[1] !== newPos[1])) {
-             // Mueve el marcador de forma fluida a la nueva posición en 30 segundos
-            data.marker.moveTo(newPos, ANIMATION_DURATION_MS);
+             // Mueve el marcador de forma fluida a la nueva posición
+             // (Requiere el plugin L.MovingMarker)
+             data.marker.moveTo(newPos, ANIMATION_DURATION_MS);
         } else {
-            // Si la posición no ha cambiado, actualizamos solo la posición/popup
+            // Si la posición no ha cambiado o es la primera vez, aseguramos la posición
             data.marker.setLatLng([data.lat, data.lon]);
         }
+        
+        // Actualizar el contenido del popup (el retraso y la parada pueden haber cambiado)
         data.marker.setPopupContent(popupContent);
 
     } else {
-        // Crear el marcador como MovingMarker
-        const marker = L.movingMarker([[data.lat, data.lon]], [ANIMATION_DURATION_MS], { icon: trainIcon, autostart: true })
-            .bindPopup(popupContent, {closeButton: false, autoClose: false});
+        // 🛑 CORRECCIÓN CRÍTICA AQUÍ: Usar L.movingMarker si el plugin está instalado
+        // Si L.movingMarker no está definido, cambiar a L.marker
+        const lat = data.lat;
+        const lon = data.lon;
+        
+        // Asumiendo que se usa el plugin para la animación:
+        let marker = L.movingMarker([lat, lon], [], { icon: trainIcon, autostart: true });
+        
+        // Si no usas el plugin y da error, cambia la línea anterior por:
+        // let marker = L.marker([lat, lon], { icon: trainIcon });
+        
+        marker.bindPopup(popupContent, {closeButton: false, autoClose: false});
 
         data.marker = marker;
         trainMarkersGroup.addLayer(marker);
-        marker.start(); // Inicia el MovingMarker
     }
 }
 
@@ -298,24 +331,27 @@ function updateMarker(tripId, oldPos, newPos) {
 
 async function fetchAndUpdateData() {
     if (Object.keys(MapTrips).length === 0) {
+        console.log("Datos estáticos no cargados aún. Saltando actualización.");
         return;
     }
-    console.log("Actualizando datos en tiempo real...");
+    console.log(`--- [${new Date().toLocaleTimeString()}] Actualizando datos en tiempo real... ---`);
     
     try {
+        // Consultar Trip Updates (Retrasos/Alertas)
         const tu_response = await fetch(TU_URL);
         const tu_data = await tu_response.json();
         if (tu_data && tu_data.entity) {
             processTripUpdates(tu_data.entity);
         }
 
+        // Consultar Vehicle Positions (Ubicación GPS)
         const vp_response = await fetch(VP_URL);
         const vp_data = await vp_response.json();
         if (vp_data && vp_data.entity) {
             processVehiclePositions(vp_data.entity);
         }
         
-        console.log(`Trenes visibles: ${Object.keys(trenesCV).length}`);
+        console.log(`Trenes visibles en el mapa: ${Object.keys(trenesCV).length}`);
 
     } catch (error) {
         console.error("Error al obtener o procesar datos en tiempo real (Backend caído o problema de red):", error);
@@ -325,7 +361,9 @@ async function fetchAndUpdateData() {
 // --- 6. Ejecución ---
 
 loadStaticData().then(() => {
+    // Primera ejecución inmediata
     fetchAndUpdateData();
+    
     // Ejecutar cada 30 segundos (30000 ms)
-    window.updateInterval = setInterval(fetchAndUpdateData, 30000); 
+    window.updateInterval = setInterval(fetchAndUpdateData, ANIMATION_DURATION_MS); 
 });
