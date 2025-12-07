@@ -135,7 +135,7 @@ function processTripUpdates(entities) {
         const tripUpdate = entity.tripUpdate;
         if (!tripUpdate) return; 
 
-        // 🛑 CORRECCIÓN DE SEGURIDAD (Previene el error 'trim')
+        // 🛑 CORRECCIÓN DE SEGURIDAD (Previene el error 'trim' y el log de 90 errores)
         if (!tripUpdate.trip || !tripUpdate.trip.tripId) {
             console.warn("Entidad TripUpdate sin información de viaje completa. Ignorando.");
             return;
