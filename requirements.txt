@@ -2,3 +2,4 @@ Flask
 requests
 gtfs-realtime-bindings
 gunicorn
+Flask-CORS
