@@ -34,12 +34,17 @@ def fetch_and_decode_gtfsrt(url, cache_key):
         headers = {'User-Agent': 'RenfeGTFSRT-Decoder/1.0'} 
         response = requests.get(url, timeout=15, headers=headers)
         response.raise_for_status() 
+    
     except requests.exceptions.RequestException as e:
         print(f"❌ Error al descargar {url}: {e}")
         # Si falla la descarga, intentar devolver la versión cacheada si existe
         if cache_key in CACHE:
              return CACHE[cache_key]['data']
-        return {"error": "Error al descargar datos de Renfe", "details": str(e)}, 500
+        
+        # SOLUCIÓN DE FALLO: Devolvemos 200 OK con JSON vacío para que el frontend no falle
+        print("⚠️ Advertencia: Error en descarga y caché vacía. Devolviendo JSON vacío.")
+        return {"header": {"timestamp": int(time.time())}, "entity": []}
+
 
     # 3. Decodificar Protocol Buffers
     try:
@@ -48,7 +53,8 @@ def fetch_and_decode_gtfsrt(url, cache_key):
         
         # 4. Convertir el objeto FeedMessage a un diccionario (JSON)
         data_dict = {
-            "header": MessageToDict(feed.header, preserving_proto_field_names=True),
+            # CORRECCIÓN CLAVE: 'names' se cambia a 'name' (singular)
+            "header": MessageToDict(feed.header, preserving_proto_field_name=True), 
             "entity": []
         }
         
@@ -58,10 +64,12 @@ def fetch_and_decode_gtfsrt(url, cache_key):
                 entity_dict['id'] = entity.id
 
             if entity.vehicle.ByteSize() > 0:
-                entity_dict['vehicle'] = MessageToDict(entity.vehicle, preserving_proto_field_names=True)
+                # CORRECCIÓN CLAVE: 'names' se cambia a 'name' (singular)
+                entity_dict['vehicle'] = MessageToDict(entity.vehicle, preserving_proto_field_name=True)
             
             if entity.trip_update.ByteSize() > 0:
-                entity_dict['tripUpdate'] = MessageToDict(entity.trip_update, preserving_proto_field_names=True)
+                # CORRECCIÓN CLAVE: 'names' se cambia a 'name' (singular)
+                entity_dict['tripUpdate'] = MessageToDict(entity.trip_update, preserving_proto_field_name=True)
 
             if entity_dict:
                  data_dict['entity'].append(entity_dict)
@@ -75,23 +83,24 @@ def fetch_and_decode_gtfsrt(url, cache_key):
         # Si falla la decodificación, intentar devolver la versión cacheada si existe
         if cache_key in CACHE:
              return CACHE[cache_key]['data']
-        return {"error": "Error de decodificación GTFS-RT", "details": str(e)}, 500
+        
+        # SOLUCIÓN DE FALLO: Devolvemos 200 OK con JSON vacío para que el frontend no falle
+        print("⚠️ Advertencia: Error en decodificación y caché vacía. Devolviendo JSON vacío.")
+        return {"header": {"timestamp": int(time.time())}, "entity": []}
 
 
 # --- RUTAS FLASK ---
 @app.route('/api/vehicle_positions', methods=['GET'])
 def get_vehicle_positions():
     data = fetch_and_decode_gtfsrt(RENFE_VP_URL, 'vp_data')
-    if isinstance(data, dict):
-        return jsonify(data)
-    return data 
+    # Si devuelve un diccionario, lo devuelve como JSON con código 200
+    return jsonify(data)
 
 @app.route('/api/trip_updates', methods=['GET'])
 def get_trip_updates():
     data = fetch_and_decode_gtfsrt(RENFE_TU_URL, 'tu_data')
-    if isinstance(data, dict):
-        return jsonify(data)
-    return data
+    # Si devuelve un diccionario, lo devuelve como JSON con código 200
+    return jsonify(data)
 
 @app.route('/')
 def home():

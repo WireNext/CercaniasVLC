@@ -124,13 +124,17 @@ function isValenciaTrain(lat, lon) {
 }
 
 function processTripUpdates(entities) {
+    // Si entities no es un array (por ejemplo, es undefined o null debido a un fallo en el backend), salimos.
+    if (!Array.isArray(entities)) {
+        console.error("El objeto de TripUpdates no contiene un array de entidades.");
+        return;
+    }
+    
     entities.forEach(entity => {
         const tripUpdate = entity.tripUpdate;
-        // La decodificación en Python usa 'tripUpdate' y no 'trip_update'
         if (!tripUpdate) return; 
 
         const tripId = tripUpdate.trip.tripId.trim(); 
-        // El campo 'delay' viene en segundos
         const delay = tripUpdate.delay || 0; 
 
         if (trenesCV[tripId]) {
@@ -140,6 +144,12 @@ function processTripUpdates(entities) {
 }
 
 function processVehiclePositions(entities) {
+    // Si entities no es un array, salimos.
+    if (!Array.isArray(entities)) {
+        console.error("El objeto de VehiclePositions no contiene un array de entidades.");
+        return;
+    }
+
     let activeTripIds = new Set();
     entities.forEach(entity => {
         const vehicle = entity.vehicle;
@@ -166,7 +176,6 @@ function processVehiclePositions(entities) {
         let platform_code = 'N/A';
         let current_stop_id = vehicle.stopId ? vehicle.stopId.trim() : null; 
         
-        // El campo 'label' viene de Renfe y a veces contiene la vía/andén entre paréntesis
         if (vehicle.vehicle && vehicle.vehicle.label) {
             const match = vehicle.vehicle.label.match(/\((\d+)\)$/); 
             if (match && match[1]) {
@@ -283,11 +292,17 @@ async function fetchAndUpdateData() {
     try {
         const tu_response = await fetch(TU_URL);
         const tu_data = await tu_response.json();
-        processTripUpdates(tu_data.entity);
+        // Agregamos un filtro de seguridad en caso de que el backend falle
+        if (tu_data && tu_data.entity) {
+            processTripUpdates(tu_data.entity);
+        }
 
         const vp_response = await fetch(VP_URL);
         const vp_data = await vp_response.json();
-        processVehiclePositions(vp_data.entity);
+        // Agregamos un filtro de seguridad en caso de que el backend falle
+        if (vp_data && vp_data.entity) {
+            processVehiclePositions(vp_data.entity);
+        }
         
         console.log(`Trenes visibles: ${Object.keys(trenesCV).length}`);
 
