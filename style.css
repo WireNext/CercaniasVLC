@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #e30013; /* Rojo Renfe */
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+p {
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+
+/* El mapa DEBE tener una altura definida para ser visible */
+#mapid { 
+    height: 90vh; 
+    width: 100%;
+}

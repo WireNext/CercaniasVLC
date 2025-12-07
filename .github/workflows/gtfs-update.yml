@@ -1,0 +1,94 @@
+# .github/workflows/gtfs-update.yml
+name: Actualización GTFS Renfe
+
+# Programación: Ejecutar a las 02:00 AM (0 2) cada dos días (*/2)
+on:
+  schedule:
+    # Esto se aproxima a cada 48 horas.
+    - cron: '0 2 */2 * *'
+  # Permite ejecutarlo manualmente desde la pestaña "Actions"
+  workflow_dispatch:
+
+jobs:
+  update-gtfs:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+        # Necesario para que la Action pueda hacer commit
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Instalar dependencias (requests)
+        run: pip install requests
+
+      - name: Descargar, extraer y limpiar GTFS (Python) 🧼
+        # Este script descarga el ZIP, extrae solo los archivos necesarios y BORRA stop_times.txt
+        run: |
+          python - <<EOF
+          import requests
+          import zipfile
+          import io
+          import os
+
+          ZIP_URL = "https://ssl.renfe.com/ftransit/Fichero_CER_FOMENTO/fomento_transit.zip"
+          # Archivos que SÍ necesitamos y mantendremos
+          FILES_TO_EXTRACT = ['routes.txt', 'trips.txt']
+          # Archivo que queremos eliminar para ahorrar espacio
+          FILE_TO_DELETE = 'stop_times.txt' 
+
+          print("Descargando GTFS ZIP...")
+          response = requests.get(ZIP_URL, timeout=60)
+          response.raise_for_status()
+
+          z = zipfile.ZipFile(io.BytesIO(response.content))
+          
+          # 1. Extraer SÓLO los archivos que necesitamos
+          for filename in z.namelist():
+              if filename in FILES_TO_EXTRACT:
+                  with z.open(filename) as source, open(filename, "wb") as target:
+                      target.write(source.read())
+                      print(f"Extraído y mantenido: {filename}")
+              else:
+                  # Ignoramos otros archivos como stop_times.txt, calendar.txt, etc.
+                  print(f"Ignorado: {filename}")
+                  
+          # 2. Borrar explícitamente el archivo que NO queremos (como medida de seguridad)
+          if os.path.exists(FILE_TO_DELETE):
+              os.remove(FILE_TO_DELETE)
+              print(f"Eliminado archivo pesado: {FILE_TO_DELETE}")
+              
+          EOF
+          
+      - name: Configurar Git para el commit
+        run: |
+          git config user.name 'GitHub Actions Bot'
+          git config user.email 'actions@github.com'
+
+      - name: Verificar cambios y hacer commit
+        id: commit
+        run: |
+          # Añadir SÓLO los archivos que deben subir
+          git add routes.txt trips.txt
+          
+          # Verificar si hay algo que commitear
+          if git diff --staged --quiet; then
+            echo "::set-output name=commit_needed::false"
+            echo "No hay cambios en GTFS. Terminando."
+          else
+            git commit -m "🤖 Auto-Actualización GTFS Renfe [skip ci]"
+            echo "::set-output name=commit_needed::true"
+          fi
+          
+      - name: Push (subir) los cambios si los hay
+        if: steps.commit.outputs.commit_needed == 'true'
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref_name }} # Sube a la rama actual (ej. 'main' o 'master')
