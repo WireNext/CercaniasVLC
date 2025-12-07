@@ -9,8 +9,8 @@ const VP_URL = PROXY + encodeURIComponent(RENFE_VP_URL);
 const TU_URL = PROXY + encodeURIComponent(RENFE_TU_URL);
 
 // URLs de datos estáticos (se asume que están en el mismo root del repo)
-const ROUTES_URL = 'routes.txt';
-const TRIPS_URL = 'trips.txt';
+const ROUTES_URL = 'gtfs/routes.txt';
+const TRIPS_URL = 'gtfs/trips.txt';
 
 // Coordenadas Bounding Box (Comunidad Valenciana)
 const VALENCIA_BBOX = {
