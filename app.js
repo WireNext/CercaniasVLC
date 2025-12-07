@@ -110,8 +110,9 @@ const trainIcon = L.icon({
 // --- 4. Funciones de Procesamiento de Datos (Igual que antes) ---
 
 function isValenciaTrain(lat, lon) {
-    return lat >= VALENCIA_BBOX.minLat && lat <= VALENCIA_BBOX.maxLat &&
-           lon >= VALENCIA_BBOX.minLon && lon <= VALENCIA_BBOX.maxLon;
+   // return lat >= VALENCIA_BBOX.minLat && lat <= VALENCIA_BBOX.maxLat &&
+    //       lon >= VALENCIA_BBOX.minLon && lon <= VALENCIA_BBOX.maxLon;
+    return true;
 }
 
 function processTripUpdates(entities) {
