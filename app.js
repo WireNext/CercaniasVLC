@@ -145,6 +145,8 @@ function processVehiclePositions(entities) {
 
         const tripInfo = MapTrips[tripId];
         if (!tripInfo) {
+            // Añade este log para ver qué IDs se están ignorando
+            console.warn(`Tren IGNORADO (tripId no encontrado en trips.txt): ${tripId}. Lat/Lon: ${lat}, ${lon}`);
             return; 
         }
         const routeInfo = MapRoutes[tripInfo.route_id];
