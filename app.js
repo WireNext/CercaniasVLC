@@ -1,6 +1,6 @@
 // --- 1. Definición de URLs, Tiempos y Áreas Geográficas ---
 
-// 🎯 CAMBIO CLAVE: Usamos la URL de tu servidor decodificador alojado en Render.
+// 🎯 URL de tu servidor decodificador alojado en Render.
 const RENDER_BASE_URL = "https://cercaniasvlc.onrender.com"; 
 
 const VP_URL = RENDER_BASE_URL + "/api/vehicle_positions";
@@ -74,6 +74,7 @@ async function loadStaticData() {
         parseCSV(tripsCSV).forEach(trip => {
             const headsign = trip.trip_headsign ? trip.trip_headsign.trim() : 'Destino Desconocido';
             if(trip.trip_id) {
+                // El ID en MapTrips debe coincidir con el ID limpiado del feed.
                 MapTrips[cleanTripId(trip.trip_id)] = { route_id: trip.route_id, headsign: headsign };
             }
         });
@@ -94,7 +95,7 @@ async function loadStaticData() {
 }
 
 
-// --- 3. Inicialización del Mapa ---
+// --- 3. Inicialización del Mapa y Icono ---
 
 const map = L.map('mapid').setView([38.9, -0.9], 9); 
 trainMarkersGroup.addTo(map);
@@ -111,7 +112,8 @@ const trainIcon = L.icon({
     popupAnchor: [0, -12] 
 });
 
-// --- 4. Funciones de Procesamiento de Datos ---
+
+// --- 4. Funciones de Procesamiento de Datos (Filtros y Limpieza) ---
 
 function isValenciaTrain(lat, lon) {
    const bbox = VALENCIA_BBOX;
@@ -121,12 +123,32 @@ function isValenciaTrain(lat, lon) {
 }
 
 /**
- * Limpia el tripId.
+ * 🔑 FUNCIÓN CLAVE: Limpieza de ID Agresiva.
+ * Intenta extraer la parte más significativa del ID numérico para coincidir con trips.txt.
+ * @param {string} tripId El ID del viaje tal como viene del feed de Renfe (ej: '3071D23566C1').
+ * @returns {string|null} El ID limpio.
  */
 function cleanTripId(tripId) {
     if (!tripId) return null;
-    return tripId.trim(); 
+    
+    const cleaned = tripId.trim().toUpperCase();
+
+    // Patrón agresivo: Extraer solo los dígitos del ID.
+    const match = cleaned.match(/\d+/g);
+    
+    if (match && match.length > 0) {
+        // Concatenamos todos los dígitos encontrados.
+        const numericPart = match.join(''); 
+        
+        // Si el resultado es muy largo, nos quedamos con la parte más relevante (dependiendo del dataset GTFS).
+        // Para la mayoría de los casos de Renfe, simplemente devolver el bloque numérico completo funciona mejor.
+        return numericPart;
+    }
+    
+    // Si no hay dígitos, devolvemos el string limpio completo.
+    return cleaned; 
 }
+
 
 function processTripUpdates(entities) {
     if (!Array.isArray(entities)) return;
@@ -135,7 +157,7 @@ function processTripUpdates(entities) {
         const tripUpdate = entity.tripUpdate;
         if (!tripUpdate) return; 
 
-        // 🛑 CORRECCIÓN DE SEGURIDAD (Previene el error 'trim' y el log de 90 errores)
+        // 🛑 CORRECCIÓN DE SEGURIDAD (Ignora mensajes incompletos de Renfe)
         if (!tripUpdate.trip || !tripUpdate.trip.tripId) {
             console.warn("Entidad TripUpdate sin información de viaje completa. Ignorando.");
             return;
@@ -172,7 +194,7 @@ function processVehiclePositions(entities) {
         
         const tripInfo = MapTrips[tripId];
         if (!tripInfo) {
-            // console.warn(`Tren IGNORADO (tripId no encontrado en trips.txt): ${tripId}.`);
+            // El tren existe en Valencia, pero su ID no coincide con trips.txt (se ignora).
             return; 
         }
         
@@ -264,7 +286,7 @@ function updateMarker(tripId, oldPos, newPos) {
     `;
 
     if (data.marker) {
-        // --- LÓGICA DE MOVIMIENTO CON ANIMACIÓN (MovingMarker) ---
+        // --- LÓGICA DE MOVIMIENTO CON ANIMACIÓN (L.movingMarker) ---
         if (oldPos && newPos && (oldPos[0] !== newPos[0] || oldPos[1] !== newPos[1])) {
              // Mueve el marcador de forma fluida a la nueva posición en 30 segundos
             data.marker.moveTo(newPos, ANIMATION_DURATION_MS);
