@@ -8,7 +8,7 @@ const RENFE_TU_URL = "https://gtfsrt.renfe.com/trip_updates.json";
 const VP_URL = PROXY + encodeURIComponent(RENFE_VP_URL);
 const TU_URL = PROXY + encodeURIComponent(RENFE_TU_URL);
 
-// URLs de datos estáticos (se asume que están en el mismo root del repo)
+// URLs de datos estáticos (APUNTANDO A LA CARPETA GTFS)
 const ROUTES_URL = 'gtfs/routes.txt';
 const TRIPS_URL = 'gtfs/trips.txt';
 
@@ -54,8 +54,7 @@ async function loadStaticData() {
         ]);
 
         if (!routesResponse.ok || !tripsResponse.ok) {
-            // Este error puede ocurrir si los archivos routes.txt y trips.txt NO han sido subidos al root
-            throw new Error("No se pudieron descargar los archivos GTFS (routes.txt o trips.txt). Asegúrese de que existen en la raíz del repositorio.");
+            throw new Error(`No se pudieron descargar los archivos GTFS (Status Route: ${routesResponse.status}, Status Trip: ${tripsResponse.status}). Asegúrese de que existen en la carpeta gtfs/`);
         }
 
         const routesCSV = await routesResponse.text();
@@ -74,10 +73,13 @@ async function loadStaticData() {
         const tripsData = parseCSV(tripsCSV);
         tripsData.forEach(trip => {
             const headsign = trip.trip_headsign ? trip.trip_headsign.trim() : 'Destino Desconocido';
-            MapTrips[trip.trip_id] = {
-                route_id: trip.route_id,
-                headsign: headsign
-            };
+            // IMPORTANTE: trips.txt también debe tener sus IDs mapeadas
+            if(trip.trip_id) {
+                MapTrips[trip.trip_id.trim()] = { // Limpiamos también las IDs del archivo estático por seguridad
+                    route_id: trip.route_id,
+                    headsign: headsign
+                };
+            }
         });
         
         console.log(`Datos estáticos cargados. Rutas: ${Object.keys(MapRoutes).length}, Viajes: ${Object.keys(MapTrips).length}`);
@@ -85,7 +87,7 @@ async function loadStaticData() {
     } catch (error) {
         console.error("Error crítico al cargar datos GTFS estáticos:", error);
         if (window.updateInterval) clearInterval(window.updateInterval);
-        document.getElementById('mapid').innerHTML = '<div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); color:red; font-size:1.2em; text-align:center; padding: 20px; background: white; border-radius: 5px;">ERROR: No se pudieron cargar los datos estáticos. Asegúrese de que los archivos TXT están en el repositorio y la URL es correcta.</div>';
+        document.getElementById('mapid').innerHTML = '<div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); color:red; font-size:1.2em; text-align:center; padding: 20px; background: white; border-radius: 5px;">ERROR: No se pudieron cargar los datos estáticos. Asegúrese de que los archivos TXT están en la carpeta gtfs/.</div>';
     }
 }
 
@@ -107,18 +109,18 @@ const trainIcon = L.icon({
     popupAnchor: [0, -12] 
 });
 
-// --- 4. Funciones de Procesamiento de Datos (Igual que antes) ---
+// --- 4. Funciones de Procesamiento de Datos (Con corrección de tripId) ---
 
 function isValenciaTrain(lat, lon) {
-   // return lat >= VALENCIA_BBOX.minLat && lat <= VALENCIA_BBOX.maxLat &&
-    //       lon >= VALENCIA_BBOX.minLon && lon <= VALENCIA_BBOX.maxLon;
-    return true;
+   // Desactivado temporalmente el filtro geográfico para ver todos los trenes
+   return true;
 }
 
 function processTripUpdates(entities) {
     entities.forEach(entity => {
         const tripUpdate = entity.tripUpdate;
-        const tripId = tripUpdate.trip.tripId;
+        // CORRECCIÓN: Limpiar tripId en Trip Updates
+        const tripId = tripUpdate.trip.tripId.trim(); 
         const delay = tripUpdate.delay || 0;
 
         if (trenesCV[tripId]) {
@@ -135,7 +137,9 @@ function processVehiclePositions(entities) {
         if (!vehicle || !vehicle.position || !vehicle.trip || !vehicle.trip.tripId) {
             return;
         }
-        const tripId = vehicle.trip.tripId;
+        
+        // CORRECCIÓN: Limpiar tripId en Vehicle Positions
+        const tripId = vehicle.trip.tripId.trim(); 
         const lat = vehicle.position.latitude;
         const lon = vehicle.position.longitude;
         
@@ -145,7 +149,6 @@ function processVehiclePositions(entities) {
 
         const tripInfo = MapTrips[tripId];
         if (!tripInfo) {
-            // Añade este log para ver qué IDs se están ignorando
             console.warn(`Tren IGNORADO (tripId no encontrado en trips.txt): ${tripId}. Lat/Lon: ${lat}, ${lon}`);
             return; 
         }
@@ -159,12 +162,14 @@ function processVehiclePositions(entities) {
             trenesCV[tripId] = { lat, lon, delay: 0, marker: null, route: route_short_name, destination: destination };
             updateMarker(tripId);
         } else {
+            // Log de depuración desactivado, la lógica es correcta
             trenesCV[tripId].lat = lat;
             trenesCV[tripId].lon = lon;
             updateMarker(tripId);
         }
     });
 
+    // Limpiar marcadores de trenes que ya no están reportando posición
     Object.keys(trenesCV).forEach(tripId => {
         if (!activeTripIds.has(tripId)) {
             if (trenesCV[tripId].marker) {
@@ -199,7 +204,7 @@ function updateMarker(tripId) {
     }
 }
 
-// --- 5. Función de Consulta y Actualización Principal (Igual que antes) ---
+// --- 5. Función de Consulta y Actualización Principal (Frecuencia 15s) ---
 
 async function fetchAndUpdateData() {
     if (Object.keys(MapTrips).length === 0) {
@@ -208,10 +213,12 @@ async function fetchAndUpdateData() {
     console.log("Actualizando datos en tiempo real...");
     
     try {
+        // Fetch para Trip Updates (Retrasos)
         const tu_response = await fetch(TU_URL);
         const tu_data = await tu_response.json();
         processTripUpdates(tu_data.entity);
 
+        // Fetch para Vehicle Positions (Posición GPS)
         const vp_response = await fetch(VP_URL);
         const vp_data = await vp_response.json();
         processVehiclePositions(vp_data.entity);
@@ -227,5 +234,6 @@ async function fetchAndUpdateData() {
 
 loadStaticData().then(() => {
     fetchAndUpdateData();
-    window.updateInterval = setInterval(fetchAndUpdateData, 15000);
+    // Ejecutar cada 15 segundos (15000 ms) para mantener la actualización
+    window.updateInterval = setInterval(fetchAndUpdateData, 15000); 
 });
