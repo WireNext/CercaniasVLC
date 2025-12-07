@@ -29,7 +29,7 @@ jobs:
         run: pip install requests
 
       - name: Descargar, extraer y limpiar GTFS (Python) 🧼
-        # Este script descarga el ZIP, extrae solo los archivos necesarios y BORRA stop_times.txt
+        # Este script descarga el ZIP y extrae SÓLO los archivos necesarios a la carpeta 'gtfs/'.
         run: |
           python - <<EOF
           import requests
@@ -38,30 +38,42 @@ jobs:
           import os
 
           ZIP_URL = "https://ssl.renfe.com/ftransit/Fichero_CER_FOMENTO/fomento_transit.zip"
+          TARGET_DIR = "gtfs" # Directorio donde se guardarán los archivos
           # Archivos que SÍ necesitamos y mantendremos
           FILES_TO_EXTRACT = ['routes.txt', 'trips.txt']
           # Archivo que queremos eliminar para ahorrar espacio
           FILE_TO_DELETE = 'stop_times.txt' 
 
           print("Descargando GTFS ZIP...")
+          
+          # Crear el directorio 'gtfs' si no existe
+          if not os.path.exists(TARGET_DIR):
+              os.makedirs(TARGET_DIR)
+          
           response = requests.get(ZIP_URL, timeout=60)
           response.raise_for_status()
 
           z = zipfile.ZipFile(io.BytesIO(response.content))
           
-          # 1. Extraer SÓLO los archivos que necesitamos
+          # 1. Extraer SÓLO los archivos que necesitamos a la carpeta TARGET_DIR
           for filename in z.namelist():
-              if filename in FILES_TO_EXTRACT:
-                  with z.open(filename) as source, open(filename, "wb") as target:
+              # Ignorar los archivos que puedan estar en subdirectorios dentro del ZIP, nos quedamos solo con el nombre
+              base_filename = os.path.basename(filename) 
+              
+              if base_filename in FILES_TO_EXTRACT:
+                  # Definir la ruta de destino dentro de la carpeta 'gtfs'
+                  target_path = os.path.join(TARGET_DIR, base_filename)
+                  
+                  with z.open(filename) as source, open(target_path, "wb") as target:
                       target.write(source.read())
-                      print(f"Extraído y mantenido: {filename}")
+                      print(f"Extraído y mantenido: {target_path}")
               else:
-                  # Ignoramos otros archivos como stop_times.txt, calendar.txt, etc.
+                  # Ignoramos otros archivos como calendar.txt, etc.
                   print(f"Ignorado: {filename}")
                   
-          # 2. Borrar explícitamente el archivo que NO queremos (como medida de seguridad)
-          if os.path.exists(FILE_TO_DELETE):
-              os.remove(FILE_TO_DELETE)
+          # 2. Borrar explícitamente el archivo que NO queremos si ya existía en la carpeta GTFS
+          if os.path.exists(os.path.join(TARGET_DIR, FILE_TO_DELETE)):
+              os.remove(os.path.join(TARGET_DIR, FILE_TO_DELETE))
               print(f"Eliminado archivo pesado: {FILE_TO_DELETE}")
               
           EOF
@@ -74,8 +86,8 @@ jobs:
       - name: Verificar cambios y hacer commit
         id: commit
         run: |
-          # Añadir SÓLO los archivos que deben subir
-          git add routes.txt trips.txt
+          # Añadir SÓLO los archivos dentro de la carpeta GTFS
+          git add gtfs/routes.txt gtfs/trips.txt
           
           # Verificar si hay algo que commitear
           if git diff --staged --quiet; then
@@ -91,4 +103,4 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref_name }} # Sube a la rama actual (ej. 'main' o 'master')
+          branch: ${{ github.ref_name }}
