@@ -1,31 +1,31 @@
-// --- 1. Definición de URLs y Áreas Geográficas ---
+// --- 1. Definición de URLs, Tiempos y Áreas Geográficas ---
 
-// URLs de datos en tiempo real de Renfe (¡Cambiado a .pb!)
-const PROXY = "https://corsproxy.io/?"; 
-const RENFE_VP_URL = "https://gtfsrt.renfe.com/vehicle_positions.pb"; // <-- CAMBIO CLAVE
-const RENFE_TU_URL = "https://gtfsrt.renfe.com/trip_updates.pb";     // <-- CAMBIO CLAVE
+// URL base de tu servidor decodificador alojado en Render
+const RENDER_BASE_URL = "https://cercaniasvlc.onrender.com"; 
 
-const VP_URL = PROXY + encodeURIComponent(RENFE_VP_URL);
-const TU_URL = PROXY + encodeURIComponent(RENFE_TU_URL);
+// Estas URLs ahora acceden al servidor Python que decodifica el .pb de Renfe
+const VP_URL = RENDER_BASE_URL + "/api/vehicle_positions";
+const TU_URL = RENDER_BASE_URL + "/api/trip_updates";
 
 // URLs de datos estáticos (APUNTANDO A LA CARPETA GTFS)
 const ROUTES_URL = 'gtfs/routes.txt';
 const TRIPS_URL = 'gtfs/trips.txt';
 const STOPS_URL = 'gtfs/stops.txt'; 
 
-// Coordenadas Bounding Box (Comunidad Valenciana + Región de Murcia)
+// Coordenadas Bounding Box (Comunidad Valenciana + Murcia)
 const VALENCIA_BBOX = {
-    minLat: 37.0,   // Incluye Murcia al Sur
-    maxLat: 40.80, 
-    minLon: -2.5,   // Incluye Murcia al Oeste
-    maxLon: 0.70
+    minLat: 37.95, maxLat: 40.80, minLon: -1.80, maxLon: 0.70
 };
+
+// CONSTANTE PARA ANIMACIÓN FLUIDA (30 segundos entre updates)
+const ANIMATION_DURATION_MS = 30000; 
 
 let trenesCV = {};
 let trainMarkersGroup = L.layerGroup();
 let MapRoutes = {}; 
 let MapTrips = {};
-let MapStops = {}; // Objeto para mapear stop_id a stop_name
+let MapStops = {}; 
+
 
 // --- 2. Mapeos de Datos Estáticos GTFS (Carga desde el Repositorio) ---
 
@@ -68,11 +68,12 @@ async function loadStaticData() {
         const tripsCSV = await tripsResponse.text();
         const stopsCSV = await stopsResponse.text();
 
-        // Procesar routes.txt y trips.txt
+        // Procesar routes.txt
         parseCSV(routesCSV).forEach(route => {
             MapRoutes[route.route_id] = { short_name: route.route_short_name, long_name: route.route_long_name };
         });
 
+        // Procesar trips.txt
         parseCSV(tripsCSV).forEach(trip => {
             const headsign = trip.trip_headsign ? trip.trip_headsign.trim() : 'Destino Desconocido';
             if(trip.trip_id) {
@@ -99,7 +100,6 @@ async function loadStaticData() {
 
 // --- 3. Inicialización del Mapa ---
 
-// Ajustado a [38.9, -0.9] (Centro de CV + Murcia) con zoom 9 para cobertura completa
 const map = L.map('mapid').setView([38.9, -0.9], 9); 
 trainMarkersGroup.addTo(map);
 
@@ -117,7 +117,6 @@ const trainIcon = L.icon({
 
 // --- 4. Funciones de Procesamiento de Datos ---
 
-// FILTRO GEOGRÁFICO ACTIVADO PARA CV + MURCIA
 function isValenciaTrain(lat, lon) {
    const bbox = VALENCIA_BBOX;
    return lat >= bbox.minLat && lat <= bbox.maxLat && 
@@ -127,8 +126,12 @@ function isValenciaTrain(lat, lon) {
 function processTripUpdates(entities) {
     entities.forEach(entity => {
         const tripUpdate = entity.tripUpdate;
+        // La decodificación en Python usa 'tripUpdate' y no 'trip_update'
+        if (!tripUpdate) return; 
+
         const tripId = tripUpdate.trip.tripId.trim(); 
-        const delay = tripUpdate.delay || 0;
+        // El campo 'delay' viene en segundos
+        const delay = tripUpdate.delay || 0; 
 
         if (trenesCV[tripId]) {
             trenesCV[tripId].delay = delay;
@@ -153,8 +156,7 @@ function processVehiclePositions(entities) {
         if (!isValenciaTrain(lat, lon)) {
             return;
         }
-        // ----------------------
-
+        
         const tripInfo = MapTrips[tripId];
         if (!tripInfo) {
             return; 
@@ -164,6 +166,7 @@ function processVehiclePositions(entities) {
         let platform_code = 'N/A';
         let current_stop_id = vehicle.stopId ? vehicle.stopId.trim() : null; 
         
+        // El campo 'label' viene de Renfe y a veces contiene la vía/andén entre paréntesis
         if (vehicle.vehicle && vehicle.vehicle.label) {
             const match = vehicle.vehicle.label.match(/\((\d+)\)$/); 
             if (match && match[1]) {
@@ -179,6 +182,7 @@ function processVehiclePositions(entities) {
         activeTripIds.add(tripId);
         
         if (!trenesCV[tripId]) {
+            // CREACIÓN INICIAL DEL TREN
             trenesCV[tripId] = { 
                 lat, lon, 
                 delay: 0, 
@@ -188,18 +192,25 @@ function processVehiclePositions(entities) {
                 platform: platform_code,      
                 current_stop_id: current_stop_id 
             };
-            updateMarker(tripId);
+            updateMarker(tripId); 
+
         } else {
-            // Actualización de posición de trenes existentes
+            // ACTUALIZACIÓN DE POSICIÓN PARA ANIMACIÓN
+            const oldLat = trenesCV[tripId].lat;
+            const oldLon = trenesCV[tripId].lon;
+            
+            // 1. Guardar la nueva posición
             trenesCV[tripId].lat = lat;
             trenesCV[tripId].lon = lon;
             trenesCV[tripId].platform = platform_code;       
             trenesCV[tripId].current_stop_id = current_stop_id; 
-            updateMarker(tripId);
+            
+            // 2. Llamar a la función de actualización con las posiciones para la animación
+            updateMarker(tripId, [oldLat, oldLon], [lat, lon]);
         }
     });
 
-    // Limpiar marcadores
+    // Limpiar marcadores de trenes que ya no están en el feed
     Object.keys(trenesCV).forEach(tripId => {
         if (!activeTripIds.has(tripId)) {
             if (trenesCV[tripId].marker) {
@@ -210,13 +221,13 @@ function processVehiclePositions(entities) {
     });
 }
 
-function updateMarker(tripId) {
+function updateMarker(tripId, oldPos, newPos) {
     const data = trenesCV[tripId];
     const delayMinutes = Math.round(data.delay / 60);
     const delayStyle = delayMinutes > 0 ? 'color:red;' : 'color:green;';
     const delayText = delayMinutes > 0 ? `<span style="${delayStyle}">+${delayMinutes} min de retraso</span>` : `<span style="${delayStyle}">A tiempo</span>`;
 
-    // 1. Obtener el nombre legible de la parada (usando MapStops)
+    // 1. Obtener el nombre legible de la parada
     let stopName = 'ID no reportada / En ruta';
     if (data.current_stop_id && MapStops[data.current_stop_id]) {
         stopName = MapStops[data.current_stop_id].stop_name;
@@ -224,7 +235,7 @@ function updateMarker(tripId) {
         stopName = `ID ${data.current_stop_id} (Nombre no encontrado)`;
     }
     
-    // 2. Determinar qué mostrar para la plataforma
+    // 2. Contenido del popup
     const platformContent = data.platform !== 'N/A' 
         ? `<strong style="font-size: 1.1em; color: #007bff;">Vía ${data.platform}</strong>` 
         : 'N/A (En tránsito o vía no asignada)';
@@ -240,16 +251,24 @@ function updateMarker(tripId) {
     `;
 
     if (data.marker) {
-        // Mover el marcador a la nueva posición
-        data.marker.setLatLng([data.lat, data.lon]);
+        // --- LÓGICA DE MOVIMIENTO CON ANIMACIÓN (MovingMarker) ---
+        if (oldPos && newPos && (oldPos[0] !== newPos[0] || oldPos[1] !== newPos[1])) {
+             // Mueve el marcador de forma fluida a la nueva posición en 30 segundos
+            data.marker.moveTo(newPos, ANIMATION_DURATION_MS);
+        } else {
+            // Si la posición no ha cambiado, actualizamos solo la posición/popup
+            data.marker.setLatLng([data.lat, data.lon]);
+        }
         data.marker.setPopupContent(popupContent);
+
     } else {
-        // Crear el marcador por primera vez
-        const marker = L.marker([data.lat, data.lon], { icon: trainIcon })
+        // Crear el marcador como MovingMarker
+        const marker = L.movingMarker([[data.lat, data.lon]], [ANIMATION_DURATION_MS], { icon: trainIcon, autostart: true })
             .bindPopup(popupContent, {closeButton: false, autoClose: false});
 
         data.marker = marker;
         trainMarkersGroup.addLayer(marker);
+        marker.start(); // Inicia el MovingMarker
     }
 }
 
@@ -263,19 +282,17 @@ async function fetchAndUpdateData() {
     
     try {
         const tu_response = await fetch(TU_URL);
-        // Intentamos leer el .pb como JSON
-        const tu_data = await tu_response.json(); 
+        const tu_data = await tu_response.json();
         processTripUpdates(tu_data.entity);
 
         const vp_response = await fetch(VP_URL);
-        // Intentamos leer el .pb como JSON
         const vp_data = await vp_response.json();
         processVehiclePositions(vp_data.entity);
         
         console.log(`Trenes visibles: ${Object.keys(trenesCV).length}`);
 
     } catch (error) {
-        console.error("Error al obtener o procesar datos en tiempo real. Si el error dice 'unexpected character', la API no está sirviendo JSON y necesitas un decodificador .pb.", error);
+        console.error("Error al obtener o procesar datos en tiempo real (Backend caído o problema de red):", error);
     }
 }
 
@@ -283,6 +300,6 @@ async function fetchAndUpdateData() {
 
 loadStaticData().then(() => {
     fetchAndUpdateData();
-    // Ejecutar cada 30 segundos (30000 ms) para coincidir con la frecuencia de la API de Renfe
+    // Ejecutar cada 30 segundos (30000 ms)
     window.updateInterval = setInterval(fetchAndUpdateData, 30000); 
 });
