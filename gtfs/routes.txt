@@ -290,6 +290,8 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 41T0014C1  ,C1  ,Alacant Terminal                        -Alacant Terminal                        ,2,73B6E0,FFFFFF                                    
 41T0015C1  ,C1  ,Callosa de Segura                       -Torrellano                              ,2,73B6E0,FFFFFF                                    
 41T0016C1  ,C1  ,Torrellano                              -Callosa de Segura                       ,2,73B6E0,FFFFFF                                    
+41T0017C1  ,C1  ,                                        -Murcia del Carmen                       ,2,73B6E0,FFFFFF                                    
+41T0018C1  ,C1  ,Murcia del Carmen                       -                                        ,2,73B6E0,FFFFFF                                    
 51T0001R1  ,R1  ,Molins de Rei                           -Maçanet-Massanes                        ,2,7DBCEC,FFFFFF                                    
 51T0002R1  ,R1  ,Maçanet-Massanes                        -Molins de Rei                           ,2,7DBCEC,FFFFFF                                    
 51T0003R2N ,R2N ,Aeroport                                -Maçanet-Massanes                        ,2,D0DF00,FFFFFF                                    
@@ -498,6 +500,8 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 62T0032C2  ,C2  ,                                        -                                        ,2,009645,FFFFFF                                    
 62T0033C3  ,C3  ,Astillero                               -La Cantábrica                           ,2,094188,FFFFFF                                    
 62T0034C3  ,C3  ,La Cantábrica                           -Astillero                               ,2,094188,FFFFFF                                    
+62T0035C3  ,C3  ,Orejo                                   -Marrón                                  ,2,094188,FFFFFF                                    
+62T0036C3  ,C3  ,Marrón                                  -Orejo                                   ,2,094188,FFFFFF                                    
 70T0001C1  ,C1  ,Casetas                                 -Miraflores                              ,2,D90724,FFFFFF                                    
 70T0002C1  ,C1  ,Miraflores                              -Casetas                                 ,2,D90724,FFFFFF                                    
 70T0003C1  ,C1  ,Casetas                                 -Miraflores                              ,2,D90724,FFFFFF                                    
