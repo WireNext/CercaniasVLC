@@ -195,6 +195,8 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 20T0102C6  ,C6  ,                                        -                                        ,2,579BE2,FFFFFF                                    
 20T0103C7  ,C7  ,                                        -                                        ,2,BCCF00,FFFFFF                                    
 20T0104C7  ,C7  ,                                        -                                        ,2,BCCF00,FFFFFF                                    
+20T0105C5A ,C5A ,Gijon (Sanz Crespo)                     -Oviedo                                  ,2,C4D600,FFFFFF                                    
+20T0106C5A ,C5A ,Oviedo                                  -Gijon (Sanz Crespo)                     ,2,C4D600,FFFFFF                                    
 30T0001C1  ,C1  ,Lora del Rio                            -Lebrija                                 ,2,78B4E1,FFFFFF                                    
 30T0002C1  ,C1  ,Lebrija                                 -Lora del Rio                            ,2,78B4E1,FFFFFF                                    
 30T0003C2  ,C2  ,Santa Justa                             -Cartuja                                 ,2,067B34,FFFFFF                                    
