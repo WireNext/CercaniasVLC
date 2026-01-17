@@ -434,6 +434,8 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 51T0136R3  ,R3  ,La Garriga                              -Barcelona-Fabra i Puig                  ,3,E54A3C,FFFFFF                                    
 51T0137RT1 ,RT1 ,La Plana-Picamoixons                    -Tarragona                               ,2,39D4CC,FFFFFF                                    
 51T0138RT1 ,RT1 ,Tarragona                               -La Plana-Picamoixons                    ,2,39D4CC,FFFFFF                                    
+51T0139R13 ,R13 ,Lleida                                  -Vinaixa                                 ,2,146520,FFFFFF                                    
+51T0140R13 ,R13 ,Vinaixa                                 -Lleida                                  ,2,146520,FFFFFF                                    
 60T0001C1  ,C1  ,Abando                                  -Santurtzi                               ,2,D7001E,FFFFFF                                    
 60T0002C1  ,C1  ,Santurtzi                               -Abando                                  ,2,D7001E,FFFFFF                                    
 60T0003C2  ,C2  ,Abando                                  -Muskiz                                  ,2,0F8C2D,FFFFFF                                    
