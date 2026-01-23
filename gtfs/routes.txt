@@ -81,8 +81,8 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 10T0082C2  ,C2  ,                                        -Guadalajara                             ,2,00943D,FFFFFF                                    
 10T0083C2  ,C2  ,Guadalajara                             -                                        ,2,00943D,FFFFFF                                    
 10T0084C2  ,C2  ,                                        -Guadalajara                             ,2,00943D,FFFFFF                                    
-10T0085C8  ,C8  ,                                        -El Escorial                             ,2,868584,FFFFFF                                    
-10T0086C8  ,C8  ,El Escorial                             -                                        ,2,868584,FFFFFF                                    
+10T0085C8a ,C8a ,                                        -El Escorial                             ,2,868584,FFFFFF                                    
+10T0086C8a ,C8a ,El Escorial                             -                                        ,2,868584,FFFFFF                                    
 10T0087C8b ,C8b ,Chamartín - Clara Campoamor             -Cercedilla                              ,2,868584,FFFFFF                                    
 10T0088C8b ,C8b ,Cercedilla                              -Chamartín - Clara Campoamor             ,2,868584,FFFFFF                                    
 10T0089C8  ,C8  ,Chamartín - Clara Campoamor             -Cercedilla                              ,2,868584,FFFFFF                                    
