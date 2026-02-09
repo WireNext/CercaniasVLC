@@ -436,6 +436,28 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 51T0138RT1 ,RT1 ,Tarragona                               -La Plana-Picamoixons                    ,2,39D4CC,FFFFFF                                    
 51T0139R13 ,R13 ,Lleida                                  -Vinaixa                                 ,2,146520,FFFFFF                                    
 51T0140R13 ,R13 ,Vinaixa                                 -Lleida                                  ,2,146520,FFFFFF                                    
+51T0141R1  ,R1  ,Lleida                                  -                                        ,2,094188,FFFFFF                                    
+51T0142R1  ,R1  ,                                        -Lleida                                  ,2,094188,FFFFFF                                    
+51T0143R1  ,R1  ,Riba-roja d'Ebre                        -                                        ,2,094188,FFFFFF                                    
+51T0144R1  ,R1  ,                                        -Riba-roja d'Ebre                        ,2,094188,FFFFFF                                    
+51T0145R1  ,R1  ,                                        -                                        ,2,094188,FFFFFF                                    
+51T0146R1  ,R1  ,                                        -                                        ,2,094188,FFFFFF                                    
+51T0147R1  ,R1  ,                                        -                                        ,2,094188,FFFFFF                                    
+51T0148R1  ,R1  ,                                        -                                        ,2,094188,FFFFFF                                    
+51T0149R1  ,R1  ,Binefar                                 -                                        ,2,094188,FFFFFF                                    
+51T0150R1  ,R1  ,                                        -Binefar                                 ,2,094188,FFFFFF                                    
+51T0151R1  ,R1  ,                                        -                                        ,2,094188,FFFFFF                                    
+51T0152R1  ,R1  ,                                        -                                        ,2,094188,FFFFFF                                    
+51T0153R1  ,R1  ,                                        -                                        ,2,094188,FFFFFF                                    
+51T0154R1  ,R1  ,                                        -                                        ,2,094188,FFFFFF                                    
+51T0155R1  ,R1  ,                                        -                                        ,2,094188,FFFFFF                                    
+51T0156R1  ,R1  ,                                        -                                        ,2,094188,FFFFFF                                    
+51T0157R1  ,R1  ,                                        -                                        ,2,094188,FFFFFF                                    
+51T0158R1  ,R1  ,                                        -                                        ,2,094188,FFFFFF                                    
+51T0159R1  ,R1  ,                                        -                                        ,2,094188,FFFFFF                                    
+51T0160R1  ,R1  ,                                        -                                        ,2,094188,FFFFFF                                    
+51T0161R1  ,R1  ,Riba-roja d'Ebre                        -                                        ,2,094188,FFFFFF                                    
+51T0162R1  ,R1  ,                                        -Riba-roja d'Ebre                        ,2,094188,FFFFFF                                    
 60T0001C1  ,C1  ,Abando                                  -Santurtzi                               ,2,D7001E,FFFFFF                                    
 60T0002C1  ,C1  ,Santurtzi                               -Abando                                  ,2,D7001E,FFFFFF                                    
 60T0003C2  ,C2  ,Abando                                  -Muskiz                                  ,2,0F8C2D,FFFFFF                                    
