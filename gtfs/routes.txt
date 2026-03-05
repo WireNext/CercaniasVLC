@@ -460,6 +460,8 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 51T0162R1  ,R1  ,                                        -Riba-roja d'Ebre                        ,2,094188,FFFFFF                                    
 51T0163R15 ,R15 ,                                        -Mora la Nova                            ,2,978571,FFFFFF                                    
 51T0164R15 ,R15 ,Mora la Nova                            -                                        ,2,978571,FFFFFF                                    
+51T0165R17 ,R17 ,Sant Vicenc de Calders                  -Tarragona                               ,2,F3B12E,FFFFFF                                    
+51T0166R17 ,R17 ,Tarragona                               -Sant Vicenc de Calders                  ,2,F3B12E,FFFFFF                                    
 60T0001C1  ,C1  ,Abando                                  -Santurtzi                               ,2,D7001E,FFFFFF                                    
 60T0002C1  ,C1  ,Santurtzi                               -Abando                                  ,2,D7001E,FFFFFF                                    
 60T0003C2  ,C2  ,Abando                                  -Muskiz                                  ,2,0F8C2D,FFFFFF                                    
