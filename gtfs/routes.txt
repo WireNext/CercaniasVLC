@@ -197,8 +197,8 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 20T0102C6  ,C6  ,                                        -                                        ,2,579BE2,FFFFFF                                    
 20T0103C7  ,C7  ,                                        -                                        ,2,BCCF00,FFFFFF                                    
 20T0104C7  ,C7  ,                                        -                                        ,2,BCCF00,FFFFFF                                    
-20T0105C5A ,C5A ,Gijon (Sanz Crespo)                     -Oviedo                                  ,2,C4D600,FFFFFF                                    
-20T0106C5A ,C5A ,Oviedo                                  -Gijon (Sanz Crespo)                     ,2,C4D600,FFFFFF                                    
+20T0105C5a ,C5a ,Gijon (Sanz Crespo)                     -Oviedo                                  ,2,C4D600,FFFFFF                                    
+20T0106C5a ,C5a ,Oviedo                                  -Gijon (Sanz Crespo)                     ,2,C4D600,FFFFFF                                    
 20T0107C2  ,C2  ,                                        -                                        ,2,009746,FFFFFF                                    
 20T0108C2  ,C2  ,                                        -                                        ,2,009746,FFFFFF                                    
 30T0001C1  ,C1  ,Lora del Rio                            -Lebrija                                 ,2,78B4E1,FFFFFF                                    
@@ -298,6 +298,20 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 41T0016C1  ,C1  ,Torrellano                              -Callosa de Segura                       ,2,73B6E0,FFFFFF                                    
 41T0017C1  ,C1  ,                                        -Murcia del Carmen                       ,2,73B6E0,FFFFFF                                    
 41T0018C1  ,C1  ,Murcia del Carmen                       -                                        ,2,73B6E0,FFFFFF                                    
+45T0001C4  ,C4  ,Cartagena                               -Los Nietos                              ,2,E5202A,FFFFFF                                    
+45T0002C4  ,C4  ,Los Nietos                              -Cartagena                               ,2,E5202A,FFFFFF                                    
+45T0003C1  ,C1  ,Cartagena                               -Los Nietos                              ,2,00FFFF,FFFFFF                                    
+45T0004C1  ,C1  ,Los Nietos                              -Cartagena                               ,2,00FFFF,FFFFFF                                    
+46T0001C1  ,C1  ,Ferrol                                  -Ortigueira                              ,2,00FFFF,FFFFFF                                    
+46T0002C1  ,C1  ,Ortigueira                              -Ferrol                                  ,2,00FFFF,FFFFFF                                    
+46T0003C1  ,C1  ,                                        -                                        ,2,00FFFF,FFFFFF                                    
+46T0004C1  ,C1  ,                                        -                                        ,2,00FFFF,FFFFFF                                    
+47T0001C1  ,C1  ,Asunción-Universidad                    -Cistierna                               ,2,00FFFF,FFFFFF                                    
+47T0002C1  ,C1  ,Cistierna                               -Asunción-Universidad                    ,2,00FFFF,FFFFFF                                    
+47T0003C1  ,C1  ,León                                    -Asunción-Universidad                    ,2,00FFFF,FFFFFF                                    
+47T0004C1  ,C1  ,Asunción-Universidad                    -León                                    ,2,00FFFF,FFFFFF                                    
+47T0005BUS ,BUS ,León                                    -Asunción-Universidad                    ,2,00FFFF,FFFFFF                                    
+47T0006BUS ,BUS ,Asunción-Universidad                    -León                                    ,2,00FFFF,FFFFFF                                    
 51T0001R1  ,R1  ,Molins de Rei                           -Maçanet-Massanes                        ,2,7DBCEC,FFFFFF                                    
 51T0002R1  ,R1  ,Maçanet-Massanes                        -Molins de Rei                           ,2,7DBCEC,FFFFFF                                    
 51T0003R2N ,R2N ,Aeroport                                -Maçanet-Massanes                        ,2,D0DF00,FFFFFF                                    
