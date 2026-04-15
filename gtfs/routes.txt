@@ -280,6 +280,8 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 40T0036C2  ,C2  ,L'Alcudia de Crespins                   -Moixent                                 ,3,F79529,FFFFFF                                    
 40T0037C2  ,C2  ,Moixent                                 -Xativa                                  ,3,F79529,FFFFFF                                    
 40T0038C2  ,C2  ,Xativa                                  -Moixent                                 ,3,F79529,FFFFFF                                    
+40T0039C6  ,C6  ,Valencia - Cabanyal                     -Sagunt                                  ,2,0D3386,FFFFFF                                    
+40T0040C6  ,C6  ,Sagunt                                  -Valencia - Cabanyal                     ,2,0D3386,FFFFFF                                    
 41T0001C1  ,C1  ,Murcia del Carmen                       -Alacant Terminal                        ,2,73B6E0,FFFFFF                                    
 41T0002C1  ,C1  ,Alacant Terminal                        -Murcia del Carmen                       ,2,73B6E0,FFFFFF                                    
 41T0003C2  ,C2  ,Murcia del Carmen                       -Aguilas                                 ,2,108C2C,FFFFFF                                    
@@ -482,8 +484,8 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 51T0168R1  ,R1  ,Tarragona                               -Sant Vicenc de Calders                  ,2,094188,FFFFFF                                    
 51T0169R15 ,R15 ,Mora la Nova                            -                                        ,2,978571,FFFFFF                                    
 51T0170R15 ,R15 ,                                        -Mora la Nova                            ,2,978571,FFFFFF                                    
-51T0171R15 ,R15 ,Sant Vicenc de Calders                  -El Prat de Llobregat                    ,2,978571,FFFFFF                                    
-51T0172R15 ,R15 ,El Prat de Llobregat                    -Sant Vicenc de Calders                  ,2,978571,FFFFFF                                    
+51T0171R15 ,R15 ,Sant Vicenc de Calders                  -El Prat de Llobregat                    ,3,978571,FFFFFF                                    
+51T0172R15 ,R15 ,El Prat de Llobregat                    -Sant Vicenc de Calders                  ,3,978571,FFFFFF                                    
 60T0001C1  ,C1  ,Abando                                  -Santurtzi                               ,2,D7001E,FFFFFF                                    
 60T0002C1  ,C1  ,Santurtzi                               -Abando                                  ,2,D7001E,FFFFFF                                    
 60T0003C2  ,C2  ,Abando                                  -Muskiz                                  ,2,0F8C2D,FFFFFF                                    
