@@ -330,6 +330,8 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 47T0004C1  ,C1  ,Asunción-Universidad                    -León                                    ,2,00FFFF,FFFFFF                                    
 47T0005BUS ,BUS ,León                                    -Asunción-Universidad                    ,2,00FFFF,FFFFFF                                    
 47T0006BUS ,BUS ,Asunción-Universidad                    -León                                    ,2,00FFFF,FFFFFF                                    
+47T0007C1  ,C1  ,                                        -                                        ,2,706D75,FFFFFF                                    
+47T0008C1  ,C1  ,                                        -                                        ,2,706D75,FFFFFF                                    
 51T0001R1  ,R1  ,Molins de Rei                           -Maçanet-Massanes                        ,2,7DBCEC,FFFFFF                                    
 51T0002R1  ,R1  ,Maçanet-Massanes                        -Molins de Rei                           ,2,7DBCEC,FFFFFF                                    
 51T0003R2N ,R2N ,Aeroport                                -Maçanet-Massanes                        ,2,D0DF00,FFFFFF                                    
