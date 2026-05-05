@@ -520,8 +520,8 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 60T0014C4A ,C4A ,Carranza                                -Bilbao La Concordia                     ,2,E93CAC,FFFFFF                                    
 60T0015C4  ,C4  ,                                        -Carranza                                ,2,E93CAC,FFFFFF                                    
 60T0016C4  ,C4  ,Carranza                                -                                        ,2,E93CAC,FFFFFF                                    
-60T0017C5  ,C5  ,Aranguren                               -Carranza                                ,2,FFFFFF,FFFFFF                                    
-60T0018C5  ,C5  ,Carranza                                -Aranguren                               ,2,FFFFFF,FFFFFF                                    
+60T0017C5  ,C5  ,Aranguren                               -Carranza                                ,2,2C2A86,FFFFFF                                    
+60T0018C5  ,C5  ,Carranza                                -Aranguren                               ,2,2C2A86,FFFFFF                                    
 61T0001C1  ,C1  ,Irun                                    -Brincola                                ,2,DA001C,FFFFFF                                    
 61T0002C1  ,C1  ,Brincola                                -Irun                                    ,2,DA001C,FFFFFF                                    
 61T0003C1  ,C1  ,Lezo-Renteria                           -Beasain                                 ,2,DA001C,FFFFFF                                    
