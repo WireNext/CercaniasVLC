@@ -522,6 +522,10 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 60T0016C4  ,C4  ,Carranza                                -                                        ,2,E93CAC,FFFFFF                                    
 60T0017C5  ,C5  ,Aranguren                               -Carranza                                ,2,2C2A86,FFFFFF                                    
 60T0018C5  ,C5  ,Carranza                                -Aranguren                               ,2,2C2A86,FFFFFF                                    
+60T0019C5  ,C5  ,                                        -Bilbao La Concordia                     ,2,2C2A86,FFFFFF                                    
+60T0020C5  ,C5  ,Bilbao La Concordia                     -                                        ,2,2C2A86,FFFFFF                                    
+60T0021C4  ,C4  ,La Asunción/Universidad                 -Guardo                                  ,2,E93CAC,FFFFFF                                    
+60T0022C4  ,C4  ,Guardo                                  -La Asunción/Universidad                 ,2,E93CAC,FFFFFF                                    
 61T0001C1  ,C1  ,Irun                                    -Brincola                                ,2,DA001C,FFFFFF                                    
 61T0002C1  ,C1  ,Brincola                                -Irun                                    ,2,DA001C,FFFFFF                                    
 61T0003C1  ,C1  ,Lezo-Renteria                           -Beasain                                 ,2,DA001C,FFFFFF                                    
