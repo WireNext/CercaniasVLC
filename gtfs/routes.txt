@@ -314,8 +314,10 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 41T0016C1  ,C1  ,Torrellano                              -Callosa de Segura                       ,2,73B6E0,FFFFFF                                    
 41T0017C1  ,C1  ,                                        -Murcia del Carmen                       ,2,73B6E0,FFFFFF                                    
 41T0018C1  ,C1  ,Murcia del Carmen                       -                                        ,2,73B6E0,FFFFFF                                    
-41T0019C2  ,C2  ,Lorca-Sutullena                         -Murcia del Carmen                       ,3,108C2C,FFFFFF                                    
-41T0020C2  ,C2  ,Murcia del Carmen                       -Lorca-Sutullena                         ,3,108C2C,FFFFFF                                    
+41T0019C2  ,C2  ,Murcia del Carmen                       -Lorca-Sutullena                         ,3,E93CAC,FFFFFF                                    
+41T0020C2  ,C2  ,Lorca-Sutullena                         -Murcia del Carmen                       ,3,E93CAC,FFFFFF                                    
+41T0021C2  ,C2  ,Lorca-Sutullena                         -Murcia del Carmen                       ,3,108C2C,FFFFFF                                    
+41T0022C2  ,C2  ,Murcia del Carmen                       -Lorca-Sutullena                         ,3,108C2C,FFFFFF                                    
 45T0001C4  ,C4  ,Cartagena                               -Los Nietos                              ,2,E5202A,FFFFFF                                    
 45T0002C4  ,C4  ,Los Nietos                              -Cartagena                               ,2,E5202A,FFFFFF                                    
 45T0003C1  ,C1  ,Cartagena                               -Los Nietos                              ,2,00FFFF,FFFFFF                                    
