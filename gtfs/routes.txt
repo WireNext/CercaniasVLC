@@ -23,8 +23,8 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 10T0022C8b ,C8b ,Cercedilla                              -Atocha                                  ,2,868584,FFFFFF                                    
 10T0023C8a ,C8a ,Atocha                                  -El Escorial                             ,2,868584,FFFFFF                                    
 10T0024C8a ,C8a ,El Escorial                             -Atocha                                  ,2,868584,FFFFFF                                    
-10T0025C9  ,C9  ,Cercedilla                              -Cotos                                   ,3,F3972A,FFFFFF                                    
-10T0026C9  ,C9  ,Cotos                                   -Cercedilla                              ,3,F3972A,FFFFFF                                    
+10T0025C9  ,C9  ,Cercedilla                              -Cotos                                   ,3,915419,FFFFFF                                    
+10T0026C9  ,C9  ,Cotos                                   -Cercedilla                              ,3,915419,FFFFFF                                    
 10T0027C8a ,C8a ,Atocha                                  -El Escorial                             ,2,868584,FFFFFF                                    
 10T0028C8a ,C8a ,El Escorial                             -Atocha                                  ,2,868584,FFFFFF                                    
 10T0029C3  ,C3  ,Aranjuez                                -                                        ,2,952585,FFFFFF                                    
@@ -250,6 +250,10 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 32T0006C2  ,C2  ,                                        -                                        ,2,0fcf34,FFFFFF                                    
 32T0007C2  ,C2  ,Álora                                   -                                        ,2,0fcf34,FFFFFF                                    
 32T0008C2  ,C2  ,                                        -Álora                                   ,2,0fcf34,FFFFFF                                    
+32T0009C2  ,C2  ,Álora                                   -Cártama                                 ,2,0fcf34,FFFFFF                                    
+32T0010C2  ,C2  ,Cártama                                 -Álora                                   ,2,0fcf34,FFFFFF                                    
+32T0011C2  ,C2  ,Pizarra                                 -Cártama                                 ,2,0fcf34,FFFFFF                                    
+32T0012C2  ,C2  ,Cártama                                 -Pizarra                                 ,2,0fcf34,FFFFFF                                    
 40T0001C1  ,C1  ,Valencia Nord                           -Platja i Grau de Gandia                 ,2,7AB3DE,FFFFFF                                    
 40T0002C1  ,C1  ,Platja i Grau de Gandia                 -Valencia Nord                           ,2,7AB3DE,FFFFFF                                    
 40T0005C2  ,C2  ,Valencia Nord                           -Moixent                                 ,2,F79529,FFFFFF                                    
@@ -318,22 +322,20 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 41T0020C2  ,C2  ,Lorca-Sutullena                         -Murcia del Carmen                       ,3,E93CAC,FFFFFF                                    
 41T0021C2  ,C2  ,Lorca-Sutullena                         -Murcia del Carmen                       ,3,108C2C,FFFFFF                                    
 41T0022C2  ,C2  ,Murcia del Carmen                       -Lorca-Sutullena                         ,3,108C2C,FFFFFF                                    
-45T0001C4  ,C4  ,Cartagena                               -Los Nietos                              ,2,E5202A,FFFFFF                                    
-45T0002C4  ,C4  ,Los Nietos                              -Cartagena                               ,2,E5202A,FFFFFF                                    
-45T0003C1  ,C1  ,Cartagena                               -Los Nietos                              ,2,00FFFF,FFFFFF                                    
-45T0004C1  ,C1  ,Los Nietos                              -Cartagena                               ,2,00FFFF,FFFFFF                                    
-46T0001C1  ,C1  ,Ferrol                                  -Ortigueira                              ,2,00FFFF,FFFFFF                                    
-46T0002C1  ,C1  ,Ortigueira                              -Ferrol                                  ,2,00FFFF,FFFFFF                                    
-46T0003C1  ,C1  ,                                        -                                        ,2,00FFFF,FFFFFF                                    
-46T0004C1  ,C1  ,                                        -                                        ,2,00FFFF,FFFFFF                                    
-47T0001C1  ,C1  ,Asunción-Universidad                    -Cistierna                               ,2,00FFFF,FFFFFF                                    
-47T0002C1  ,C1  ,Cistierna                               -Asunción-Universidad                    ,2,00FFFF,FFFFFF                                    
-47T0003C1  ,C1  ,León                                    -Asunción-Universidad                    ,2,00FFFF,FFFFFF                                    
-47T0004C1  ,C1  ,Asunción-Universidad                    -León                                    ,2,00FFFF,FFFFFF                                    
-47T0005BUS ,BUS ,León                                    -Asunción-Universidad                    ,2,00FFFF,FFFFFF                                    
-47T0006BUS ,BUS ,Asunción-Universidad                    -León                                    ,2,00FFFF,FFFFFF                                    
-47T0007C1  ,C1  ,                                        -                                        ,2,706D75,FFFFFF                                    
-47T0008C1  ,C1  ,                                        -                                        ,2,706D75,FFFFFF                                    
+45T0001C1  ,C1  ,Cartagena                               -Los Nietos                              ,2,D7001E,FFFFFF                                    
+45T0002C1  ,C1  ,Los Nietos                              -Cartagena                               ,2,D7001E,FFFFFF                                    
+46T0001C1  ,C1  ,Ferrol                                  -Ortigueira                              ,2,D7001E,FFFFFF                                    
+46T0002C1  ,C1  ,Ortigueira                              -Ferrol                                  ,2,D7001E,FFFFFF                                    
+46T0003C1  ,C1  ,                                        -                                        ,2,D7001E,FFFFFF                                    
+46T0004C1  ,C1  ,                                        -                                        ,2,D7001E,FFFFFF                                    
+47T0001C1  ,C1  ,Asunción-Universidad                    -Cistierna                               ,2,D7001E,FFFFFF                                    
+47T0002C1  ,C1  ,Cistierna                               -Asunción-Universidad                    ,2,D7001E,FFFFFF                                    
+47T0003C1  ,C1  ,León                                    -Asunción-Universidad                    ,2,D7001E,FFFFFF                                    
+47T0004C1  ,C1  ,Asunción-Universidad                    -León                                    ,2,D7001E,FFFFFF                                    
+47T0005BUS ,BUS ,León                                    -Asunción-Universidad                    ,2,D7001E,FFFFFF                                    
+47T0006BUS ,BUS ,Asunción-Universidad                    -León                                    ,2,D7001E,FFFFFF                                    
+47T0007C1  ,C1  ,                                        -                                        ,2,D7001E,FFFFFF                                    
+47T0008C1  ,C1  ,                                        -                                        ,2,D7001E,FFFFFF                                    
 51T0001R1  ,R1  ,Molins de Rei                           -Maçanet-Massanes                        ,2,7DBCEC,FFFFFF                                    
 51T0002R1  ,R1  ,Maçanet-Massanes                        -Molins de Rei                           ,2,7DBCEC,FFFFFF                                    
 51T0003R2N ,R2N ,Aeroport                                -Maçanet-Massanes                        ,2,D0DF00,FFFFFF                                    
