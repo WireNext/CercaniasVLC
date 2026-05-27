@@ -93,6 +93,10 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 10T0094C10 ,C10 ,Nuevos Ministerios                      -Pinar de las Rozas                      ,2,BCCF00,FFFFFF                                    
 10T0095C4  ,C4  ,                                        -Tres Cantos                             ,2,2C2A86,FFFFFF                                    
 10T0096C4  ,C4  ,Tres Cantos                             -                                        ,2,2C2A86,FFFFFF                                    
+10T0097C8b ,C8b ,                                        -Cercedilla                              ,2,868584,FFFFFF                                    
+10T0098C8b ,C8b ,Cercedilla                              -                                        ,2,868584,FFFFFF                                    
+10T0099C3  ,C3  ,Villaverde Bajo                         -Getafe Industrial                       ,2,952585,FFFFFF                                    
+10T0100C3  ,C3  ,Getafe Industrial                       -Villaverde Bajo                         ,2,952585,FFFFFF                                    
 20T0001C1  ,C1  ,Gijon (Sanz Crespo)                     -Puente L.Fierros                        ,2,EC3541,FFFFFF                                    
 20T0002C1  ,C1  ,Puente L.Fierros                        -Gijon (Sanz Crespo)                     ,2,EC3541,FFFFFF                                    
 20T0003C2  ,C2  ,Oviedo                                  -El Entrego                              ,2,009746,FFFFFF                                    
@@ -254,6 +258,10 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 32T0010C2  ,C2  ,Cártama                                 -Álora                                   ,2,0fcf34,FFFFFF                                    
 32T0011C2  ,C2  ,Pizarra                                 -Cártama                                 ,2,0fcf34,FFFFFF                                    
 32T0012C2  ,C2  ,Cártama                                 -Pizarra                                 ,2,0fcf34,FFFFFF                                    
+32T0013C2  ,C2  ,Málaga-Centro Alameda                   -Cártama                                 ,2,0fcf34,FFFFFF                                    
+32T0014C2  ,C2  ,Cártama                                 -Málaga-Centro Alameda                   ,2,0fcf34,FFFFFF                                    
+32T0015C2  ,C2  ,Cártama                                 -Álora                                   ,3,0fcf34,FFFFFF                                    
+32T0016C2  ,C2  ,Álora                                   -Cártama                                 ,3,0fcf34,FFFFFF                                    
 40T0001C1  ,C1  ,Valencia Nord                           -Platja i Grau de Gandia                 ,2,7AB3DE,FFFFFF                                    
 40T0002C1  ,C1  ,Platja i Grau de Gandia                 -Valencia Nord                           ,2,7AB3DE,FFFFFF                                    
 40T0005C2  ,C2  ,Valencia Nord                           -Moixent                                 ,2,F79529,FFFFFF                                    
@@ -520,12 +528,12 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 60T0010C4  ,C4  ,Balmaseda                               -Sodupe                                  ,2,E93CAC,FFFFFF                                    
 60T0011C4  ,C4  ,                                        -                                        ,2,E93CAC,FFFFFF                                    
 60T0012C4  ,C4  ,                                        -                                        ,2,E93CAC,FFFFFF                                    
-60T0013C4A ,C4A ,Bilbao La Concordia                     -Carranza                                ,2,E93CAC,FFFFFF                                    
-60T0014C4A ,C4A ,Carranza                                -Bilbao La Concordia                     ,2,E93CAC,FFFFFF                                    
-60T0015C4  ,C4  ,                                        -Carranza                                ,2,E93CAC,FFFFFF                                    
-60T0016C4  ,C4  ,Carranza                                -                                        ,2,E93CAC,FFFFFF                                    
-60T0017C5  ,C5  ,Aranguren                               -Carranza                                ,2,2C2A86,FFFFFF                                    
-60T0018C5  ,C5  ,Carranza                                -Aranguren                               ,2,2C2A86,FFFFFF                                    
+60T0013C4A ,C4A ,Bilbao La Concordia                     -Karranza                                ,2,E93CAC,FFFFFF                                    
+60T0014C4A ,C4A ,Karranza                                -Bilbao La Concordia                     ,2,E93CAC,FFFFFF                                    
+60T0015C4  ,C4  ,                                        -Karranza                                ,2,E93CAC,FFFFFF                                    
+60T0016C4  ,C4  ,Karranza                                -                                        ,2,E93CAC,FFFFFF                                    
+60T0017C5  ,C5  ,Aranguren                               -Karranza                                ,2,2C2A86,FFFFFF                                    
+60T0018C5  ,C5  ,Karranza                                -Aranguren                               ,2,2C2A86,FFFFFF                                    
 60T0019C5  ,C5  ,                                        -Bilbao La Concordia                     ,2,2C2A86,FFFFFF                                    
 60T0020C5  ,C5  ,Bilbao La Concordia                     -                                        ,2,2C2A86,FFFFFF                                    
 60T0021C4  ,C4  ,La Asunción/Universidad                 -Guardo                                  ,2,E93CAC,FFFFFF                                    
