@@ -234,6 +234,8 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 30T0026C3  ,C3  ,Los Rosales                             -Cazalla-Constantina                     ,3,E4242D,FFFFFF                                    
 30T0027C3  ,C3  ,Villanueva del Rio y Minas              -Los Rosales                             ,3,E4242D,FFFFFF                                    
 30T0028C3  ,C3  ,Los Rosales                             -Villanueva del Rio y Minas              ,3,E4242D,FFFFFF                                    
+30T0029C5  ,C5  ,Santa Justa                             -Benacazon                               ,3,073588,FFFFFF                                    
+30T0030C5  ,C5  ,Benacazon                               -Santa Justa                             ,3,073588,FFFFFF                                    
 31T0001C1  ,C1  ,Cádiz                                   -Aeropuerto de Jerez                     ,2,D7001E,FFFFFF                                    
 31T0002C1  ,C1  ,Aeropuerto de Jerez                     -Cádiz                                   ,2,D7001E,FFFFFF                                    
 31T0003C1a ,C1a ,Las Aletas                              -Universidad                             ,2,D7001E,FFFFFF                                    
