@@ -304,10 +304,10 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 40T0040C6  ,C6  ,Sagunt                                  -Valencia - Cabanyal                     ,2,0D3386,FFFFFF                                    
 40T0041C3  ,C3  ,Utiel                                   -Buñol                                   ,3,7A2780,FFFFFF                                    
 40T0042C3  ,C3  ,Buñol                                   -Utiel                                   ,3,7A2780,FFFFFF                                    
-40T0043C3  ,C3  ,Valencia Nord                           -Buñol                                   ,3,7A2780,FFFFFF                                    
-40T0044C3  ,C3  ,Buñol                                   -Valencia Nord                           ,3,7A2780,FFFFFF                                    
-40T0045C3  ,C3  ,Valencia - F.S.L.                       -Buñol                                   ,3,7A2780,FFFFFF                                    
-40T0046C3  ,C3  ,Buñol                                   -Valencia - F.S.L.                       ,3,7A2780,FFFFFF                                    
+40T0043C3  ,C3  ,Valencia Nord                           -Buñol                                   ,2,7A2780,FFFFFF                                    
+40T0044C3  ,C3  ,Buñol                                   -Valencia Nord                           ,2,7A2780,FFFFFF                                    
+40T0045C3  ,C3  ,Valencia - F.S.L.                       -Buñol                                   ,2,7A2780,FFFFFF                                    
+40T0046C3  ,C3  ,Buñol                                   -Valencia - F.S.L.                       ,2,7A2780,FFFFFF                                    
 40T0047C5  ,C5  ,PuÇol                                   -Caudiel                                 ,3,018A27,FFFFFF                                    
 40T0048C5  ,C5  ,Caudiel                                 -PuÇol                                   ,3,018A27,FFFFFF                                    
 41T0001C1  ,C1  ,Murcia del Carmen                       -Alacant Terminal                        ,2,73B6E0,FFFFFF                                    
