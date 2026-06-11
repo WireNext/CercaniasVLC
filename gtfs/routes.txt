@@ -526,6 +526,8 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 51T0176R13 ,R13 ,Sant Vicenc de Calders                  -La Plana-Picamoixons                    ,3,146520,FFFFFF                                    
 51T0177R13 ,R13 ,Valls                                   -Barcelona-Sants                         ,3,146520,FFFFFF                                    
 51T0178R13 ,R13 ,Barcelona-Sants                         -Valls                                   ,3,146520,FFFFFF                                    
+51T0179R8  ,R8  ,Martorell Central                       -Rubí Can Vallhonrat                     ,3,88016A,FFFFFF                                    
+51T0180R8  ,R8  ,Rubí Can Vallhonrat                     -Martorell Central                       ,3,88016A,FFFFFF                                    
 60T0001C1  ,C1  ,Abando                                  -Santurtzi                               ,2,D7001E,FFFFFF                                    
 60T0002C1  ,C1  ,Santurtzi                               -Abando                                  ,2,D7001E,FFFFFF                                    
 60T0003C2  ,C2  ,Abando                                  -Muskiz                                  ,2,0F8C2D,FFFFFF                                    
