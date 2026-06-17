@@ -349,6 +349,9 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 40T0055C3  ,C3  ,Buñol                                   -Utiel                                   ,3,7A2780,FFFFFF                                    
 40T0056C5  ,C5  ,Caudiel                                 -PuÇol                                   ,3,018A27,FFFFFF                                    
 40T0057ER24,ER24,                                        -Xativa                                  ,3,FFFFFF,FFFFFF                                    
+40T0058C1  ,C1  ,Tavernes de la Valldigna                -Gandia                                  ,3,7AB3DE,FFFFFF                                    
+40T0059C1  ,C1  ,Gandia                                  -Tavernes de la Valldigna                ,3,7AB3DE,FFFFFF                                    
+40T0060C1  ,C1  ,Platja i Grau de Gandia                 -Tavernes de la Valldigna                ,3,7AB3DE,FFFFFF                                    
 41T0001C1  ,C1  ,Murcia del Carmen                       -Alacant Terminal                        ,2,73B6E0,FFFFFF                                    
 41T0002C1  ,C1  ,Alacant Terminal                        -Murcia del Carmen                       ,2,73B6E0,FFFFFF                                    
 41T0003C2  ,C2  ,Murcia del Carmen                       -Aguilas                                 ,2,108C2C,FFFFFF                                    
