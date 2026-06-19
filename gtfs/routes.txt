@@ -251,8 +251,15 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 30T0029C5  ,C5  ,Santa Justa                             -Benacazon                               ,2,073588,FFFFFF                                    
 30T0030C5  ,C5  ,Benacazon                               -Santa Justa                             ,2,073588,FFFFFF                                    
 30T0031CR20,CR20,                                        -                                        ,3,FFFFFF,FFFFFF                                    
-30T0032C5  ,C5  ,Benacazon                               -Santa Justa                             ,3,073588,FFFFFF                                    
-30T0033C5  ,C5  ,Santa Justa                             -Benacazon                               ,3,073588,FFFFFF                                    
+30T0032CR20,CR20,                                        -Santa Justa                             ,3,FFFFFF,FFFFFF                                    
+30T0033C3  ,C3  ,                                        -Santa Justa                             ,3,E4242D,FFFFFF                                    
+30T0034C3  ,C3  ,Cazalla-Constantina                     -Los Rosales                             ,3,E4242D,FFFFFF                                    
+30T0035C5  ,C5  ,Benacazon                               -Santa Justa                             ,3,073588,FFFFFF                                    
+30T0036C3  ,C3  ,Los Rosales                             -Cazalla-Constantina                     ,3,E4242D,FFFFFF                                    
+30T0037CR20,CR20,Santa Justa                             -                                        ,3,FFFFFF,FFFFFF                                    
+30T0038C3  ,C3  ,Santa Justa                             -                                        ,3,E4242D,FFFFFF                                    
+30T0039C3  ,C3  ,Santa Justa                             -                                        ,3,E4242D,FFFFFF                                    
+30T0040C5  ,C5  ,Santa Justa                             -Benacazon                               ,3,073588,FFFFFF                                    
 31T0001C1  ,C1  ,Cádiz                                   -Aeropuerto de Jerez                     ,2,D7001E,FFFFFF                                    
 31T0002C1  ,C1  ,Aeropuerto de Jerez                     -Cádiz                                   ,2,D7001E,FFFFFF                                    
 31T0003C1a ,C1a ,Las Aletas                              -Universidad                             ,2,D7001E,FFFFFF                                    
@@ -351,7 +358,6 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 40T0057ER24,ER24,                                        -Xativa                                  ,3,FFFFFF,FFFFFF                                    
 40T0058C1  ,C1  ,Tavernes de la Valldigna                -Gandia                                  ,3,7AB3DE,FFFFFF                                    
 40T0059C1  ,C1  ,Gandia                                  -Tavernes de la Valldigna                ,3,7AB3DE,FFFFFF                                    
-40T0060C1  ,C1  ,Platja i Grau de Gandia                 -Tavernes de la Valldigna                ,3,7AB3DE,FFFFFF                                    
 41T0001C1  ,C1  ,Murcia del Carmen                       -Alacant Terminal                        ,2,73B6E0,FFFFFF                                    
 41T0002C1  ,C1  ,Alacant Terminal                        -Murcia del Carmen                       ,2,73B6E0,FFFFFF                                    
 41T0003C2  ,C2  ,Murcia del Carmen                       -Aguilas                                 ,2,108C2C,FFFFFF                                    
