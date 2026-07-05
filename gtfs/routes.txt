@@ -622,8 +622,10 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 51T0212R3  ,R3  ,Barcelona-Fabra i Puig                  -La Garriga                              ,3,E54A3C,FFFFFF                                    
 51T0213R3  ,R3  ,Barcelona-Fabra i Puig                  -Centelles                               ,3,E54A3C,FFFFFF                                    
 51T0214R3  ,R3  ,Barcelona-Fabra i Puig                  -Vic                                     ,3,E54A3C,FFFFFF                                    
-51T0215R1  ,R1  ,Mataró                                  -Maçanet-Massanes                        ,3,094188,FFFFFF                                    
-51T0216R1  ,R1  ,Calella                                 -Mataró                                  ,3,094188,FFFFFF                                    
+51T0215R1  ,R1  ,Maçanet-Massanes                        -Blanes                                  ,3,094188,FFFFFF                                    
+51T0216R1  ,R1  ,Mataró                                  -Maçanet-Massanes                        ,3,094188,FFFFFF                                    
+51T0217R1  ,R1  ,Calella                                 -Mataró                                  ,3,094188,FFFFFF                                    
+51T0218R1  ,R1  ,Blanes                                  -Maçanet-Massanes                        ,3,094188,FFFFFF                                    
 60T0001C1  ,C1  ,Abando                                  -Santurtzi                               ,2,D7001E,FFFFFF                                    
 60T0002C1  ,C1  ,Santurtzi                               -Abando                                  ,2,D7001E,FFFFFF                                    
 60T0003C2  ,C2  ,Abando                                  -Muskiz                                  ,2,0F8C2D,FFFFFF                                    
