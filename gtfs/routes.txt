@@ -222,13 +222,17 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 20T0112C4  ,C4  ,Pravia                                  -El Regueral                             ,2,E93CAC,FFFFFF                                    
 20T0113C4  ,C4  ,Candás                                  -Gijon (Sanz Crespo)                     ,3,E93CAC,FFFFFF                                    
 20T0114C4  ,C4  ,El Regueral                             -Gijon (Sanz Crespo)                     ,3,E93CAC,FFFFFF                                    
-20T0115C6  ,C6  ,El Berrón                               -Nava                                    ,3,579BE2,FFFFFF                                    
-20T0116C6  ,C6  ,El Berrón                               -L'infiestu Apd                          ,3,579BE2,FFFFFF                                    
-20T0117C6  ,C6  ,Nava                                    -L'infiestu Apd                          ,3,579BE2,FFFFFF                                    
-20T0118C6  ,C6  ,L'infiestu Apd                          -El Berrón                               ,3,579BE2,FFFFFF                                    
-20T0119NR26,NR26,                                        -                                        ,3,FFFFFF,FFFFFF                                    
-20T0120C4  ,C4  ,Gijon (Sanz Crespo)                     -Candás                                  ,3,E93CAC,FFFFFF                                    
-20T0121C4  ,C4  ,Gijon (Sanz Crespo)                     -El Regueral                             ,3,E93CAC,FFFFFF                                    
+20T0115C5  ,C5  ,Pinzales                                -Gijon (Sanz Crespo)                     ,3,C4D600,FFFFFF                                    
+20T0116C7  ,C7  ,Pinzales                                -Gijon (Sanz Crespo)                     ,3,BCCF00,FFFFFF                                    
+20T0117C6  ,C6  ,El Berrón                               -Nava                                    ,3,579BE2,FFFFFF                                    
+20T0118C6  ,C6  ,El Berrón                               -L'infiestu Apd                          ,3,579BE2,FFFFFF                                    
+20T0119C6  ,C6  ,Nava                                    -L'infiestu Apd                          ,3,579BE2,FFFFFF                                    
+20T0120C6  ,C6  ,L'infiestu Apd                          -El Berrón                               ,3,579BE2,FFFFFF                                    
+20T0121NR26,NR26,                                        -                                        ,3,FFFFFF,FFFFFF                                    
+20T0122C4  ,C4  ,Gijon (Sanz Crespo)                     -Candás                                  ,3,E93CAC,FFFFFF                                    
+20T0123C4  ,C4  ,Gijon (Sanz Crespo)                     -El Regueral                             ,3,E93CAC,FFFFFF                                    
+20T0124C5  ,C5  ,Gijon (Sanz Crespo)                     -Pinzales                                ,3,C4D600,FFFFFF                                    
+20T0125C7  ,C7  ,Gijon (Sanz Crespo)                     -Pinzales                                ,3,BCCF00,FFFFFF                                    
 30T0001C1  ,C1  ,Lora del Rio                            -Lebrija                                 ,2,78B4E1,FFFFFF                                    
 30T0002C1  ,C1  ,Lebrija                                 -Lora del Rio                            ,2,78B4E1,FFFFFF                                    
 30T0003C2  ,C2  ,Santa Justa                             -Cartuja                                 ,2,067B34,FFFFFF                                    
