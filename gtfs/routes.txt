@@ -635,16 +635,18 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 51T0215R3  ,R3  ,Puigcerdà                               -La Tor de Querol-Enveig                 ,3,E54A3C,FFFFFF                                    
 51T0216R3  ,R3  ,La Tor de Querol-Enveig                 -Vic                                     ,3,E54A3C,FFFFFF                                    
 51T0217R3  ,R3  ,La Tor de Querol-Enveig                 -Puigcerdà                               ,3,E54A3C,FFFFFF                                    
-51T0218R4  ,R4  ,Manresa                                 -Terrassa Estació del Nord               ,3,F7A30D,FFFFFF                                    
-51T0219R4  ,R4  ,Terrassa Estació del Nord               -Manresa                                 ,3,F7A30D,FFFFFF                                    
-51T0220R3  ,R3  ,Barcelona-Fabra i Puig                  -Granollers-Canovelles                   ,3,E54A3C,FFFFFF                                    
-51T0221R3  ,R3  ,Barcelona-Fabra i Puig                  -La Garriga                              ,3,E54A3C,FFFFFF                                    
-51T0222R3  ,R3  ,Barcelona-Fabra i Puig                  -Centelles                               ,3,E54A3C,FFFFFF                                    
-51T0223R3  ,R3  ,Barcelona-Fabra i Puig                  -Vic                                     ,3,E54A3C,FFFFFF                                    
-51T0224R1  ,R1  ,Maçanet-Massanes                        -Blanes                                  ,3,094188,FFFFFF                                    
-51T0225R1  ,R1  ,Mataró                                  -Maçanet-Massanes                        ,3,094188,FFFFFF                                    
-51T0226R1  ,R1  ,Calella                                 -Mataró                                  ,3,094188,FFFFFF                                    
-51T0227R1  ,R1  ,Blanes                                  -Maçanet-Massanes                        ,3,094188,FFFFFF                                    
+51T0218RL4 ,RL4 ,Cervera                                 -Terrassa Estació del Nord               ,3,F7A30D,FFFFFF                                    
+51T0219R4  ,R4  ,Manresa                                 -Terrassa Estació del Nord               ,3,F7A30D,FFFFFF                                    
+51T0220RL4 ,RL4 ,Terrassa Estació del Nord               -Cervera                                 ,3,F7A30D,FFFFFF                                    
+51T0221R4  ,R4  ,Terrassa Estació del Nord               -Manresa                                 ,3,F7A30D,FFFFFF                                    
+51T0222R3  ,R3  ,Barcelona-Fabra i Puig                  -Granollers-Canovelles                   ,3,E54A3C,FFFFFF                                    
+51T0223R3  ,R3  ,Barcelona-Fabra i Puig                  -La Garriga                              ,3,E54A3C,FFFFFF                                    
+51T0224R3  ,R3  ,Barcelona-Fabra i Puig                  -Centelles                               ,3,E54A3C,FFFFFF                                    
+51T0225R3  ,R3  ,Barcelona-Fabra i Puig                  -Vic                                     ,3,E54A3C,FFFFFF                                    
+51T0226R1  ,R1  ,Maçanet-Massanes                        -Blanes                                  ,3,094188,FFFFFF                                    
+51T0227R1  ,R1  ,Mataró                                  -Maçanet-Massanes                        ,3,094188,FFFFFF                                    
+51T0228R1  ,R1  ,Calella                                 -Mataró                                  ,3,094188,FFFFFF                                    
+51T0229R1  ,R1  ,Blanes                                  -Maçanet-Massanes                        ,3,094188,FFFFFF                                    
 60T0001C1  ,C1  ,Abando                                  -Santurtzi                               ,2,D7001E,FFFFFF                                    
 60T0002C1  ,C1  ,Santurtzi                               -Abando                                  ,2,D7001E,FFFFFF                                    
 60T0003C2  ,C2  ,Abando                                  -Muskiz                                  ,2,0F8C2D,FFFFFF                                    
