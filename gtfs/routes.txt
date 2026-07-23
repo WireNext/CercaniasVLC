@@ -697,7 +697,8 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 61T0022C1  ,C1  ,Pasaia                                  -Irun                                    ,2,DA001C,FFFFFF                                    
 61T0023C1  ,C1  ,Irun                                    -Lezo-Renteria                           ,2,DA001C,FFFFFF                                    
 61T0024C1  ,C1  ,Lezo-Renteria                           -Irun                                    ,2,DA001C,FFFFFF                                    
-61T0025C1  ,C1  ,Irun                                    -Lezo-Renteria                           ,3,DA001C,FFFFFF                                    
+61T0025C1  ,C1  ,Irun                                    -Hernani                                 ,3,DA001C,FFFFFF                                    
+61T0026C1  ,C1  ,Irun                                    -Lezo-Renteria                           ,3,DA001C,FFFFFF                                    
 62T0001C1  ,C1  ,Santander                               -Reinosa                                 ,2,EF3340,FFFFFF                                    
 62T0002C1  ,C1  ,Reinosa                                 -Santander                               ,2,EF3340,FFFFFF                                    
 62T0003C2  ,C2  ,Santander                               -Cabezón De La Sal                       ,2,009645,FFFFFF                                    
