@@ -825,6 +825,13 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 62T0050C3  ,C3  ,Solares                                 -Astillero                               ,3,0060A9,FFFFFF                                    
 62T0051C3  ,C3  ,Liérganes                               -Astillero                               ,3,0060A9,FFFFFF                                    
 62T0052C3  ,C3  ,Liérganes                               -Astillero                               ,3,0060A9,FFFFFF                                    
+62T0053C1  ,C1  ,Barcena                                 -Maliaño                                 ,3,EF3340,FFFFFF                                    
+62T0054C1  ,C1  ,Los Corrales Buelna                     -Maliaño                                 ,3,EF3340,FFFFFF                                    
+62T0055C1  ,C1  ,Renedo                                  -Maliaño                                 ,3,EF3340,FFFFFF                                    
+62T0056C1  ,C1  ,Santander                               -Reinosa                                 ,3,EF3340,FFFFFF                                    
+62T0057C1  ,C1  ,Santander                               -Barcena                                 ,3,EF3340,FFFFFF                                    
+62T0058C1  ,C1  ,Santander                               -Los Corrales Buelna                     ,3,EF3340,FFFFFF                                    
+62T0059C1  ,C1  ,Santander                               -Renedo                                  ,3,EF3340,FFFFFF                                    
 70T0001C1  ,C1  ,Casetas                                 -Miraflores                              ,2,D90724,FFFFFF                                    
 70T0002C1  ,C1  ,Miraflores                              -Casetas                                 ,2,D90724,FFFFFF                                    
 70T0003C1  ,C1  ,Casetas                                 -Miraflores                              ,2,D90724,FFFFFF                                    
