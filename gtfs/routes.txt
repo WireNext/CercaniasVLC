@@ -329,14 +329,8 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 32T0016C2  ,C2  ,Álora                                   -Cártama                                 ,2,0fcf34,FFFFFF                                    
 32T0017C2  ,C2  ,                                        -Cártama                                 ,2,0fcf34,FFFFFF                                    
 32T0018C2  ,C2  ,Cártama                                 -                                        ,2,0fcf34,FFFFFF                                    
-32T0019C2  ,C2  ,                                        -Cártama                                 ,3,0fcf34,FFFFFF                                    
-32T0020C2  ,C2  ,Álora                                   -Cártama                                 ,3,0fcf34,FFFFFF                                    
-32T0021C2  ,C2  ,Álora                                   -Málaga-M.Z.                             ,3,0fcf34,FFFFFF                                    
-32T0022C2  ,C2  ,Pizarra                                 -Cártama                                 ,3,0fcf34,FFFFFF                                    
-32T0023C2  ,C2  ,Cártama                                 -                                        ,3,0fcf34,FFFFFF                                    
-32T0024C2  ,C2  ,Cártama                                 -Álora                                   ,3,0fcf34,FFFFFF                                    
-32T0025C2  ,C2  ,Cártama                                 -Pizarra                                 ,3,0fcf34,FFFFFF                                    
-32T0026C2  ,C2  ,Málaga-Centro Alameda                   -Álora                                   ,3,0fcf34,FFFFFF                                    
+32T0019C2  ,C2  ,Álora                                   -Málaga-M.Z.                             ,3,0fcf34,FFFFFF                                    
+32T0020C2  ,C2  ,Málaga-Centro Alameda                   -Álora                                   ,3,0fcf34,FFFFFF                                    
 40T0001C1  ,C1  ,Valencia Nord                           -Platja i Grau de Gandia                 ,2,7AB3DE,FFFFFF                                    
 40T0002C1  ,C1  ,Platja i Grau de Gandia                 -Valencia Nord                           ,2,7AB3DE,FFFFFF                                    
 40T0005C2  ,C2  ,Valencia Nord                           -Moixent                                 ,2,F79529,FFFFFF                                    
@@ -837,7 +831,6 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 62T0058C1  ,C1  ,Maliaño                                 -Barcena                                 ,3,EF3340,FFFFFF                                    
 62T0059C1  ,C1  ,Maliaño                                 -Los Corrales Buelna                     ,3,EF3340,FFFFFF                                    
 62T0060C1  ,C1  ,Maliaño                                 -Renedo                                  ,3,EF3340,FFFFFF                                    
-62T0061C1  ,C1  ,Santander                               -Renedo                                  ,3,EF3340,FFFFFF                                    
 70T0001C1  ,C1  ,Casetas                                 -Miraflores                              ,2,D90724,FFFFFF                                    
 70T0002C1  ,C1  ,Miraflores                              -Casetas                                 ,2,D90724,FFFFFF                                    
 70T0003C1  ,C1  ,Casetas                                 -Miraflores                              ,2,D90724,FFFFFF                                    
