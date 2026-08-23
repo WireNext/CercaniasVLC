@@ -279,26 +279,31 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 30T0031CR20,CR20,                                        -                                        ,3,FFFFFF,FFFFFF                                    
 30T0032CR20,CR20,                                        -                                        ,3,FFFFFF,FFFFFF                                    
 30T0033CR20,CR20,                                        -Santa Justa                             ,3,FFFFFF,FFFFFF                                    
-30T0034C3  ,C3  ,                                        -Santa Justa                             ,3,E4242D,FFFFFF                                    
-30T0035CR20,CR20,                                        -Santa Justa                             ,3,FFFFFF,FFFFFF                                    
-30T0036CR20,CR20,                                        -Santa Justa                             ,3,FFFFFF,FFFFFF                                    
-30T0037C3  ,C3  ,                                        -Santa Justa                             ,3,E4242D,FFFFFF                                    
-30T0038C3  ,C3  ,                                        -Santa Justa                             ,3,E4242D,FFFFFF                                    
-30T0039C3  ,C3  ,Cazalla-Constantina                     -Los Rosales                             ,3,E4242D,FFFFFF                                    
-30T0040C3  ,C3  ,Cazalla-Constantina                     -Los Rosales                             ,3,E4242D,FFFFFF                                    
-30T0041C5  ,C5  ,Benacazon                               -Santa Justa                             ,3,073588,FFFFFF                                    
-30T0042C3  ,C3  ,Los Rosales                             -Cazalla-Constantina                     ,3,E4242D,FFFFFF                                    
-30T0043C3  ,C3  ,Los Rosales                             -Cazalla-Constantina                     ,3,E4242D,FFFFFF                                    
-30T0044CR20,CR20,Santa Justa                             -                                        ,3,FFFFFF,FFFFFF                                    
-30T0045C3  ,C3  ,Santa Justa                             -                                        ,3,E4242D,FFFFFF                                    
-30T0046C3  ,C3  ,Santa Justa                             -                                        ,3,E4242D,FFFFFF                                    
+30T0034CR20,CR20,                                        -Santa Justa                             ,3,FFFFFF,FFFFFF                                    
+30T0035C3  ,C3  ,                                        -Santa Justa                             ,3,E4242D,FFFFFF                                    
+30T0036C3  ,C3  ,                                        -Santa Justa                             ,3,E4242D,FFFFFF                                    
+30T0037CR20,CR20,                                        -Santa Justa                             ,3,FFFFFF,FFFFFF                                    
+30T0038CR20,CR20,                                        -Santa Justa                             ,3,FFFFFF,FFFFFF                                    
+30T0039C3  ,C3  ,                                        -Santa Justa                             ,3,E4242D,FFFFFF                                    
+30T0040C3  ,C3  ,                                        -Santa Justa                             ,3,E4242D,FFFFFF                                    
+30T0041C3  ,C3  ,Cazalla-Constantina                     -Los Rosales                             ,3,E4242D,FFFFFF                                    
+30T0042C3  ,C3  ,Cazalla-Constantina                     -Los Rosales                             ,3,E4242D,FFFFFF                                    
+30T0043C5  ,C5  ,Benacazon                               -Santa Justa                             ,3,073588,FFFFFF                                    
+30T0044C3  ,C3  ,Los Rosales                             -Cazalla-Constantina                     ,3,E4242D,FFFFFF                                    
+30T0045C3  ,C3  ,Los Rosales                             -Cazalla-Constantina                     ,3,E4242D,FFFFFF                                    
+30T0046CR20,CR20,Santa Justa                             -                                        ,3,FFFFFF,FFFFFF                                    
 30T0047CR20,CR20,Santa Justa                             -                                        ,3,FFFFFF,FFFFFF                                    
-30T0048CR20,CR20,Santa Justa                             -                                        ,3,FFFFFF,FFFFFF                                    
+30T0048C3  ,C3  ,Santa Justa                             -                                        ,3,E4242D,FFFFFF                                    
 30T0049C3  ,C3  ,Santa Justa                             -                                        ,3,E4242D,FFFFFF                                    
 30T0050C3  ,C3  ,Santa Justa                             -                                        ,3,E4242D,FFFFFF                                    
 30T0051C3  ,C3  ,Santa Justa                             -                                        ,3,E4242D,FFFFFF                                    
-30T0052C3  ,C3  ,Santa Justa                             -                                        ,3,E4242D,FFFFFF                                    
-30T0053C5  ,C5  ,Santa Justa                             -Benacazon                               ,3,073588,FFFFFF                                    
+30T0052CR20,CR20,Santa Justa                             -                                        ,3,FFFFFF,FFFFFF                                    
+30T0053CR20,CR20,Santa Justa                             -                                        ,3,FFFFFF,FFFFFF                                    
+30T0054C3  ,C3  ,Santa Justa                             -                                        ,3,E4242D,FFFFFF                                    
+30T0055C3  ,C3  ,Santa Justa                             -                                        ,3,E4242D,FFFFFF                                    
+30T0056C3  ,C3  ,Santa Justa                             -                                        ,3,E4242D,FFFFFF                                    
+30T0057C3  ,C3  ,Santa Justa                             -                                        ,3,E4242D,FFFFFF                                    
+30T0058C5  ,C5  ,Santa Justa                             -Benacazon                               ,3,073588,FFFFFF                                    
 31T0001C1  ,C1  ,Cádiz                                   -Aeropuerto de Jerez                     ,2,D7001E,FFFFFF                                    
 31T0002C1  ,C1  ,Aeropuerto de Jerez                     -Cádiz                                   ,2,D7001E,FFFFFF                                    
 31T0003C1a ,C1a ,Las Aletas                              -Universidad                             ,2,D7001E,FFFFFF                                    
@@ -637,77 +642,75 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 51T0186R13 ,R13 ,Barcelona-Sants                         -Valls                                   ,3,146520,FFFFFF                                    
 51T0187R4  ,R4  ,Martorell Central                       -Molins de Rei                           ,3,F7A30D,FFFFFF                                    
 51T0188R8  ,R8  ,Martorell Central                       -Rubí Can Vallhonrat                     ,3,88016A,FFFFFF                                    
-51T0189R8  ,R8  ,Martorell Central                       -Rubí Can Vallhonrat                     ,3,88016A,FFFFFF                                    
-51T0190R4  ,R4  ,Molins de Rei                           -Martorell Central                       ,3,F7A30D,FFFFFF                                    
-51T0191R8  ,R8  ,Rubí Can Vallhonrat                     -Martorell Central                       ,3,88016A,FFFFFF                                    
-51T0192R8  ,R8  ,Rubí Can Vallhonrat                     -Martorell Central                       ,3,88016A,FFFFFF                                    
-51T0193R13 ,R13 ,La Plana-Picamoixons                    -Sant Vicenc de Calders                  ,3,146520,FFFFFF                                    
-51T0194R13 ,R13 ,La Plana-Picamoixons                    -Lleida                                  ,3,146520,FFFFFF                                    
-51T0195R13 ,R13 ,La Plana-Picamoixons                    -Lleida                                  ,3,146520,FFFFFF                                    
-51T0196R13 ,R13 ,Valls                                   -Barcelona-Sants                         ,3,146520,FFFFFF                                    
-51T0197R3  ,R3  ,Granollers-Canovelles                   -Barcelona-Fabra i Puig                  ,3,E54A3C,FFFFFF                                    
-51T0198R3  ,R3  ,Granollers-Canovelles                   -Barcelona-Fabra i Puig                  ,3,E54A3C,FFFFFF                                    
-51T0199R3  ,R3  ,La Garriga                              -Vic                                     ,3,E54A3C,FFFFFF                                    
-51T0200R3  ,R3  ,La Garriga                              -Vic                                     ,3,E54A3C,FFFFFF                                    
-51T0201R3  ,R3  ,La Garriga                              -Ripoll                                  ,3,E54A3C,FFFFFF                                    
-51T0202R3  ,R3  ,La Garriga                              -Ripoll                                  ,3,E54A3C,FFFFFF                                    
-51T0203R3  ,R3  ,La Garriga                              -Barcelona-Fabra i Puig                  ,3,E54A3C,FFFFFF                                    
-51T0204R3  ,R3  ,La Garriga                              -Barcelona-Fabra i Puig                  ,3,E54A3C,FFFFFF                                    
-51T0205R3  ,R3  ,Centelles                               -Vic                                     ,3,E54A3C,FFFFFF                                    
-51T0206R3  ,R3  ,Centelles                               -Vic                                     ,3,E54A3C,FFFFFF                                    
-51T0207R3  ,R3  ,Centelles                               -Barcelona-Fabra i Puig                  ,3,E54A3C,FFFFFF                                    
-51T0208R3  ,R3  ,Centelles                               -Barcelona-Fabra i Puig                  ,3,E54A3C,FFFFFF                                    
-51T0209R3  ,R3  ,Vic                                     -La Garriga                              ,3,E54A3C,FFFFFF                                    
-51T0210R3  ,R3  ,Vic                                     -La Garriga                              ,3,E54A3C,FFFFFF                                    
-51T0211R3  ,R3  ,Vic                                     -Centelles                               ,3,E54A3C,FFFFFF                                    
-51T0212R3  ,R3  ,Vic                                     -Centelles                               ,3,E54A3C,FFFFFF                                    
-51T0213R3  ,R3  ,Vic                                     -Ripoll                                  ,3,E54A3C,FFFFFF                                    
-51T0214R3  ,R3  ,Vic                                     -Ripoll                                  ,3,E54A3C,FFFFFF                                    
-51T0215R3  ,R3  ,Vic                                     -Puigcerdà                               ,3,E54A3C,FFFFFF                                    
-51T0216R3  ,R3  ,Vic                                     -Puigcerdà                               ,3,E54A3C,FFFFFF                                    
-51T0217R3  ,R3  ,Vic                                     -La Tor de Querol-Enveig                 ,3,E54A3C,FFFFFF                                    
-51T0218R3  ,R3  ,Vic                                     -La Tor de Querol-Enveig                 ,3,E54A3C,FFFFFF                                    
-51T0219R3  ,R3  ,Vic                                     -Barcelona-Fabra i Puig                  ,3,E54A3C,FFFFFF                                    
-51T0220R3  ,R3  ,Vic                                     -Barcelona-Fabra i Puig                  ,3,E54A3C,FFFFFF                                    
-51T0221R3  ,R3  ,Ripoll                                  -La Garriga                              ,3,E54A3C,FFFFFF                                    
-51T0222R3  ,R3  ,Ripoll                                  -La Garriga                              ,3,E54A3C,FFFFFF                                    
-51T0223R3  ,R3  ,Ripoll                                  -Vic                                     ,3,E54A3C,FFFFFF                                    
-51T0224R3  ,R3  ,Ripoll                                  -Vic                                     ,3,E54A3C,FFFFFF                                    
-51T0225R3  ,R3  ,Ribes de Freser                         -Toses                                   ,3,E54A3C,FFFFFF                                    
-51T0226R3  ,R3  ,Planoles                                -Toses                                   ,3,E54A3C,FFFFFF                                    
-51T0227R3  ,R3  ,Planoles                                -Toses                                   ,3,E54A3C,FFFFFF                                    
-51T0228R3  ,R3  ,Planoles                                -La Molina                               ,3,E54A3C,FFFFFF                                    
-51T0229R3  ,R3  ,Toses                                   -Ribes de Freser                         ,3,E54A3C,FFFFFF                                    
-51T0230R3  ,R3  ,Toses                                   -Planoles                                ,3,E54A3C,FFFFFF                                    
-51T0231R3  ,R3  ,Toses                                   -Planoles                                ,3,E54A3C,FFFFFF                                    
-51T0232R3  ,R3  ,La Molina                               -Planoles                                ,3,E54A3C,FFFFFF                                    
-51T0233R3  ,R3  ,Puigcerdà                               -Vic                                     ,3,E54A3C,FFFFFF                                    
-51T0234R3  ,R3  ,Puigcerdà                               -Vic                                     ,3,E54A3C,FFFFFF                                    
-51T0235R3  ,R3  ,Puigcerdà                               -Ripoll                                  ,3,E54A3C,FFFFFF                                    
-51T0236R3  ,R3  ,Puigcerdà                               -Ripoll                                  ,3,E54A3C,FFFFFF                                    
-51T0237R3  ,R3  ,Puigcerdà                               -La Tor de Querol-Enveig                 ,3,E54A3C,FFFFFF                                    
-51T0238R3  ,R3  ,Puigcerdà                               -La Tor de Querol-Enveig                 ,3,E54A3C,FFFFFF                                    
-51T0239R3  ,R3  ,La Tor de Querol-Enveig                 -Vic                                     ,3,E54A3C,FFFFFF                                    
-51T0240R3  ,R3  ,La Tor de Querol-Enveig                 -Vic                                     ,3,E54A3C,FFFFFF                                    
-51T0241R3  ,R3  ,La Tor de Querol-Enveig                 -Puigcerdà                               ,3,E54A3C,FFFFFF                                    
-51T0242R3  ,R3  ,La Tor de Querol-Enveig                 -Puigcerdà                               ,3,E54A3C,FFFFFF                                    
-51T0243R13 ,R13 ,Lleida                                  -La Plana-Picamoixons                    ,3,146520,FFFFFF                                    
-51T0244R13 ,R13 ,Lleida                                  -La Plana-Picamoixons                    ,3,146520,FFFFFF                                    
-51T0245RL4 ,RL4 ,Cervera                                 -Terrassa Estació del Nord               ,3,F7A30D,FFFFFF                                    
-51T0246RL4 ,RL4 ,Terrassa Estació del Nord               -Cervera                                 ,3,F7A30D,FFFFFF                                    
-51T0247R4  ,R4  ,Terrassa Estació del Nord               -Manresa                                 ,3,F7A30D,FFFFFF                                    
-51T0248R3  ,R3  ,Barcelona-Fabra i Puig                  -Granollers-Canovelles                   ,3,E54A3C,FFFFFF                                    
-51T0249R3  ,R3  ,Barcelona-Fabra i Puig                  -Granollers-Canovelles                   ,3,E54A3C,FFFFFF                                    
-51T0250R3  ,R3  ,Barcelona-Fabra i Puig                  -La Garriga                              ,3,E54A3C,FFFFFF                                    
-51T0251R3  ,R3  ,Barcelona-Fabra i Puig                  -La Garriga                              ,3,E54A3C,FFFFFF                                    
-51T0252R3  ,R3  ,Barcelona-Fabra i Puig                  -Centelles                               ,3,E54A3C,FFFFFF                                    
-51T0253R3  ,R3  ,Barcelona-Fabra i Puig                  -Centelles                               ,3,E54A3C,FFFFFF                                    
-51T0254R3  ,R3  ,Barcelona-Fabra i Puig                  -Vic                                     ,3,E54A3C,FFFFFF                                    
-51T0255R3  ,R3  ,Barcelona-Fabra i Puig                  -Vic                                     ,3,E54A3C,FFFFFF                                    
-51T0256R1  ,R1  ,Maçanet-Massanes                        -Blanes                                  ,3,094188,FFFFFF                                    
-51T0257R1  ,R1  ,Maçanet-Massanes                        -Blanes                                  ,3,094188,FFFFFF                                    
-51T0258R1  ,R1  ,Blanes                                  -Maçanet-Massanes                        ,3,094188,FFFFFF                                    
-51T0259R1  ,R1  ,Blanes                                  -Maçanet-Massanes                        ,3,094188,FFFFFF                                    
+51T0189R4  ,R4  ,Molins de Rei                           -Martorell Central                       ,3,F7A30D,FFFFFF                                    
+51T0190R8  ,R8  ,Rubí Can Vallhonrat                     -Martorell Central                       ,3,88016A,FFFFFF                                    
+51T0191R13 ,R13 ,La Plana-Picamoixons                    -Sant Vicenc de Calders                  ,3,146520,FFFFFF                                    
+51T0192R13 ,R13 ,La Plana-Picamoixons                    -Lleida                                  ,3,146520,FFFFFF                                    
+51T0193R13 ,R13 ,La Plana-Picamoixons                    -Lleida                                  ,3,146520,FFFFFF                                    
+51T0194R13 ,R13 ,Valls                                   -Barcelona-Sants                         ,3,146520,FFFFFF                                    
+51T0195R3  ,R3  ,Granollers-Canovelles                   -Barcelona-Fabra i Puig                  ,3,E54A3C,FFFFFF                                    
+51T0196R3  ,R3  ,Granollers-Canovelles                   -Barcelona-Fabra i Puig                  ,3,E54A3C,FFFFFF                                    
+51T0197R3  ,R3  ,La Garriga                              -Vic                                     ,3,E54A3C,FFFFFF                                    
+51T0198R3  ,R3  ,La Garriga                              -Vic                                     ,3,E54A3C,FFFFFF                                    
+51T0199R3  ,R3  ,La Garriga                              -Ripoll                                  ,3,E54A3C,FFFFFF                                    
+51T0200R3  ,R3  ,La Garriga                              -Ripoll                                  ,3,E54A3C,FFFFFF                                    
+51T0201R3  ,R3  ,La Garriga                              -Barcelona-Fabra i Puig                  ,3,E54A3C,FFFFFF                                    
+51T0202R3  ,R3  ,La Garriga                              -Barcelona-Fabra i Puig                  ,3,E54A3C,FFFFFF                                    
+51T0203R3  ,R3  ,Centelles                               -Vic                                     ,3,E54A3C,FFFFFF                                    
+51T0204R3  ,R3  ,Centelles                               -Vic                                     ,3,E54A3C,FFFFFF                                    
+51T0205R3  ,R3  ,Centelles                               -Barcelona-Fabra i Puig                  ,3,E54A3C,FFFFFF                                    
+51T0206R3  ,R3  ,Centelles                               -Barcelona-Fabra i Puig                  ,3,E54A3C,FFFFFF                                    
+51T0207R3  ,R3  ,Vic                                     -La Garriga                              ,3,E54A3C,FFFFFF                                    
+51T0208R3  ,R3  ,Vic                                     -La Garriga                              ,3,E54A3C,FFFFFF                                    
+51T0209R3  ,R3  ,Vic                                     -Centelles                               ,3,E54A3C,FFFFFF                                    
+51T0210R3  ,R3  ,Vic                                     -Centelles                               ,3,E54A3C,FFFFFF                                    
+51T0211R3  ,R3  ,Vic                                     -Ripoll                                  ,3,E54A3C,FFFFFF                                    
+51T0212R3  ,R3  ,Vic                                     -Ripoll                                  ,3,E54A3C,FFFFFF                                    
+51T0213R3  ,R3  ,Vic                                     -Puigcerdà                               ,3,E54A3C,FFFFFF                                    
+51T0214R3  ,R3  ,Vic                                     -Puigcerdà                               ,3,E54A3C,FFFFFF                                    
+51T0215R3  ,R3  ,Vic                                     -La Tor de Querol-Enveig                 ,3,E54A3C,FFFFFF                                    
+51T0216R3  ,R3  ,Vic                                     -La Tor de Querol-Enveig                 ,3,E54A3C,FFFFFF                                    
+51T0217R3  ,R3  ,Vic                                     -Barcelona-Fabra i Puig                  ,3,E54A3C,FFFFFF                                    
+51T0218R3  ,R3  ,Vic                                     -Barcelona-Fabra i Puig                  ,3,E54A3C,FFFFFF                                    
+51T0219R3  ,R3  ,Ripoll                                  -La Garriga                              ,3,E54A3C,FFFFFF                                    
+51T0220R3  ,R3  ,Ripoll                                  -La Garriga                              ,3,E54A3C,FFFFFF                                    
+51T0221R3  ,R3  ,Ripoll                                  -Vic                                     ,3,E54A3C,FFFFFF                                    
+51T0222R3  ,R3  ,Ripoll                                  -Vic                                     ,3,E54A3C,FFFFFF                                    
+51T0223R3  ,R3  ,Ribes de Freser                         -Toses                                   ,3,E54A3C,FFFFFF                                    
+51T0224R3  ,R3  ,Planoles                                -Toses                                   ,3,E54A3C,FFFFFF                                    
+51T0225R3  ,R3  ,Planoles                                -Toses                                   ,3,E54A3C,FFFFFF                                    
+51T0226R3  ,R3  ,Planoles                                -La Molina                               ,3,E54A3C,FFFFFF                                    
+51T0227R3  ,R3  ,Toses                                   -Ribes de Freser                         ,3,E54A3C,FFFFFF                                    
+51T0228R3  ,R3  ,Toses                                   -Planoles                                ,3,E54A3C,FFFFFF                                    
+51T0229R3  ,R3  ,Toses                                   -Planoles                                ,3,E54A3C,FFFFFF                                    
+51T0230R3  ,R3  ,La Molina                               -Planoles                                ,3,E54A3C,FFFFFF                                    
+51T0231R3  ,R3  ,Puigcerdà                               -Vic                                     ,3,E54A3C,FFFFFF                                    
+51T0232R3  ,R3  ,Puigcerdà                               -Vic                                     ,3,E54A3C,FFFFFF                                    
+51T0233R3  ,R3  ,Puigcerdà                               -Ripoll                                  ,3,E54A3C,FFFFFF                                    
+51T0234R3  ,R3  ,Puigcerdà                               -Ripoll                                  ,3,E54A3C,FFFFFF                                    
+51T0235R3  ,R3  ,Puigcerdà                               -La Tor de Querol-Enveig                 ,3,E54A3C,FFFFFF                                    
+51T0236R3  ,R3  ,Puigcerdà                               -La Tor de Querol-Enveig                 ,3,E54A3C,FFFFFF                                    
+51T0237R3  ,R3  ,La Tor de Querol-Enveig                 -Vic                                     ,3,E54A3C,FFFFFF                                    
+51T0238R3  ,R3  ,La Tor de Querol-Enveig                 -Vic                                     ,3,E54A3C,FFFFFF                                    
+51T0239R3  ,R3  ,La Tor de Querol-Enveig                 -Puigcerdà                               ,3,E54A3C,FFFFFF                                    
+51T0240R3  ,R3  ,La Tor de Querol-Enveig                 -Puigcerdà                               ,3,E54A3C,FFFFFF                                    
+51T0241R13 ,R13 ,Lleida                                  -La Plana-Picamoixons                    ,3,146520,FFFFFF                                    
+51T0242R13 ,R13 ,Lleida                                  -La Plana-Picamoixons                    ,3,146520,FFFFFF                                    
+51T0243RL4 ,RL4 ,Cervera                                 -Terrassa Estació del Nord               ,3,F7A30D,FFFFFF                                    
+51T0244RL4 ,RL4 ,Terrassa Estació del Nord               -Cervera                                 ,3,F7A30D,FFFFFF                                    
+51T0245R4  ,R4  ,Terrassa Estació del Nord               -Manresa                                 ,3,F7A30D,FFFFFF                                    
+51T0246R3  ,R3  ,Barcelona-Fabra i Puig                  -Granollers-Canovelles                   ,3,E54A3C,FFFFFF                                    
+51T0247R3  ,R3  ,Barcelona-Fabra i Puig                  -Granollers-Canovelles                   ,3,E54A3C,FFFFFF                                    
+51T0248R3  ,R3  ,Barcelona-Fabra i Puig                  -La Garriga                              ,3,E54A3C,FFFFFF                                    
+51T0249R3  ,R3  ,Barcelona-Fabra i Puig                  -La Garriga                              ,3,E54A3C,FFFFFF                                    
+51T0250R3  ,R3  ,Barcelona-Fabra i Puig                  -Centelles                               ,3,E54A3C,FFFFFF                                    
+51T0251R3  ,R3  ,Barcelona-Fabra i Puig                  -Centelles                               ,3,E54A3C,FFFFFF                                    
+51T0252R3  ,R3  ,Barcelona-Fabra i Puig                  -Vic                                     ,3,E54A3C,FFFFFF                                    
+51T0253R3  ,R3  ,Barcelona-Fabra i Puig                  -Vic                                     ,3,E54A3C,FFFFFF                                    
+51T0254R1  ,R1  ,Maçanet-Massanes                        -Blanes                                  ,3,094188,FFFFFF                                    
+51T0255R1  ,R1  ,Maçanet-Massanes                        -Blanes                                  ,3,094188,FFFFFF                                    
+51T0256R1  ,R1  ,Blanes                                  -Maçanet-Massanes                        ,3,094188,FFFFFF                                    
+51T0257R1  ,R1  ,Blanes                                  -Maçanet-Massanes                        ,3,094188,FFFFFF                                    
 60T0001C1  ,C1  ,Abando                                  -Santurtzi                               ,2,D7001E,FFFFFF                                    
 60T0002C1  ,C1  ,Santurtzi                               -Abando                                  ,2,D7001E,FFFFFF                                    
 60T0003C2  ,C2  ,Abando                                  -Muskiz                                  ,2,0F8C2D,FFFFFF                                    
