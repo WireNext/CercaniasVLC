@@ -288,22 +288,20 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 30T0040C3  ,C3  ,                                        -Santa Justa                             ,3,E4242D,FFFFFF                                    
 30T0041C3  ,C3  ,Cazalla-Constantina                     -Los Rosales                             ,3,E4242D,FFFFFF                                    
 30T0042C3  ,C3  ,Cazalla-Constantina                     -Los Rosales                             ,3,E4242D,FFFFFF                                    
-30T0043C5  ,C5  ,Benacazon                               -Santa Justa                             ,3,073588,FFFFFF                                    
+30T0043C3  ,C3  ,Los Rosales                             -Cazalla-Constantina                     ,3,E4242D,FFFFFF                                    
 30T0044C3  ,C3  ,Los Rosales                             -Cazalla-Constantina                     ,3,E4242D,FFFFFF                                    
-30T0045C3  ,C3  ,Los Rosales                             -Cazalla-Constantina                     ,3,E4242D,FFFFFF                                    
+30T0045CR20,CR20,Santa Justa                             -                                        ,3,FFFFFF,FFFFFF                                    
 30T0046CR20,CR20,Santa Justa                             -                                        ,3,FFFFFF,FFFFFF                                    
-30T0047CR20,CR20,Santa Justa                             -                                        ,3,FFFFFF,FFFFFF                                    
+30T0047C3  ,C3  ,Santa Justa                             -                                        ,3,E4242D,FFFFFF                                    
 30T0048C3  ,C3  ,Santa Justa                             -                                        ,3,E4242D,FFFFFF                                    
 30T0049C3  ,C3  ,Santa Justa                             -                                        ,3,E4242D,FFFFFF                                    
 30T0050C3  ,C3  ,Santa Justa                             -                                        ,3,E4242D,FFFFFF                                    
-30T0051C3  ,C3  ,Santa Justa                             -                                        ,3,E4242D,FFFFFF                                    
+30T0051CR20,CR20,Santa Justa                             -                                        ,3,FFFFFF,FFFFFF                                    
 30T0052CR20,CR20,Santa Justa                             -                                        ,3,FFFFFF,FFFFFF                                    
-30T0053CR20,CR20,Santa Justa                             -                                        ,3,FFFFFF,FFFFFF                                    
+30T0053C3  ,C3  ,Santa Justa                             -                                        ,3,E4242D,FFFFFF                                    
 30T0054C3  ,C3  ,Santa Justa                             -                                        ,3,E4242D,FFFFFF                                    
 30T0055C3  ,C3  ,Santa Justa                             -                                        ,3,E4242D,FFFFFF                                    
 30T0056C3  ,C3  ,Santa Justa                             -                                        ,3,E4242D,FFFFFF                                    
-30T0057C3  ,C3  ,Santa Justa                             -                                        ,3,E4242D,FFFFFF                                    
-30T0058C5  ,C5  ,Santa Justa                             -Benacazon                               ,3,073588,FFFFFF                                    
 31T0001C1  ,C1  ,Cádiz                                   -Aeropuerto de Jerez                     ,2,D7001E,FFFFFF                                    
 31T0002C1  ,C1  ,Aeropuerto de Jerez                     -Cádiz                                   ,2,D7001E,FFFFFF                                    
 31T0003C1a ,C1a ,Las Aletas                              -Universidad                             ,2,D7001E,FFFFFF                                    
