@@ -398,8 +398,6 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 40T0064C5  ,C5  ,Caudiel                                 -PuÇol                                   ,3,018A27,FFFFFF                                    
 40T0065ER24,ER24,                                        -Xativa                                  ,3,FFFFFF,FFFFFF                                    
 40T0066ER24,ER24,                                        -Xativa                                  ,3,FFFFFF,FFFFFF                                    
-40T0067C1  ,C1  ,Tavernes de la Valldigna                -Gandia                                  ,3,7AB3DE,FFFFFF                                    
-40T0068C1  ,C1  ,Gandia                                  -Tavernes de la Valldigna                ,3,7AB3DE,FFFFFF                                    
 41T0001C1  ,C1  ,Murcia del Carmen                       -Alacant Terminal                        ,2,73B6E0,FFFFFF                                    
 41T0002C1  ,C1  ,Alacant Terminal                        -Murcia del Carmen                       ,2,73B6E0,FFFFFF                                    
 41T0003C2  ,C2  ,Murcia del Carmen                       -Aguilas                                 ,2,108C2C,FFFFFF                                    
@@ -768,10 +766,11 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 61T0031C1  ,C1  ,Hernani                                 -Irun                                    ,3,DA001C,FFFFFF                                    
 61T0032C1  ,C1  ,Hernani                                 -Irun                                    ,3,DA001C,FFFFFF                                    
 61T0033C1  ,C1  ,Donostia-San Sebastian                  -Hernani                                 ,3,DA001C,FFFFFF                                    
-61T0034C1  ,C1  ,Irun                                    -Hernani                                 ,3,DA001C,FFFFFF                                    
+61T0034C1  ,C1  ,Lezo-Renteria                           -Hernani                                 ,3,DA001C,FFFFFF                                    
 61T0035C1  ,C1  ,Irun                                    -Hernani                                 ,3,DA001C,FFFFFF                                    
-61T0036C1  ,C1  ,Irun                                    -Lezo-Renteria                           ,3,DA001C,FFFFFF                                    
+61T0036C1  ,C1  ,Irun                                    -Hernani                                 ,3,DA001C,FFFFFF                                    
 61T0037C1  ,C1  ,Irun                                    -Lezo-Renteria                           ,3,DA001C,FFFFFF                                    
+61T0038C1  ,C1  ,Irun                                    -Lezo-Renteria                           ,3,DA001C,FFFFFF                                    
 62T0001C1  ,C1  ,Santander                               -Reinosa                                 ,2,EF3340,FFFFFF                                    
 62T0002C1  ,C1  ,Reinosa                                 -Santander                               ,2,EF3340,FFFFFF                                    
 62T0003C2  ,C2  ,Santander                               -Cabezón De La Sal                       ,2,009645,FFFFFF                                    
@@ -815,23 +814,25 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 62T0041C3  ,C3  ,Liérganes                               -Astillero                               ,2,0060A9,FFFFFF                                    
 62T0042C3  ,C3  ,Astillero                               -Liérganes                               ,2,0060A9,FFFFFF                                    
 62T0043C3  ,C3  ,Astillero                               -La Cantábrica                           ,3,0060A9,FFFFFF                                    
-62T0044C3  ,C3  ,Astillero                               -Solares                                 ,3,0060A9,FFFFFF                                    
+62T0044C3  ,C3  ,Astillero                               -La Cantábrica                           ,3,0060A9,FFFFFF                                    
 62T0045C3  ,C3  ,Astillero                               -Solares                                 ,3,0060A9,FFFFFF                                    
-62T0046C3  ,C3  ,Astillero                               -Liérganes                               ,3,0060A9,FFFFFF                                    
+62T0046C3  ,C3  ,Astillero                               -Solares                                 ,3,0060A9,FFFFFF                                    
 62T0047C3  ,C3  ,Astillero                               -Liérganes                               ,3,0060A9,FFFFFF                                    
-62T0048C3  ,C3  ,La Cantábrica                           -Astillero                               ,3,0060A9,FFFFFF                                    
-62T0049C3  ,C3  ,Solares                                 -Astillero                               ,3,0060A9,FFFFFF                                    
-62T0050C3  ,C3  ,Solares                                 -Astillero                               ,3,0060A9,FFFFFF                                    
-62T0051C3  ,C3  ,Liérganes                               -Astillero                               ,3,0060A9,FFFFFF                                    
-62T0052C3  ,C3  ,Liérganes                               -Astillero                               ,3,0060A9,FFFFFF                                    
-62T0053C1  ,C1  ,Reinosa                                 -Maliaño                                 ,3,EF3340,FFFFFF                                    
-62T0054C1  ,C1  ,Barcena                                 -Maliaño                                 ,3,EF3340,FFFFFF                                    
-62T0055C1  ,C1  ,Los Corrales Buelna                     -Maliaño                                 ,3,EF3340,FFFFFF                                    
-62T0056C1  ,C1  ,Renedo                                  -Maliaño                                 ,3,EF3340,FFFFFF                                    
-62T0057C1  ,C1  ,Maliaño                                 -Reinosa                                 ,3,EF3340,FFFFFF                                    
-62T0058C1  ,C1  ,Maliaño                                 -Barcena                                 ,3,EF3340,FFFFFF                                    
-62T0059C1  ,C1  ,Maliaño                                 -Los Corrales Buelna                     ,3,EF3340,FFFFFF                                    
-62T0060C1  ,C1  ,Maliaño                                 -Renedo                                  ,3,EF3340,FFFFFF                                    
+62T0048C3  ,C3  ,Astillero                               -Liérganes                               ,3,0060A9,FFFFFF                                    
+62T0049C3  ,C3  ,La Cantábrica                           -Astillero                               ,3,0060A9,FFFFFF                                    
+62T0050C3  ,C3  ,La Cantábrica                           -Astillero                               ,3,0060A9,FFFFFF                                    
+62T0051C3  ,C3  ,Solares                                 -Astillero                               ,3,0060A9,FFFFFF                                    
+62T0052C3  ,C3  ,Solares                                 -Astillero                               ,3,0060A9,FFFFFF                                    
+62T0053C3  ,C3  ,Liérganes                               -Astillero                               ,3,0060A9,FFFFFF                                    
+62T0054C3  ,C3  ,Liérganes                               -Astillero                               ,3,0060A9,FFFFFF                                    
+62T0055C1  ,C1  ,Reinosa                                 -Maliaño                                 ,3,EF3340,FFFFFF                                    
+62T0056C1  ,C1  ,Barcena                                 -Maliaño                                 ,3,EF3340,FFFFFF                                    
+62T0057C1  ,C1  ,Los Corrales Buelna                     -Maliaño                                 ,3,EF3340,FFFFFF                                    
+62T0058C1  ,C1  ,Renedo                                  -Maliaño                                 ,3,EF3340,FFFFFF                                    
+62T0059C1  ,C1  ,Maliaño                                 -Reinosa                                 ,3,EF3340,FFFFFF                                    
+62T0060C1  ,C1  ,Maliaño                                 -Barcena                                 ,3,EF3340,FFFFFF                                    
+62T0061C1  ,C1  ,Maliaño                                 -Los Corrales Buelna                     ,3,EF3340,FFFFFF                                    
+62T0062C1  ,C1  ,Maliaño                                 -Renedo                                  ,3,EF3340,FFFFFF                                    
 70T0001C1  ,C1  ,Casetas                                 -Miraflores                              ,2,D90724,FFFFFF                                    
 70T0002C1  ,C1  ,Miraflores                              -Casetas                                 ,2,D90724,FFFFFF                                    
 70T0003C1  ,C1  ,Casetas                                 -Miraflores                              ,2,D90724,FFFFFF                                    
