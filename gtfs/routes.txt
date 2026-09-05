@@ -768,7 +768,7 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 61T0031C1  ,C1  ,Hernani                                 -Irun                                    ,3,DA001C,FFFFFF                                    
 61T0032C1  ,C1  ,Hernani                                 -Irun                                    ,3,DA001C,FFFFFF                                    
 61T0033C1  ,C1  ,Donostia-San Sebastian                  -Hernani                                 ,3,DA001C,FFFFFF                                    
-61T0034C1  ,C1  ,Lezo-Renteria                           -Hernani                                 ,3,DA001C,FFFFFF                                    
+61T0034C1  ,C1  ,Lezo-Renteria                           -Irun                                    ,3,DA001C,FFFFFF                                    
 61T0035C1  ,C1  ,Irun                                    -Hernani                                 ,3,DA001C,FFFFFF                                    
 61T0036C1  ,C1  ,Irun                                    -Hernani                                 ,3,DA001C,FFFFFF                                    
 61T0037C1  ,C1  ,Irun                                    -Lezo-Renteria                           ,3,DA001C,FFFFFF                                    
