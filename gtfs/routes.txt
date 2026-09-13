@@ -691,23 +691,22 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 51T0241R13 ,R13 ,Lleida                                  -La Plana-Picamoixons                    ,3,146520,FFFFFF                                    
 51T0242RL4 ,RL4 ,Cervera                                 -Terrassa Estació del Nord               ,3,F7A30D,FFFFFF                                    
 51T0243RL4 ,RL4 ,Terrassa Estació del Nord               -Cervera                                 ,3,F7A30D,FFFFFF                                    
-51T0244R4  ,R4  ,Terrassa Estació del Nord               -Manresa                                 ,3,F7A30D,FFFFFF                                    
+51T0244R3  ,R3  ,Barcelona-Fabra i Puig                  -Granollers-Canovelles                   ,3,E54A3C,FFFFFF                                    
 51T0245R3  ,R3  ,Barcelona-Fabra i Puig                  -Granollers-Canovelles                   ,3,E54A3C,FFFFFF                                    
-51T0246R3  ,R3  ,Barcelona-Fabra i Puig                  -Granollers-Canovelles                   ,3,E54A3C,FFFFFF                                    
+51T0246R3  ,R3  ,Barcelona-Fabra i Puig                  -La Garriga                              ,3,E54A3C,FFFFFF                                    
 51T0247R3  ,R3  ,Barcelona-Fabra i Puig                  -La Garriga                              ,3,E54A3C,FFFFFF                                    
-51T0248R3  ,R3  ,Barcelona-Fabra i Puig                  -La Garriga                              ,3,E54A3C,FFFFFF                                    
+51T0248R3  ,R3  ,Barcelona-Fabra i Puig                  -Centelles                               ,3,E54A3C,FFFFFF                                    
 51T0249R3  ,R3  ,Barcelona-Fabra i Puig                  -Centelles                               ,3,E54A3C,FFFFFF                                    
-51T0250R3  ,R3  ,Barcelona-Fabra i Puig                  -Centelles                               ,3,E54A3C,FFFFFF                                    
+51T0250R3  ,R3  ,Barcelona-Fabra i Puig                  -Vic                                     ,3,E54A3C,FFFFFF                                    
 51T0251R3  ,R3  ,Barcelona-Fabra i Puig                  -Vic                                     ,3,E54A3C,FFFFFF                                    
-51T0252R3  ,R3  ,Barcelona-Fabra i Puig                  -Vic                                     ,3,E54A3C,FFFFFF                                    
+51T0252R1  ,R1  ,Maçanet-Massanes                        -Blanes                                  ,3,094188,FFFFFF                                    
 51T0253R1  ,R1  ,Maçanet-Massanes                        -Blanes                                  ,3,094188,FFFFFF                                    
-51T0254R1  ,R1  ,Maçanet-Massanes                        -Blanes                                  ,3,094188,FFFFFF                                    
-51T0255R11 ,R11 ,Figueres                                -PORTBOU                                 ,3,0069AA,FFFFFF                                    
-51T0256R11 ,R11 ,PORTBOU                                 -Barcelona-Sants                         ,3,0069AA,FFFFFF                                    
-51T0257R2  ,R2  ,PORTBOU                                 -Barcelona-Sants                         ,3,26A741,FFFFFF                                    
-51T0258R11 ,R11 ,PORTBOU                                 -Figueres                                ,3,0069AA,FFFFFF                                    
+51T0254R11 ,R11 ,Figueres                                -PORTBOU                                 ,3,0069AA,FFFFFF                                    
+51T0255R11 ,R11 ,PORTBOU                                 -Barcelona-Sants                         ,3,0069AA,FFFFFF                                    
+51T0256R2  ,R2  ,PORTBOU                                 -Barcelona-Sants                         ,3,26A741,FFFFFF                                    
+51T0257R11 ,R11 ,PORTBOU                                 -Figueres                                ,3,0069AA,FFFFFF                                    
+51T0258R1  ,R1  ,Blanes                                  -Maçanet-Massanes                        ,3,094188,FFFFFF                                    
 51T0259R1  ,R1  ,Blanes                                  -Maçanet-Massanes                        ,3,094188,FFFFFF                                    
-51T0260R1  ,R1  ,Blanes                                  -Maçanet-Massanes                        ,3,094188,FFFFFF                                    
 60T0001C1  ,C1  ,Abando                                  -Santurtzi                               ,2,D7001E,FFFFFF                                    
 60T0002C1  ,C1  ,Santurtzi                               -Abando                                  ,2,D7001E,FFFFFF                                    
 60T0003C2  ,C2  ,Abando                                  -Muskiz                                  ,2,0F8C2D,FFFFFF                                    
