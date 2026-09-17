@@ -726,8 +726,6 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 60T0022C4  ,C4  ,Guardo                                  -La Asunción/Universidad                 ,2,E93CAC,FFFFFF                                    
 60T0023C3  ,C3  ,Abando                                  -Arrigorriaga                            ,2,78B4E1,FFFFFF                                    
 60T0024C3  ,C3  ,Arrigorriaga                            -Abando                                  ,2,78B4E1,FFFFFF                                    
-60T0025C3  ,C3  ,Arrigorriaga                            -Abando                                  ,3,78B4E1,FFFFFF                                    
-60T0026C3  ,C3  ,Abando                                  -Arrigorriaga                            ,3,78B4E1,FFFFFF                                    
 61T0001C1  ,C1  ,Irun                                    -Brincola                                ,2,DA001C,FFFFFF                                    
 61T0002C1  ,C1  ,Brincola                                -Irun                                    ,2,DA001C,FFFFFF                                    
 61T0003C1  ,C1  ,Lezo-Renteria                           -Beasain                                 ,2,DA001C,FFFFFF                                    
