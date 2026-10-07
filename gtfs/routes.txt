@@ -229,22 +229,15 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 20T0110C6  ,C6  ,L'infiestu Apd                          -El Berrón                               ,2,579BE2,FFFFFF                                    
 20T0111C4  ,C4  ,El Regueral                             -Pravia                                  ,2,E93CAC,FFFFFF                                    
 20T0112C4  ,C4  ,Pravia                                  -El Regueral                             ,2,E93CAC,FFFFFF                                    
-20T0113C4  ,C4  ,Candás                                  -Gijon (Sanz Crespo)                     ,3,E93CAC,FFFFFF                                    
-20T0114C5  ,C5  ,Pinzales                                -Gijon (Sanz Crespo)                     ,3,C4D600,FFFFFF                                    
-20T0115C7  ,C7  ,Pinzales                                -Gijon (Sanz Crespo)                     ,3,BCCF00,FFFFFF                                    
-20T0116C6  ,C6  ,El Berrón                               -Nava                                    ,3,579BE2,FFFFFF                                    
-20T0117C6  ,C6  ,El Berrón                               -Nava                                    ,3,579BE2,FFFFFF                                    
-20T0118C6  ,C6  ,El Berrón                               -L'infiestu Apd                          ,3,579BE2,FFFFFF                                    
-20T0119C6  ,C6  ,El Berrón                               -L'infiestu Apd                          ,3,579BE2,FFFFFF                                    
-20T0120C6  ,C6  ,Nava                                    -L'infiestu Apd                          ,3,579BE2,FFFFFF                                    
-20T0121C6  ,C6  ,Nava                                    -L'infiestu Apd                          ,3,579BE2,FFFFFF                                    
-20T0122C6  ,C6  ,L'infiestu Apd                          -El Berrón                               ,3,579BE2,FFFFFF                                    
-20T0123C6  ,C6  ,L'infiestu Apd                          -El Berrón                               ,3,579BE2,FFFFFF                                    
-20T0124NR26,NR26,                                        -                                        ,3,FFFFFF,FFFFFF                                    
-20T0125NR26,NR26,                                        -                                        ,3,FFFFFF,FFFFFF                                    
-20T0126C4  ,C4  ,Gijon (Sanz Crespo)                     -Candás                                  ,3,E93CAC,FFFFFF                                    
-20T0127C5  ,C5  ,Gijon (Sanz Crespo)                     -Pinzales                                ,3,C4D600,FFFFFF                                    
-20T0128C7  ,C7  ,Gijon (Sanz Crespo)                     -Pinzales                                ,3,BCCF00,FFFFFF                                    
+20T0113C6  ,C6  ,El Berrón                               -Nava                                    ,3,579BE2,FFFFFF                                    
+20T0114C6  ,C6  ,El Berrón                               -Nava                                    ,3,579BE2,FFFFFF                                    
+20T0115C6  ,C6  ,El Berrón                               -L'infiestu Apd                          ,3,579BE2,FFFFFF                                    
+20T0116C6  ,C6  ,El Berrón                               -L'infiestu Apd                          ,3,579BE2,FFFFFF                                    
+20T0117C6  ,C6  ,Nava                                    -L'infiestu Apd                          ,3,579BE2,FFFFFF                                    
+20T0118C6  ,C6  ,Nava                                    -L'infiestu Apd                          ,3,579BE2,FFFFFF                                    
+20T0119C6  ,C6  ,L'infiestu Apd                          -El Berrón                               ,3,579BE2,FFFFFF                                    
+20T0120C6  ,C6  ,L'infiestu Apd                          -El Berrón                               ,3,579BE2,FFFFFF                                    
+20T0121NR26,NR26,                                        -                                        ,3,FFFFFF,FFFFFF                                    
 30T0001C1  ,C1  ,Lora del Rio                            -Lebrija                                 ,2,78B4E1,FFFFFF                                    
 30T0002C1  ,C1  ,Lebrija                                 -Lora del Rio                            ,2,78B4E1,FFFFFF                                    
 30T0003C2  ,C2  ,Santa Justa                             -Cartuja                                 ,2,067B34,FFFFFF                                    
@@ -739,20 +732,16 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 61T0022C1  ,C1  ,Pasaia                                  -Irun                                    ,2,DA001C,FFFFFF                                    
 61T0023C1  ,C1  ,Irun                                    -Lezo-Renteria                           ,2,DA001C,FFFFFF                                    
 61T0024C1  ,C1  ,Lezo-Renteria                           -Irun                                    ,2,DA001C,FFFFFF                                    
-61T0025C1  ,C1  ,Brincola                                -Beasain                                 ,3,DA001C,FFFFFF                                    
-61T0026C1  ,C1  ,Zumarraga                               -Beasain                                 ,3,DA001C,FFFFFF                                    
-61T0027C1  ,C1  ,Beasain                                 -Brincola                                ,3,DA001C,FFFFFF                                    
-61T0028C1  ,C1  ,Beasain                                 -Zumarraga                               ,3,DA001C,FFFFFF                                    
-61T0029C1  ,C1  ,Beasain                                 -Tolosa                                  ,3,DA001C,FFFFFF                                    
-61T0030C1  ,C1  ,Tolosa                                  -Beasain                                 ,3,DA001C,FFFFFF                                    
-61T0031C1  ,C1  ,Hernani                                 -Irun                                    ,3,DA001C,FFFFFF                                    
-61T0032C1  ,C1  ,Hernani                                 -Irun                                    ,3,DA001C,FFFFFF                                    
-61T0033C1  ,C1  ,Donostia-San Sebastian                  -Hernani                                 ,3,DA001C,FFFFFF                                    
-61T0034C1  ,C1  ,Lezo-Renteria                           -Irun                                    ,3,DA001C,FFFFFF                                    
-61T0035C1  ,C1  ,Irun                                    -Hernani                                 ,3,DA001C,FFFFFF                                    
-61T0036C1  ,C1  ,Irun                                    -Hernani                                 ,3,DA001C,FFFFFF                                    
-61T0037C1  ,C1  ,Irun                                    -Lezo-Renteria                           ,3,DA001C,FFFFFF                                    
-61T0038C1  ,C1  ,Irun                                    -Lezo-Renteria                           ,3,DA001C,FFFFFF                                    
+61T0025C1  ,C1  ,Beasain                                 -Tolosa                                  ,3,DA001C,FFFFFF                                    
+61T0026C1  ,C1  ,Tolosa                                  -Beasain                                 ,3,DA001C,FFFFFF                                    
+61T0027C1  ,C1  ,Hernani                                 -Irun                                    ,3,DA001C,FFFFFF                                    
+61T0028C1  ,C1  ,Hernani                                 -Irun                                    ,3,DA001C,FFFFFF                                    
+61T0029C1  ,C1  ,Donostia-San Sebastian                  -Hernani                                 ,3,DA001C,FFFFFF                                    
+61T0030C1  ,C1  ,Lezo-Renteria                           -Irun                                    ,3,DA001C,FFFFFF                                    
+61T0031C1  ,C1  ,Irun                                    -Hernani                                 ,3,DA001C,FFFFFF                                    
+61T0032C1  ,C1  ,Irun                                    -Hernani                                 ,3,DA001C,FFFFFF                                    
+61T0033C1  ,C1  ,Irun                                    -Lezo-Renteria                           ,3,DA001C,FFFFFF                                    
+61T0034C1  ,C1  ,Irun                                    -Lezo-Renteria                           ,3,DA001C,FFFFFF                                    
 62T0001C1  ,C1  ,Santander                               -Reinosa                                 ,2,EF3340,FFFFFF                                    
 62T0002C1  ,C1  ,Reinosa                                 -Santander                               ,2,EF3340,FFFFFF                                    
 62T0003C2  ,C2  ,Santander                               -Cabezón De La Sal                       ,2,009645,FFFFFF                                    
@@ -802,29 +791,27 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 62T0047C3  ,C3  ,Maliaño La Vidriera                     -Solares                                 ,3,0060A9,FFFFFF                                    
 62T0048C3  ,C3  ,Maliaño La Vidriera                     -Liérganes                               ,3,0060A9,FFFFFF                                    
 62T0049C3  ,C3  ,Astillero                               -La Cantábrica                           ,3,0060A9,FFFFFF                                    
-62T0050C3  ,C3  ,Astillero                               -La Cantábrica                           ,3,0060A9,FFFFFF                                    
+62T0050C3  ,C3  ,Astillero                               -Solares                                 ,3,0060A9,FFFFFF                                    
 62T0051C3  ,C3  ,Astillero                               -Solares                                 ,3,0060A9,FFFFFF                                    
-62T0052C3  ,C3  ,Astillero                               -Solares                                 ,3,0060A9,FFFFFF                                    
+62T0052C3  ,C3  ,Astillero                               -Liérganes                               ,3,0060A9,FFFFFF                                    
 62T0053C3  ,C3  ,Astillero                               -Liérganes                               ,3,0060A9,FFFFFF                                    
-62T0054C3  ,C3  ,Astillero                               -Liérganes                               ,3,0060A9,FFFFFF                                    
-62T0055C3  ,C3  ,La Cantábrica                           -Maliaño La Vidriera                     ,3,0060A9,FFFFFF                                    
-62T0056C3  ,C3  ,La Cantábrica                           -Astillero                               ,3,0060A9,FFFFFF                                    
-62T0057C3  ,C3  ,La Cantábrica                           -Astillero                               ,3,0060A9,FFFFFF                                    
-62T0058C3  ,C3  ,Orejo                                   -Maliaño La Vidriera                     ,3,0060A9,FFFFFF                                    
-62T0059C3  ,C3  ,Solares                                 -Maliaño La Vidriera                     ,3,0060A9,FFFFFF                                    
-62T0060C3  ,C3  ,Solares                                 -Astillero                               ,3,0060A9,FFFFFF                                    
-62T0061C3  ,C3  ,Solares                                 -Astillero                               ,3,0060A9,FFFFFF                                    
-62T0062C3  ,C3  ,Liérganes                               -Maliaño La Vidriera                     ,3,0060A9,FFFFFF                                    
-62T0063C3  ,C3  ,Liérganes                               -Astillero                               ,3,0060A9,FFFFFF                                    
-62T0064C3  ,C3  ,Liérganes                               -Astillero                               ,3,0060A9,FFFFFF                                    
-62T0065C1  ,C1  ,Reinosa                                 -Maliaño                                 ,3,EF3340,FFFFFF                                    
-62T0066C1  ,C1  ,Barcena                                 -Maliaño                                 ,3,EF3340,FFFFFF                                    
-62T0067C1  ,C1  ,Los Corrales Buelna                     -Maliaño                                 ,3,EF3340,FFFFFF                                    
-62T0068C1  ,C1  ,Renedo                                  -Maliaño                                 ,3,EF3340,FFFFFF                                    
-62T0069C1  ,C1  ,Maliaño                                 -Reinosa                                 ,3,EF3340,FFFFFF                                    
-62T0070C1  ,C1  ,Maliaño                                 -Barcena                                 ,3,EF3340,FFFFFF                                    
-62T0071C1  ,C1  ,Maliaño                                 -Los Corrales Buelna                     ,3,EF3340,FFFFFF                                    
-62T0072C1  ,C1  ,Maliaño                                 -Renedo                                  ,3,EF3340,FFFFFF                                    
+62T0054C3  ,C3  ,La Cantábrica                           -Maliaño La Vidriera                     ,3,0060A9,FFFFFF                                    
+62T0055C3  ,C3  ,La Cantábrica                           -Astillero                               ,3,0060A9,FFFFFF                                    
+62T0056C3  ,C3  ,Orejo                                   -Maliaño La Vidriera                     ,3,0060A9,FFFFFF                                    
+62T0057C3  ,C3  ,Solares                                 -Maliaño La Vidriera                     ,3,0060A9,FFFFFF                                    
+62T0058C3  ,C3  ,Solares                                 -Astillero                               ,3,0060A9,FFFFFF                                    
+62T0059C3  ,C3  ,Solares                                 -Astillero                               ,3,0060A9,FFFFFF                                    
+62T0060C3  ,C3  ,Liérganes                               -Maliaño La Vidriera                     ,3,0060A9,FFFFFF                                    
+62T0061C3  ,C3  ,Liérganes                               -Astillero                               ,3,0060A9,FFFFFF                                    
+62T0062C3  ,C3  ,Liérganes                               -Astillero                               ,3,0060A9,FFFFFF                                    
+62T0063C1  ,C1  ,Reinosa                                 -Maliaño                                 ,3,EF3340,FFFFFF                                    
+62T0064C1  ,C1  ,Barcena                                 -Maliaño                                 ,3,EF3340,FFFFFF                                    
+62T0065C1  ,C1  ,Los Corrales Buelna                     -Maliaño                                 ,3,EF3340,FFFFFF                                    
+62T0066C1  ,C1  ,Renedo                                  -Maliaño                                 ,3,EF3340,FFFFFF                                    
+62T0067C1  ,C1  ,Maliaño                                 -Reinosa                                 ,3,EF3340,FFFFFF                                    
+62T0068C1  ,C1  ,Maliaño                                 -Barcena                                 ,3,EF3340,FFFFFF                                    
+62T0069C1  ,C1  ,Maliaño                                 -Los Corrales Buelna                     ,3,EF3340,FFFFFF                                    
+62T0070C1  ,C1  ,Maliaño                                 -Renedo                                  ,3,EF3340,FFFFFF                                    
 70T0001C1  ,C1  ,Casetas                                 -Miraflores                              ,2,D90724,FFFFFF                                    
 70T0002C1  ,C1  ,Miraflores                              -Casetas                                 ,2,D90724,FFFFFF                                    
 70T0003C1  ,C1  ,Casetas                                 -Miraflores                              ,2,D90724,FFFFFF                                    
