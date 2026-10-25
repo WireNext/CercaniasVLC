@@ -140,11 +140,11 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 41T0013C1  ,C1  ,Alacant Terminal                        -Alacant Terminal                        ,2,73B6E0,FFFFFF                                    
 41T0023C2  ,C2  ,Lorca-Sutullena                         -Murcia del Carmen                       ,3,E93CAC,FFFFFF                                    
 41T0025C2  ,C2  ,Aguilas                                 -Lorca-Sutullena                         ,3,E93CAC,FFFFFF                                    
-41T0029C1  ,C1  ,Alacant Terminal                        -Callosa de Segura                       ,3,73B6E0,FFFFFF                                    
-41T0030C1  ,C1  ,Alacant Terminal                        -Crevillent                              ,3,73B6E0,FFFFFF                                    
-41T0031C2  ,C2  ,Murcia del Carmen                       -Lorca-Sutullena                         ,3,E93CAC,FFFFFF                                    
-41T0035C1  ,C1  ,Callosa de Segura                       -Alacant Terminal                        ,3,73B6E0,FFFFFF                                    
-41T0036C1  ,C1  ,Crevillent                              -Alacant Terminal                        ,3,73B6E0,FFFFFF                                    
+41T0028C1  ,C1  ,Alacant Terminal                        -Callosa de Segura                       ,3,73B6E0,FFFFFF                                    
+41T0029C1  ,C1  ,Alacant Terminal                        -Crevillent                              ,3,73B6E0,FFFFFF                                    
+41T0030C2  ,C2  ,Murcia del Carmen                       -Lorca-Sutullena                         ,3,E93CAC,FFFFFF                                    
+41T0034C1  ,C1  ,Callosa de Segura                       -Alacant Terminal                        ,3,73B6E0,FFFFFF                                    
+41T0035C1  ,C1  ,Crevillent                              -Alacant Terminal                        ,3,73B6E0,FFFFFF                                    
 45T0001C1  ,C1  ,Cartagena                               -Los Nietos                              ,2,D7001E,FFFFFF                                    
 45T0002C1  ,C1  ,Los Nietos                              -Cartagena                               ,2,D7001E,FFFFFF                                    
 46T0001C1  ,C1  ,Ferrol                                  -Ortigueira                              ,2,D7001E,FFFFFF                                    
