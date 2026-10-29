@@ -19,6 +19,9 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 10T0026C9  ,C9  ,Cotos                                   -Cercedilla                              ,2,915419,FFFFFF                                    
 10T0027C8a ,C8a ,Atocha                                  -El Escorial                             ,2,868584,FFFFFF                                    
 10T0035C5  ,C5  ,                                        -Fuenlabrada                             ,2,FECB00,FFFFFF                                    
+10T0037C2  ,C2  ,Alcala de Henares                       -Nuevos Ministerios                      ,2,00943D,FFFFFF                                    
+10T0047C5  ,C5  ,Atocha                                  -Fuenlabrada                             ,2,FECB00,FFFFFF                                    
+10T0048C5  ,C5  ,Fuenlabrada                             -Atocha                                  ,2,FECB00,FFFFFF                                    
 10T0051C7  ,C7  ,Principe Pio                            -Chamartín - Clara Campoamor             ,2,E5202A,FFFFFF                                    
 10T0052C7  ,C7  ,Chamartín - Clara Campoamor             -Principe Pio                            ,2,E5202A,FFFFFF                                    
 10T0053C7  ,C7  ,Principe Pio                            -Atocha                                  ,2,E5202A,FFFFFF                                    
@@ -66,7 +69,8 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 20T0110C6  ,C6  ,L'infiestu Apd                          -El Berrón                               ,2,579BE2,FFFFFF                                    
 20T0113C6  ,C6  ,El Berrón                               -Nava                                    ,3,579BE2,FFFFFF                                    
 20T0115C6  ,C6  ,El Berrón                               -L'infiestu Apd                          ,3,579BE2,FFFFFF                                    
-20T0119C6  ,C6  ,L'infiestu Apd                          -El Berrón                               ,3,579BE2,FFFFFF                                    
+20T0119C6  ,C6  ,Carancos                                -L'infiestu Apd                          ,3,579BE2,FFFFFF                                    
+20T0120C6  ,C6  ,L'infiestu Apd                          -El Berrón                               ,3,579BE2,FFFFFF                                    
 30T0001C1  ,C1  ,Lora del Rio                            -Lebrija                                 ,2,78B4E1,FFFFFF                                    
 30T0002C1  ,C1  ,Lebrija                                 -Lora del Rio                            ,2,78B4E1,FFFFFF                                    
 30T0003C2  ,C2  ,Santa Justa                             -Cartuja                                 ,2,067B34,FFFFFF                                    
