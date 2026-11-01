@@ -19,8 +19,6 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 10T0026C9  ,C9  ,Cotos                                   -Cercedilla                              ,2,915419,FFFFFF                                    
 10T0027C8a ,C8a ,Atocha                                  -El Escorial                             ,2,868584,FFFFFF                                    
 10T0035C5  ,C5  ,                                        -Fuenlabrada                             ,2,FECB00,FFFFFF                                    
-10T0047C5  ,C5  ,Atocha                                  -Fuenlabrada                             ,2,FECB00,FFFFFF                                    
-10T0048C5  ,C5  ,Fuenlabrada                             -Atocha                                  ,2,FECB00,FFFFFF                                    
 10T0051C7  ,C7  ,Principe Pio                            -Chamartín - Clara Campoamor             ,2,E5202A,FFFFFF                                    
 10T0052C7  ,C7  ,Chamartín - Clara Campoamor             -Principe Pio                            ,2,E5202A,FFFFFF                                    
 10T0053C7  ,C7  ,Principe Pio                            -Atocha                                  ,2,E5202A,FFFFFF                                    
@@ -37,8 +35,6 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 10T0088C8b ,C8b ,Cercedilla                              -Chamartín - Clara Campoamor             ,2,868584,FFFFFF                                    
 10T0097C8b ,C8b ,                                        -Cercedilla                              ,2,868584,FFFFFF                                    
 10T0098C8b ,C8b ,Cercedilla                              -                                        ,2,868584,FFFFFF                                    
-10T0111C9  ,C9  ,Cercedilla                              -Cotos                                   ,3,915419,FFFFFF                                    
-10T0112C9  ,C9  ,Cotos                                   -Cercedilla                              ,3,915419,FFFFFF                                    
 20T0001C1  ,C1  ,Gijon (Sanz Crespo)                     -Puente L.Fierros                        ,2,EC3541,FFFFFF                                    
 20T0002C1  ,C1  ,Puente L.Fierros                        -Gijon (Sanz Crespo)                     ,2,EC3541,FFFFFF                                    
 20T0003C2  ,C2  ,Oviedo                                  -El Entrego                              ,2,009746,FFFFFF                                    
