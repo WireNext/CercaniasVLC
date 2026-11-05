@@ -63,10 +63,11 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 20T0109C6  ,C6  ,El Berrón                               -L'infiestu Apd                          ,2,579BE2,FFFFFF                                    
 20T0110C6  ,C6  ,L'infiestu Apd                          -El Berrón                               ,2,579BE2,FFFFFF                                    
 20T0113C6  ,C6  ,El Berrón                               -Nava                                    ,3,579BE2,FFFFFF                                    
-20T0115C6  ,C6  ,El Berrón                               -L'infiestu Apd                          ,3,579BE2,FFFFFF                                    
-20T0119C6  ,C6  ,Carancos                                -L'infiestu Apd                          ,3,579BE2,FFFFFF                                    
-20T0120C6  ,C6  ,L'infiestu Apd                          -El Berrón                               ,3,579BE2,FFFFFF                                    
-20T0122C6  ,C6  ,L'infiestu Apd                          -Carancos                                ,3,579BE2,FFFFFF                                    
+20T0114C6  ,C6  ,El Berrón                               -L'infiestu Apd                          ,3,579BE2,FFFFFF                                    
+20T0115C6  ,C6  ,Nava                                    -L'infiestu Apd                          ,3,579BE2,FFFFFF                                    
+20T0116C6  ,C6  ,Carancos                                -L'infiestu Apd                          ,3,579BE2,FFFFFF                                    
+20T0117C6  ,C6  ,L'infiestu Apd                          -El Berrón                               ,3,579BE2,FFFFFF                                    
+20T0118C6  ,C6  ,L'infiestu Apd                          -Carancos                                ,3,579BE2,FFFFFF                                    
 30T0001C1  ,C1  ,Lora del Rio                            -Lebrija                                 ,2,78B4E1,FFFFFF                                    
 30T0002C1  ,C1  ,Lebrija                                 -Lora del Rio                            ,2,78B4E1,FFFFFF                                    
 30T0003C2  ,C2  ,Santa Justa                             -Cartuja                                 ,2,067B34,FFFFFF                                    
@@ -137,12 +138,14 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 41T0011C3  ,C3  ,                                        -Sant Vicent Centre                      ,2,706D75,FFFFFF                                    
 41T0013C1  ,C1  ,Alacant Terminal                        -Alacant Terminal                        ,2,73B6E0,FFFFFF                                    
 41T0023C2  ,C2  ,Lorca-Sutullena                         -Murcia del Carmen                       ,3,E93CAC,FFFFFF                                    
-41T0025C2  ,C2  ,Aguilas                                 -Lorca-Sutullena                         ,3,E93CAC,FFFFFF                                    
-41T0028C1  ,C1  ,Alacant Terminal                        -Callosa de Segura                       ,3,73B6E0,FFFFFF                                    
-41T0029C1  ,C1  ,Alacant Terminal                        -Crevillent                              ,3,73B6E0,FFFFFF                                    
-41T0030C2  ,C2  ,Murcia del Carmen                       -Lorca-Sutullena                         ,3,E93CAC,FFFFFF                                    
-41T0034C1  ,C1  ,Callosa de Segura                       -Alacant Terminal                        ,3,73B6E0,FFFFFF                                    
-41T0035C1  ,C1  ,Crevillent                              -Alacant Terminal                        ,3,73B6E0,FFFFFF                                    
+41T0024C2  ,C2  ,Aguilas                                 -Lorca-Sutullena                         ,3,E93CAC,FFFFFF                                    
+41T0025C2  ,C2  ,Aguilas                                 -Murcia del Carmen                       ,3,E93CAC,FFFFFF                                    
+41T0026C1  ,C1  ,Alacant Terminal                        -Callosa de Segura                       ,3,73B6E0,FFFFFF                                    
+41T0027C1  ,C1  ,Alacant Terminal                        -Crevillent                              ,3,73B6E0,FFFFFF                                    
+41T0028C2  ,C2  ,Murcia del Carmen                       -Lorca-Sutullena                         ,3,E93CAC,FFFFFF                                    
+41T0029C2  ,C2  ,Murcia del Carmen                       -Aguilas                                 ,3,E93CAC,FFFFFF                                    
+41T0030C1  ,C1  ,Callosa de Segura                       -Alacant Terminal                        ,3,73B6E0,FFFFFF                                    
+41T0031C1  ,C1  ,Crevillent                              -Alacant Terminal                        ,3,73B6E0,FFFFFF                                    
 45T0001C1  ,C1  ,Cartagena                               -Los Nietos                              ,2,D7001E,FFFFFF                                    
 45T0002C1  ,C1  ,Los Nietos                              -Cartagena                               ,2,D7001E,FFFFFF                                    
 46T0001C1  ,C1  ,Ferrol                                  -Ortigueira                              ,2,D7001E,FFFFFF                                    
@@ -251,9 +254,6 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 61T0002C1  ,C1  ,Brincola                                -Irun                                    ,2,DA001C,FFFFFF                                    
 61T0005C1  ,C1  ,                                        -Donostia-San Sebastian                  ,2,DA001C,FFFFFF                                    
 61T0006C1  ,C1  ,Donostia-San Sebastian                  -                                        ,2,DA001C,FFFFFF                                    
-61T0007C1  ,C1  ,Zumarraga                               -Hernani                                 ,2,DA001C,FFFFFF                                    
-61T0008C1  ,C1  ,Hernani                                 -Zumarraga                               ,2,DA001C,FFFFFF                                    
-61T0030C1  ,C1  ,Irun                                    -Lezo-Renteria                           ,3,DA001C,FFFFFF                                    
 62T0001C1  ,C1  ,Santander                               -Reinosa                                 ,2,EF3340,FFFFFF                                    
 62T0002C1  ,C1  ,Reinosa                                 -Santander                               ,2,EF3340,FFFFFF                                    
 62T0003C2  ,C2  ,Santander                               -Cabezón De La Sal                       ,2,009645,FFFFFF                                    
