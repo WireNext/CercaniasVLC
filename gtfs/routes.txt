@@ -83,10 +83,10 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 30T0010C5  ,C5  ,Benacazon                               -Jardines de Hercules                    ,2,073588,FFFFFF                                    
 30T0029C5  ,C5  ,Santa Justa                             -Benacazon                               ,2,073588,FFFFFF                                    
 30T0030C5  ,C5  ,Benacazon                               -Santa Justa                             ,2,073588,FFFFFF                                    
-30T0036C3  ,C3  ,                                        -Santa Justa                             ,3,E4242D,FFFFFF                                    
-30T0037C3  ,C3  ,Cazalla-Constantina                     -Los Rosales                             ,3,E4242D,FFFFFF                                    
-30T0038C3  ,C3  ,Los Rosales                             -Cazalla-Constantina                     ,3,E4242D,FFFFFF                                    
-30T0044C3  ,C3  ,Santa Justa                             -                                        ,3,E4242D,FFFFFF                                    
+30T0034C3  ,C3  ,                                        -Santa Justa                             ,3,E4242D,FFFFFF                                    
+30T0035C3  ,C3  ,Cazalla-Constantina                     -Los Rosales                             ,3,E4242D,FFFFFF                                    
+30T0036C3  ,C3  ,Los Rosales                             -Cazalla-Constantina                     ,3,E4242D,FFFFFF                                    
+30T0039C3  ,C3  ,Santa Justa                             -                                        ,3,E4242D,FFFFFF                                    
 31T0001C1  ,C1  ,Cádiz                                   -Aeropuerto de Jerez                     ,2,D7001E,FFFFFF                                    
 31T0002C1  ,C1  ,Aeropuerto de Jerez                     -Cádiz                                   ,2,D7001E,FFFFFF                                    
 31T0003C1a ,C1a ,Las Aletas                              -Universidad                             ,2,D7001E,FFFFFF                                    
@@ -176,6 +176,7 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 51T0024R8  ,R8  ,Granollers Centre                       -Martorell Central                       ,2,88016A,FFFFFF                                    
 51T0025R2  ,R2  ,Sant Vicenc de Calders                  -Castelldefels                           ,2,26A741,FFFFFF                                    
 51T0026R2  ,R2  ,Castelldefels                           -Sant Vicenc de Calders                  ,2,26A741,FFFFFF                                    
+51T0027R2  ,R2  ,Sant Celoni                             -Barcelona-Sants                         ,2,26A741,FFFFFF                                    
 51T0028R2  ,R2  ,Barcelona-Sants                         -Sant Celoni                             ,2,26A741,FFFFFF                                    
 51T0029R7  ,R7  ,Barcelona-Fabra i Puig                  -Cerdanyola-Universitat                  ,2,24A842,FFFFFF                                    
 51T0030R7  ,R7  ,Cerdanyola-Universitat                  -Barcelona-Fabra i Puig                  ,2,24A842,FFFFFF                                    
@@ -191,6 +192,7 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 51T0048RL4 ,RL4 ,Lleida                                  -Terrassa Estació del Nord               ,2,F7A30D,FFFFFF                                    
 51T0093R11 ,R11 ,Figueres                                -Barcelona-Sants                         ,2,0069AA,FFFFFF                                    
 51T0094R11 ,R11 ,Barcelona-Sants                         -Figueres                                ,2,0069AA,FFFFFF                                    
+51T0095R2  ,R2  ,El Prat de Llobregat                    -Barcelona-Sant Andreu                   ,2,26A741,FFFFFF                                    
 51T0097R15 ,R15 ,Riba-roja d'Ebre                        -Caspe                                   ,2,978571,FFFFFF                                    
 51T0098R15 ,R15 ,Caspe                                   -Riba-roja d'Ebre                        ,2,978571,FFFFFF                                    
 51T0099RL3 ,RL3 ,Lleida                                  -Cervera                                 ,2,B6AE33,FFFFFF                                    
