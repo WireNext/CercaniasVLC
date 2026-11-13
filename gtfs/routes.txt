@@ -27,7 +27,6 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 10T0053C7  ,C7  ,Principe Pio                            -Atocha                                  ,2,E5202A,FFFFFF                                    
 10T0054C7  ,C7  ,Atocha                                  -Principe Pio                            ,2,E5202A,FFFFFF                                    
 10T0059C7  ,C7  ,Chamartín - Clara Campoamor             -Alcala de Henares                       ,2,E5202A,FFFFFF                                    
-10T0060C7  ,C7  ,Alcala de Henares                       -Chamartín - Clara Campoamor             ,2,E5202A,FFFFFF                                    
 10T0061C8a ,C8a ,El Escorial                             -Chamartín - Clara Campoamor             ,2,868584,FFFFFF                                    
 10T0062C8a ,C8a ,Chamartín - Clara Campoamor             -El Escorial                             ,2,868584,FFFFFF                                    
 10T0064C10 ,C10 ,Principe Pio                            -El Escorial                             ,2,BCCF00,FFFFFF                                    
@@ -76,7 +75,8 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 20T0118C6  ,C6  ,Nava                                    -L'infiestu Apd                          ,3,579BE2,FFFFFF                                    
 20T0119C6  ,C6  ,Carancos                                -L'infiestu Apd                          ,3,579BE2,FFFFFF                                    
 20T0120C6  ,C6  ,L'infiestu Apd                          -El Berrón                               ,3,579BE2,FFFFFF                                    
-20T0121C6  ,C6  ,L'infiestu Apd                          -Carancos                                ,3,579BE2,FFFFFF                                    
+20T0121C6  ,C6  ,L'infiestu Apd                          -Nava                                    ,3,579BE2,FFFFFF                                    
+20T0122C6  ,C6  ,L'infiestu Apd                          -Carancos                                ,3,579BE2,FFFFFF                                    
 30T0001C1  ,C1  ,Lora del Rio                            -Lebrija                                 ,2,78B4E1,FFFFFF                                    
 30T0002C1  ,C1  ,Lebrija                                 -Lora del Rio                            ,2,78B4E1,FFFFFF                                    
 30T0003C2  ,C2  ,Santa Justa                             -Cartuja                                 ,2,067B34,FFFFFF                                    
