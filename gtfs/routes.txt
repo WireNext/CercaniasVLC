@@ -30,7 +30,6 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 10T0061C8a ,C8a ,El Escorial                             -Chamartín - Clara Campoamor             ,2,868584,FFFFFF                                    
 10T0062C8a ,C8a ,Chamartín - Clara Campoamor             -El Escorial                             ,2,868584,FFFFFF                                    
 10T0064C10 ,C10 ,Principe Pio                            -El Escorial                             ,2,BCCF00,FFFFFF                                    
-10T0071C10 ,C10 ,Pozuelo                                 -Pitis                                   ,2,BCCF00,FFFFFF                                    
 10T0075C10 ,C10 ,Torrelodones                            -Chamartín - Clara Campoamor             ,2,BCCF00,FFFFFF                                    
 10T0076C10 ,C10 ,Chamartín - Clara Campoamor             -Torrelodones                            ,2,BCCF00,FFFFFF                                    
 10T0085C8a ,C8a ,                                        -El Escorial                             ,2,868584,FFFFFF                                    
@@ -38,6 +37,7 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 10T0088C8b ,C8b ,Cercedilla                              -Chamartín - Clara Campoamor             ,2,868584,FFFFFF                                    
 10T0097C8b ,C8b ,                                        -Cercedilla                              ,2,868584,FFFFFF                                    
 10T0098C8b ,C8b ,Cercedilla                              -                                        ,2,868584,FFFFFF                                    
+10T0107C8a ,C8a ,Las Matas                               -Las Rozas                               ,3,868584,FFFFFF                                    
 10T0111C9  ,C9  ,Cercedilla                              -Cotos                                   ,3,915419,FFFFFF                                    
 10T0112C9  ,C9  ,Cotos                                   -Cercedilla                              ,3,915419,FFFFFF                                    
 20T0001C1  ,C1  ,Gijon (Sanz Crespo)                     -Puente L.Fierros                        ,2,EC3541,FFFFFF                                    
@@ -145,16 +145,11 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 41T0005C3  ,C3  ,Sant Vicent Centre                      -Alacant Terminal                        ,2,7D2486,FFFFFF                                    
 41T0006C3  ,C3  ,Alacant Terminal                        -Sant Vicent Centre                      ,2,7D2486,FFFFFF                                    
 41T0011C3  ,C3  ,                                        -Sant Vicent Centre                      ,2,706D75,FFFFFF                                    
-41T0013C1  ,C1  ,Alacant Terminal                        -Alacant Terminal                        ,2,73B6E0,FFFFFF                                    
 41T0023C2  ,C2  ,Lorca-Sutullena                         -Murcia del Carmen                       ,3,E93CAC,FFFFFF                                    
 41T0024C2  ,C2  ,Aguilas                                 -Lorca-Sutullena                         ,3,E93CAC,FFFFFF                                    
 41T0025C2  ,C2  ,Aguilas                                 -Murcia del Carmen                       ,3,E93CAC,FFFFFF                                    
-41T0026C1  ,C1  ,Alacant Terminal                        -Callosa de Segura                       ,3,73B6E0,FFFFFF                                    
-41T0027C1  ,C1  ,Alacant Terminal                        -Crevillent                              ,3,73B6E0,FFFFFF                                    
-41T0028C2  ,C2  ,Murcia del Carmen                       -Lorca-Sutullena                         ,3,E93CAC,FFFFFF                                    
-41T0029C2  ,C2  ,Murcia del Carmen                       -Aguilas                                 ,3,E93CAC,FFFFFF                                    
-41T0030C1  ,C1  ,Callosa de Segura                       -Alacant Terminal                        ,3,73B6E0,FFFFFF                                    
-41T0031C1  ,C1  ,Crevillent                              -Alacant Terminal                        ,3,73B6E0,FFFFFF                                    
+41T0026C2  ,C2  ,Murcia del Carmen                       -Lorca-Sutullena                         ,3,E93CAC,FFFFFF                                    
+41T0027C2  ,C2  ,Murcia del Carmen                       -Aguilas                                 ,3,E93CAC,FFFFFF                                    
 45T0001C1  ,C1  ,Cartagena                               -Los Nietos                              ,2,D7001E,FFFFFF                                    
 45T0002C1  ,C1  ,Los Nietos                              -Cartagena                               ,2,D7001E,FFFFFF                                    
 46T0001C1  ,C1  ,Ferrol                                  -Ortigueira                              ,2,D7001E,FFFFFF                                    
@@ -216,6 +211,7 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 51T0112RG1 ,RG1 ,Figueres                                -Maçanet-Massanes                        ,2,409EF5,FFFFFF                                    
 51T0113R15 ,R15 ,Cunit                                   -Riba-roja d'Ebre                        ,2,978571,FFFFFF                                    
 51T0114R15 ,R15 ,Riba-roja d'Ebre                        -Cunit                                   ,2,978571,FFFFFF                                    
+51T0119R11 ,R11 ,Barcelona-Sant Andreu                   -Girona                                  ,2,0069AA,FFFFFF                                    
 51T0120R11 ,R11 ,Girona                                  -Barcelona-Sant Andreu                   ,2,0069AA,FFFFFF                                    
 51T0123R15 ,R15 ,Reus                                    -Torredembarra                           ,2,978571,FFFFFF                                    
 51T0124R15 ,R15 ,Torredembarra                           -Reus                                    ,2,978571,FFFFFF                                    
@@ -231,24 +227,29 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 51T0176R13 ,R13 ,Sant Vicenc de Calders                  -La Plana-Picamoixons                    ,2,146520,FFFFFF                                    
 51T0185R13 ,R13 ,La Plana-Picamoixons                    -Lleida                                  ,3,146520,FFFFFF                                    
 51T0186R3  ,R3  ,Granollers-Canovelles                   -Barcelona-Fabra i Puig                  ,3,E54A3C,FFFFFF                                    
-51T0187R3  ,R3  ,La Garriga                              -Ripoll                                  ,3,E54A3C,FFFFFF                                    
-51T0188R3  ,R3  ,La Garriga                              -Barcelona-Fabra i Puig                  ,3,E54A3C,FFFFFF                                    
-51T0189R3  ,R3  ,Centelles                               -Vic                                     ,3,E54A3C,FFFFFF                                    
-51T0190R3  ,R3  ,Centelles                               -Barcelona-Fabra i Puig                  ,3,E54A3C,FFFFFF                                    
-51T0191R3  ,R3  ,Vic                                     -Centelles                               ,3,E54A3C,FFFFFF                                    
-51T0192R3  ,R3  ,Vic                                     -Puigcerdà                               ,3,E54A3C,FFFFFF                                    
-51T0193R3  ,R3  ,Vic                                     -La Tor de Querol-Enveig                 ,3,E54A3C,FFFFFF                                    
-51T0194R3  ,R3  ,Vic                                     -Barcelona-Fabra i Puig                  ,3,E54A3C,FFFFFF                                    
-51T0195R3  ,R3  ,Ripoll                                  -La Garriga                              ,3,E54A3C,FFFFFF                                    
-51T0196R3  ,R3  ,Planoles                                -La Molina                               ,3,E54A3C,FFFFFF                                    
-51T0197R3  ,R3  ,La Molina                               -Planoles                                ,3,E54A3C,FFFFFF                                    
-51T0198R3  ,R3  ,Puigcerdà                               -Vic                                     ,3,E54A3C,FFFFFF                                    
-51T0199R3  ,R3  ,La Tor de Querol-Enveig                 -Vic                                     ,3,E54A3C,FFFFFF                                    
-51T0200R13 ,R13 ,Lleida                                  -La Plana-Picamoixons                    ,3,146520,FFFFFF                                    
-51T0201R3  ,R3  ,Barcelona-Fabra i Puig                  -Granollers-Canovelles                   ,3,E54A3C,FFFFFF                                    
-51T0202R3  ,R3  ,Barcelona-Fabra i Puig                  -La Garriga                              ,3,E54A3C,FFFFFF                                    
-51T0203R3  ,R3  ,Barcelona-Fabra i Puig                  -Centelles                               ,3,E54A3C,FFFFFF                                    
-51T0204R3  ,R3  ,Barcelona-Fabra i Puig                  -Vic                                     ,3,E54A3C,FFFFFF                                    
+51T0187R3  ,R3  ,La Garriga                              -Vic                                     ,3,E54A3C,FFFFFF                                    
+51T0188R3  ,R3  ,La Garriga                              -Ripoll                                  ,3,E54A3C,FFFFFF                                    
+51T0189R3  ,R3  ,La Garriga                              -Barcelona-Fabra i Puig                  ,3,E54A3C,FFFFFF                                    
+51T0190R3  ,R3  ,Centelles                               -Vic                                     ,3,E54A3C,FFFFFF                                    
+51T0191R3  ,R3  ,Centelles                               -Barcelona-Fabra i Puig                  ,3,E54A3C,FFFFFF                                    
+51T0192R3  ,R3  ,Vic                                     -La Garriga                              ,3,E54A3C,FFFFFF                                    
+51T0193R3  ,R3  ,Vic                                     -Centelles                               ,3,E54A3C,FFFFFF                                    
+51T0194R3  ,R3  ,Vic                                     -Puigcerdà                               ,3,E54A3C,FFFFFF                                    
+51T0195R3  ,R3  ,Vic                                     -La Tor de Querol-Enveig                 ,3,E54A3C,FFFFFF                                    
+51T0196R3  ,R3  ,Vic                                     -Barcelona-Fabra i Puig                  ,3,E54A3C,FFFFFF                                    
+51T0197R3  ,R3  ,Ripoll                                  -La Garriga                              ,3,E54A3C,FFFFFF                                    
+51T0198R3  ,R3  ,Ripoll                                  -Vic                                     ,3,E54A3C,FFFFFF                                    
+51T0199R3  ,R3  ,Planoles                                -La Molina                               ,3,E54A3C,FFFFFF                                    
+51T0200R3  ,R3  ,Planoles                                -La Tor de Querol-Enveig                 ,3,E54A3C,FFFFFF                                    
+51T0201R3  ,R3  ,La Molina                               -Planoles                                ,3,E54A3C,FFFFFF                                    
+51T0202R3  ,R3  ,Puigcerdà                               -Vic                                     ,3,E54A3C,FFFFFF                                    
+51T0203R3  ,R3  ,La Tor de Querol-Enveig                 -Vic                                     ,3,E54A3C,FFFFFF                                    
+51T0204R3  ,R3  ,La Tor de Querol-Enveig                 -Ripoll                                  ,3,E54A3C,FFFFFF                                    
+51T0205R13 ,R13 ,Lleida                                  -La Plana-Picamoixons                    ,3,146520,FFFFFF                                    
+51T0206R3  ,R3  ,Barcelona-Fabra i Puig                  -Granollers-Canovelles                   ,3,E54A3C,FFFFFF                                    
+51T0207R3  ,R3  ,Barcelona-Fabra i Puig                  -La Garriga                              ,3,E54A3C,FFFFFF                                    
+51T0208R3  ,R3  ,Barcelona-Fabra i Puig                  -Centelles                               ,3,E54A3C,FFFFFF                                    
+51T0209R3  ,R3  ,Barcelona-Fabra i Puig                  -Vic                                     ,3,E54A3C,FFFFFF                                    
 60T0001C1  ,C1  ,Abando                                  -Santurtzi                               ,2,D7001E,FFFFFF                                    
 60T0002C1  ,C1  ,Santurtzi                               -Abando                                  ,2,D7001E,FFFFFF                                    
 60T0003C2  ,C2  ,Abando                                  -Muskiz                                  ,2,0F8C2D,FFFFFF                                    
@@ -263,6 +264,7 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 60T0020C5  ,C5  ,Bilbao La Concordia                     -                                        ,2,2C2A86,FFFFFF                                    
 61T0001C1  ,C1  ,Irun                                    -Brincola                                ,2,DA001C,FFFFFF                                    
 61T0002C1  ,C1  ,Brincola                                -Irun                                    ,2,DA001C,FFFFFF                                    
+61T0003C1  ,C1  ,Lezo-Renteria                           -Beasain                                 ,2,DA001C,FFFFFF                                    
 61T0005C1  ,C1  ,                                        -Donostia-San Sebastian                  ,2,DA001C,FFFFFF                                    
 61T0006C1  ,C1  ,Donostia-San Sebastian                  -                                        ,2,DA001C,FFFFFF                                    
 62T0001C1  ,C1  ,Santander                               -Reinosa                                 ,2,EF3340,FFFFFF                                    
