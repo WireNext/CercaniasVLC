@@ -223,7 +223,6 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 51T0164R15 ,R15 ,Mora la Nova                            -                                        ,2,978571,FFFFFF                                    
 51T0175R13 ,R13 ,La Plana-Picamoixons                    -Sant Vicenc de Calders                  ,2,146520,FFFFFF                                    
 51T0176R13 ,R13 ,Sant Vicenc de Calders                  -La Plana-Picamoixons                    ,2,146520,FFFFFF                                    
-51T0185R4  ,R4  ,Barcelona-Fabra i Puig                  -Cornellà                                ,2,F7A30D,FFFFFF                                    
 51T0187R13 ,R13 ,La Plana-Picamoixons                    -Lleida                                  ,3,146520,FFFFFF                                    
 51T0188R3  ,R3  ,Granollers-Canovelles                   -Barcelona-Fabra i Puig                  ,3,E54A3C,FFFFFF                                    
 51T0189R3  ,R3  ,La Garriga                              -Vic                                     ,3,E54A3C,FFFFFF                                    
