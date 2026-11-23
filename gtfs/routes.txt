@@ -73,7 +73,6 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 20T0118C6  ,C6  ,Nava                                    -L'infiestu Apd                          ,3,579BE2,FFFFFF                                    
 20T0119C6  ,C6  ,Carancos                                -L'infiestu Apd                          ,3,579BE2,FFFFFF                                    
 20T0120C6  ,C6  ,L'infiestu Apd                          -El Berrón                               ,3,579BE2,FFFFFF                                    
-20T0121C6  ,C6  ,L'infiestu Apd                          -Nava                                    ,3,579BE2,FFFFFF                                    
 20T0122C6  ,C6  ,L'infiestu Apd                          -Carancos                                ,3,579BE2,FFFFFF                                    
 30T0001C1  ,C1  ,Lora del Rio                            -Lebrija                                 ,2,78B4E1,FFFFFF                                    
 30T0002C1  ,C1  ,Lebrija                                 -Lora del Rio                            ,2,78B4E1,FFFFFF                                    
@@ -209,6 +208,8 @@ route_id,route_short_name,route_long_name,route_type,route_color,route_text_colo
 51T0112RG1 ,RG1 ,Figueres                                -Maçanet-Massanes                        ,2,409EF5,FFFFFF                                    
 51T0113R15 ,R15 ,Cunit                                   -Riba-roja d'Ebre                        ,2,978571,FFFFFF                                    
 51T0114R15 ,R15 ,Riba-roja d'Ebre                        -Cunit                                   ,2,978571,FFFFFF                                    
+51T0115R14 ,R14 ,Lleida                                  -Cunit                                   ,2,6C60A8,FFFFFF                                    
+51T0116R14 ,R14 ,Cunit                                   -Lleida                                  ,2,6C60A8,FFFFFF                                    
 51T0119R11 ,R11 ,Barcelona-Sant Andreu                   -Girona                                  ,2,0069AA,FFFFFF                                    
 51T0120R11 ,R11 ,Girona                                  -Barcelona-Sant Andreu                   ,2,0069AA,FFFFFF                                    
 51T0123R15 ,R15 ,Reus                                    -Torredembarra                           ,2,978571,FFFFFF                                    
